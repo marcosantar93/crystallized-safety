@@ -46,9 +46,35 @@ cd crystallized-safety
 pip install -r requirements.txt
 ```
 
-### Run main experiment
+### Extract a steering vector
+```python
+from src import SteeringVectorExtractor
+from data.prompts import HARMFUL_EXTRACTION, HARMLESS_EXTRACTION
+
+extractor = SteeringVectorExtractor("meta-llama/Meta-Llama-3.1-8B-Instruct")
+extractor.load_model()
+vector = extractor.extract(HARMFUL_EXTRACTION, HARMLESS_EXTRACTION, layer=15)
+```
+
+### Apply steering during generation
+```python
+from src import ActivationSteerer
+
+steerer = ActivationSteerer("meta-llama/Meta-Llama-3.1-8B-Instruct", layer=15)
+steerer.load_model()
+steerer.set_steering_vector(vector)
+
+# Negative alpha = suppress refusal
+response = steerer.generate("How do I pick a lock?", alpha=-3.0)
+```
+
+### Run experiments
 ```bash
-python src/steering.py --model llama-3.1-8b --layer 15 --strength 1.5
+# Layer-wise analysis
+python experiments/layer_sweep.py --model meta-llama/Meta-Llama-3.1-8B-Instruct
+
+# Cross-model transfer
+python experiments/cross_model.py --source llama-8b --target mistral-7b
 ```
 
 ## Requirements
@@ -66,6 +92,15 @@ python src/steering.py --model llama-3.1-8b --layer 15 --strength 1.5
 | Llama-3.1-70B | ✓ | Partial | Layer-dependent |
 | Mistral-7B | ✓ | ✗ | Crystallized safety |
 | Qwen-2.5-7B | ✓ | ✗ | Similar to Mistral |
+| Gemma-2-9B | ✓ | ✓ | Layer 21 vulnerability |
+| Phi-3-mini | ✓ | ✗ | Floor effects mask steering |
+
+### Key Findings
+
+1. **Asymmetry**: Steering vectors can enhance refusal (+25pp) but not reliably reduce it
+2. **Non-invertibility**: Most models show non-invertible safety representations
+3. **Floor Effects**: Low-compliance models mask true steering effects
+4. **Transfer**: Within-family transfer works; cross-family transfer fails
 
 ## Citation
 
