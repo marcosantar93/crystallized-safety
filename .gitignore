@@ -1,0 +1,42 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+dist/
+build/
+*.egg
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Environment
+.env
+.venv/
+venv/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Project specific
+results/*.json
+results/*.pt
+*.log
+wandb/
+
+# Large files (use HuggingFace Hub instead)
+*.bin
+*.safetensors
+*.ckpt
+data/vectors/*.pt
+
+# Keep directory structure
+!data/vectors/.gitkeep
+!results/.gitkeep
+!figures/.gitkeep
