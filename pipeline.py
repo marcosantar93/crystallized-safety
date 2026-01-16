@@ -717,13 +717,10 @@ async def review_with_gemini(results: Dict, hypothesis: str, perspective: str) -
     if not api_key:
         return {"verdict": "YELLOW", "critique": "API key not configured", "required_controls": [], "confidence": 0, "proceed": False, "error": "No API key"}
 
-    import google.generativeai as genai
-    genai.configure(api_key=api_key)
+    from google import genai
+    from google.genai import types
 
-    model = genai.GenerativeModel(
-        model_name="gemini-2.5-pro",
-        generation_config={"temperature": 0.3, "max_output_tokens": 4000, "response_mime_type": "application/json"}
-    )
+    client = genai.Client(api_key=api_key)
 
     prompt = REVIEW_SYSTEM_PROMPT.format(perspective=perspective) + "\n\n" + REVIEW_USER_PROMPT.format(
         hypothesis=hypothesis,
@@ -731,7 +728,16 @@ async def review_with_gemini(results: Dict, hypothesis: str, perspective: str) -
         perspective=perspective
     )
 
-    response = await model.generate_content_async(prompt)
+    response = await client.aio.models.generate_content(
+        model='gemini-2.0-flash-exp',
+        contents=prompt,
+        config=types.GenerateContentConfig(
+            temperature=0.3,
+            max_output_tokens=4000,
+            response_mime_type="application/json"
+        )
+    )
+
     return json.loads(response.text)
 
 
