@@ -676,7 +676,7 @@ async def review_with_gpt5(results: Dict, hypothesis: str, perspective: str) -> 
             )}
         ],
         temperature=0.3,
-        max_tokens=4000,
+        max_completion_tokens=4000,
         response_format={"type": "json_object"}
     )
     return json.loads(response.choices[0].message.content)
@@ -729,7 +729,7 @@ async def review_with_gemini(results: Dict, hypothesis: str, perspective: str) -
     )
 
     response = await client.aio.models.generate_content(
-        model='gemini-3-flash',
+        model='gemini-3-flash-preview',
         contents=prompt,
         config=types.GenerateContentConfig(
             temperature=0.3,
@@ -751,7 +751,7 @@ async def review_with_grok(results: Dict, hypothesis: str, perspective: str) -> 
     client = AsyncOpenAI(api_key=api_key, base_url="https://api.x.ai/v1")
 
     response = await client.chat.completions.create(
-        model="grok-4.1",
+        model="grok-4",
         messages=[
             {"role": "system", "content": REVIEW_SYSTEM_PROMPT.format(perspective=perspective)},
             {"role": "user", "content": REVIEW_USER_PROMPT.format(
