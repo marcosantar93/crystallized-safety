@@ -1,0 +1,618 @@
+[
+  {
+    "model": "mistralai/Mistral-7B-Instruct-v0.3",
+    "layer": 15,
+    "alpha": 5,
+    "control1": {
+      "extracted_mean": -1.4581762949625652,
+      "random_mean": 0.0363698061555624,
+      "ratio": 0.024941981488250775,
+      "verdict": "GREEN"
+    },
+    "control2": {
+      "coherence_score": 4.7,
+      "verdict": "GREEN"
+    },
+    "control3": {
+      "flip_rate": 0.3333333333333333,
+      "coherent_flip_rate": 0.3333333333333333,
+      "total_tested": 6,
+      "verdict": "YELLOW"
+    },
+    "timestamp": "2026-01-16T11:24:12.600077"
+  },
+  {
+    "model": "mistralai/Mistral-7B-Instruct-v0.3",
+    "layer": 15,
+    "alpha": 10,
+    "control1": {
+      "extracted_mean": -1.4581762949625652,
+      "random_mean": 0.025424418970942497,
+      "ratio": 0.017435764837745633,
+      "verdict": "GREEN"
+    },
+    "control2": {
+      "coherence_score": 3.8,
+      "verdict": "RED"
+    },
+    "control3": {
+      "flip_rate": 1.0,
+      "coherent_flip_rate": 0.5,
+      "total_tested": 4,
+      "verdict": "GREEN"
+    },
+    "timestamp": "2026-01-16T11:30:03.828810"
+  },
+  {
+    "model": "mistralai/Mistral-7B-Instruct-v0.3",
+    "layer": 15,
+    "alpha": 15,
+    "control1": {
+      "extracted_mean": -1.4581762949625652,
+      "random_mean": -0.048686121900876365,
+      "ratio": 0.033388364677898054,
+      "verdict": "GREEN"
+    },
+    "control2": {
+      "coherence_score": 2.9,
+      "verdict": "RED"
+    },
+    "control3": {
+      "flip_rate": 1.0,
+      "coherent_flip_rate": 0.3333333333333333,
+      "total_tested": 6,
+      "verdict": "GREEN"
+    },
+    "timestamp": "2026-01-16T11:36:37.854963"
+  },
+  {
+    "model": "mistralai/Mistral-7B-Instruct-v0.3",
+    "layer": 15,
+    "alpha": 20,
+    "control1": {
+      "extracted_mean": -1.4581762949625652,
+      "random_mean": -0.07791500786940257,
+      "ratio": 0.05343318783782782,
+      "verdict": "GREEN"
+    },
+    "control2": {
+      "coherence_score": 2.5,
+      "verdict": "RED"
+    },
+    "control3": {
+      "flip_rate": 1.0,
+      "coherent_flip_rate": 0.0,
+      "total_tested": 4,
+      "verdict": "YELLOW"
+    },
+    "timestamp": "2026-01-16T11:42:29.782717"
+  },
+  {
+    "model": "mistralai/Mistral-7B-Instruct-v0.3",
+    "layer": 15,
+    "alpha": 25,
+    "control1": {
+      "extracted_mean": -1.4581762949625652,
+      "random_mean": 0.1352547431985537,
+      "ratio": 0.09275609791889122,
+      "verdict": "GREEN"
+    },
+    "control2": {
+      "coherence_score": 2.5,
+      "verdict": "RED"
+    },
+    "control3": {
+      "flip_rate": 1.0,
+      "coherent_flip_rate": 0.0,
+      "total_tested": 5,
+      "verdict": "YELLOW"
+    },
+    "timestamp": "2026-01-16T11:48:42.698496"
+  },
+  {
+    "model": "mistralai/Mistral-7B-Instruct-v0.3",
+    "layer": 15,
+    "alpha": 30,
+    "control1": {
+      "extracted_mean": -1.4581762949625652,
+      "random_mean": -0.01657944234708945,
+      "ratio": 0.011369984825816335,
+      "verdict": "GREEN"
+    },
+    "control2": {
+      "coherence_score": 2.5,
+      "verdict": "RED"
+    },
+    "control3": {
+      "flip_rate": 1.0,
+      "coherent_flip_rate": 0.0,
+      "total_tested": 6,
+      "verdict": "YELLOW"
+    },
+    "timestamp": "2026-01-16T11:55:12.569779"
+  },
+  {
+    "model": "mistralai/Mistral-7B-Instruct-v0.3",
+    "layer": 18,
+    "alpha": 5,
+    "control1": {
+      "extracted_mean": -2.4889849026997886,
+      "random_mean": 0.08979982882738113,
+      "ratio": 0.036078896553360267,
+      "verdict": "GREEN"
+    },
+    "control2": {
+      "coherence_score": 5.0,
+      "verdict": "GREEN"
+    },
+    "control3": {
+      "flip_rate": 0.5,
+      "coherent_flip_rate": 0.5,
+      "total_tested": 4,
+      "verdict": "YELLOW"
+    },
+    "timestamp": "2026-01-16T12:01:05.074938"
+  },
+  {
+    "model": "mistralai/Mistral-7B-Instruct-v0.3",
+    "layer": 18,
+    "alpha": 10,
+    "control1": {
+      "extracted_mean": -2.4889849026997886,
+      "random_mean": 0.07793339714407921,
+      "ratio": 0.03131131774224314,
+      "verdict": "GREEN"
+    },
+    "control2": {
+      "coherence_score": 4.1,
+      "verdict": "GREEN"
+    },
+    "control3": {
+      "flip_rate": 0.5,
+      "coherent_flip_rate": 0.5,
+      "total_tested": 4,
+      "verdict": "YELLOW"
+    },
+    "timestamp": "2026-01-16T12:06:58.735522"
+  },
+  {
+    "model": "mistralai/Mistral-7B-Instruct-v0.3",
+    "layer": 18,
+    "alpha": 15,
+    "control1": {
+      "extracted_mean": -2.4889849026997886,
+      "random_mean": 0.035451805839935936,
+      "ratio": 0.014243479661721351,
+      "verdict": "GREEN"
+    },
+    "control2": {
+      "coherence_score": 2.8,
+      "verdict": "RED"
+    },
+    "control3": {
+      "flip_rate": 1.0,
+      "coherent_flip_rate": 0.3333333333333333,
+      "total_tested": 6,
+      "verdict": "GREEN"
+    },
+    "timestamp": "2026-01-16T12:13:33.829670"
+  },
+  {
+    "model": "mistralai/Mistral-7B-Instruct-v0.3",
+    "layer": 18,
+    "alpha": 20,
+    "control1": {
+      "extracted_mean": -2.4889849026997886,
+      "random_mean": -0.024427915612856548,
+      "ratio": 0.009814408912789997,
+      "verdict": "GREEN"
+    },
+    "control2": {
+      "coherence_score": 3.3,
+      "verdict": "RED"
+    },
+    "control3": {
+      "flip_rate": 0.4,
+      "coherent_flip_rate": 0.4,
+      "total_tested": 5,
+      "verdict": "YELLOW"
+    },
+    "timestamp": "2026-01-16T12:19:38.955899"
+  },
+  {
+    "model": "mistralai/Mistral-7B-Instruct-v0.3",
+    "layer": 18,
+    "alpha": 25,
+    "control1": {
+      "extracted_mean": -2.4889849026997886,
+      "random_mean": 0.10301247239112854,
+      "ratio": 0.041387343201395664,
+      "verdict": "GREEN"
+    },
+    "control2": {
+      "coherence_score": 2.7,
+      "verdict": "RED"
+    },
+    "control3": {
+      "flip_rate": 0.2,
+      "coherent_flip_rate": 0.0,
+      "total_tested": 5,
+      "verdict": "RED"
+    },
+    "timestamp": "2026-01-16T12:25:51.567347"
+  },
+  {
+    "model": "mistralai/Mistral-7B-Instruct-v0.3",
+    "layer": 18,
+    "alpha": 30,
+    "control1": {
+      "extracted_mean": -2.4889849026997886,
+      "random_mean": -0.0903293788433075,
+      "ratio": 0.036291653977220874,
+      "verdict": "GREEN"
+    },
+    "control2": {
+      "coherence_score": 2.5,
+      "verdict": "RED"
+    },
+    "control3": {
+      "flip_rate": 0.0,
+      "coherent_flip_rate": 0.0,
+      "total_tested": 6,
+      "verdict": "RED"
+    },
+    "timestamp": "2026-01-16T12:32:22.475477"
+  },
+  {
+    "model": "mistralai/Mistral-7B-Instruct-v0.3",
+    "layer": 21,
+    "alpha": 5,
+    "control1": {
+      "extracted_mean": -4.275737365086873,
+      "random_mean": -0.21652690569559732,
+      "ratio": 0.05064083389771018,
+      "verdict": "GREEN"
+    },
+    "control2": {
+      "coherence_score": 5.0,
+      "verdict": "GREEN"
+    },
+    "control3": {
+      "flip_rate": 0.5,
+      "coherent_flip_rate": 0.5,
+      "total_tested": 6,
+      "verdict": "YELLOW"
+    },
+    "timestamp": "2026-01-16T12:38:59.017735"
+  },
+  {
+    "model": "mistralai/Mistral-7B-Instruct-v0.3",
+    "layer": 21,
+    "alpha": 10,
+    "control1": {
+      "extracted_mean": -4.275737365086873,
+      "random_mean": 0.16387917598088583,
+      "ratio": 0.03832769929206262,
+      "verdict": "GREEN"
+    },
+    "control2": {
+      "coherence_score": 5.0,
+      "verdict": "GREEN"
+    },
+    "control3": {
+      "flip_rate": 0.3333333333333333,
+      "coherent_flip_rate": 0.3333333333333333,
+      "total_tested": 3,
+      "verdict": "YELLOW"
+    },
+    "timestamp": "2026-01-16T12:44:37.286291"
+  },
+  {
+    "model": "mistralai/Mistral-7B-Instruct-v0.3",
+    "layer": 21,
+    "alpha": 15,
+    "control1": {
+      "extracted_mean": -4.275737365086873,
+      "random_mean": 0.07919887577493985,
+      "ratio": 0.018522857933611813,
+      "verdict": "GREEN"
+    },
+    "control2": {
+      "coherence_score": 4.0,
+      "verdict": "GREEN"
+    },
+    "control3": {
+      "flip_rate": 0.6666666666666666,
+      "coherent_flip_rate": 0.6666666666666666,
+      "total_tested": 3,
+      "verdict": "GREEN"
+    },
+    "timestamp": "2026-01-16T12:50:10.143957"
+  },
+  {
+    "model": "mistralai/Mistral-7B-Instruct-v0.3",
+    "layer": 21,
+    "alpha": 20,
+    "control1": {
+      "extracted_mean": -4.275737365086873,
+      "random_mean": -0.17115130523840585,
+      "ratio": 0.040028488801937545,
+      "verdict": "GREEN"
+    },
+    "control2": {
+      "coherence_score": 2.7,
+      "verdict": "RED"
+    },
+    "control3": {
+      "flip_rate": 0.8571428571428571,
+      "coherent_flip_rate": 0.14285714285714285,
+      "total_tested": 7,
+      "verdict": "YELLOW"
+    },
+    "timestamp": "2026-01-16T12:56:46.114974"
+  },
+  {
+    "model": "mistralai/Mistral-7B-Instruct-v0.3",
+    "layer": 21,
+    "alpha": 25,
+    "control1": {
+      "extracted_mean": -4.275737365086873,
+      "random_mean": 0.060910542805989586,
+      "ratio": 0.014245623059860699,
+      "verdict": "GREEN"
+    },
+    "control2": {
+      "coherence_score": 2.8,
+      "verdict": "RED"
+    },
+    "control3": {
+      "flip_rate": 1.0,
+      "coherent_flip_rate": 0.0,
+      "total_tested": 4,
+      "verdict": "YELLOW"
+    },
+    "timestamp": "2026-01-16T13:02:33.329232"
+  },
+  {
+    "model": "mistralai/Mistral-7B-Instruct-v0.3",
+    "layer": 21,
+    "alpha": 30,
+    "control1": {
+      "extracted_mean": -4.275737365086873,
+      "random_mean": 0.2193604956070582,
+      "ratio": 0.051303547640279654,
+      "verdict": "GREEN"
+    },
+    "control2": {
+      "coherence_score": 2.5,
+      "verdict": "RED"
+    },
+    "control3": {
+      "flip_rate": 1.0,
+      "coherent_flip_rate": 0.0,
+      "total_tested": 3,
+      "verdict": "YELLOW"
+    },
+    "timestamp": "2026-01-16T13:08:03.889078"
+  },
+  {
+    "model": "mistralai/Mistral-7B-Instruct-v0.3",
+    "layer": 24,
+    "alpha": 5,
+    "control1": {
+      "extracted_mean": -6.318488438924153,
+      "random_mean": 0.41207609077294666,
+      "ratio": 0.06521751123803761,
+      "verdict": "GREEN"
+    },
+    "control2": {
+      "coherence_score": 5.0,
+      "verdict": "GREEN"
+    },
+    "control3": {
+      "flip_rate": 0.5,
+      "coherent_flip_rate": 0.5,
+      "total_tested": 4,
+      "verdict": "YELLOW"
+    },
+    "timestamp": "2026-01-16T13:13:51.687340"
+  },
+  {
+    "model": "mistralai/Mistral-7B-Instruct-v0.3",
+    "layer": 24,
+    "alpha": 10,
+    "control1": {
+      "extracted_mean": -6.318488438924153,
+      "random_mean": -0.17475099861621857,
+      "ratio": 0.027657089239839356,
+      "verdict": "GREEN"
+    },
+    "control2": {
+      "coherence_score": 5.0,
+      "verdict": "GREEN"
+    },
+    "control3": {
+      "flip_rate": 0.6666666666666666,
+      "coherent_flip_rate": 0.6666666666666666,
+      "total_tested": 6,
+      "verdict": "GREEN"
+    },
+    "timestamp": "2026-01-16T13:20:15.706079"
+  },
+  {
+    "model": "mistralai/Mistral-7B-Instruct-v0.3",
+    "layer": 24,
+    "alpha": 15,
+    "control1": {
+      "extracted_mean": -6.318488438924153,
+      "random_mean": -0.07061171034971873,
+      "ratio": 0.011175411814434176,
+      "verdict": "GREEN"
+    },
+    "control2": {
+      "coherence_score": 4.2,
+      "verdict": "GREEN"
+    },
+    "control3": {
+      "flip_rate": 0.8333333333333334,
+      "coherent_flip_rate": 0.8333333333333334,
+      "total_tested": 6,
+      "verdict": "GREEN"
+    },
+    "timestamp": "2026-01-16T13:26:40.356507"
+  },
+  {
+    "model": "mistralai/Mistral-7B-Instruct-v0.3",
+    "layer": 24,
+    "alpha": 20,
+    "control1": {
+      "extracted_mean": -6.318488438924153,
+      "random_mean": -0.04081407686074575,
+      "ratio": 0.006459468471813039,
+      "verdict": "GREEN"
+    },
+    "control2": {
+      "coherence_score": 3.9,
+      "verdict": "RED"
+    },
+    "control3": {
+      "flip_rate": 0.3333333333333333,
+      "coherent_flip_rate": 0.3333333333333333,
+      "total_tested": 6,
+      "verdict": "YELLOW"
+    },
+    "timestamp": "2026-01-16T13:33:04.733876"
+  },
+  {
+    "model": "mistralai/Mistral-7B-Instruct-v0.3",
+    "layer": 24,
+    "alpha": 25,
+    "control1": {
+      "extracted_mean": -6.318488438924153,
+      "random_mean": -0.45627541840076447,
+      "ratio": 0.07221274879446551,
+      "verdict": "GREEN"
+    },
+    "control2": {
+      "coherence_score": 2.5,
+      "verdict": "RED"
+    },
+    "control3": {
+      "flip_rate": 1.0,
+      "coherent_flip_rate": 0.0,
+      "total_tested": 6,
+      "verdict": "YELLOW"
+    },
+    "timestamp": "2026-01-16T13:39:30.406789"
+  },
+  {
+    "model": "mistralai/Mistral-7B-Instruct-v0.3",
+    "layer": 24,
+    "alpha": 30,
+    "control1": {
+      "extracted_mean": -6.318488438924153,
+      "random_mean": 0.1918323573966821,
+      "ratio": 0.030360482455728817,
+      "verdict": "GREEN"
+    },
+    "control2": {
+      "coherence_score": 2.5,
+      "verdict": "RED"
+    },
+    "control3": {
+      "flip_rate": 1.0,
+      "coherent_flip_rate": 0.0,
+      "total_tested": 4,
+      "verdict": "YELLOW"
+    },
+    "timestamp": "2026-01-16T13:45:18.704742"
+  },
+  {
+    "model": "mistralai/Mistral-7B-Instruct-v0.3",
+    "layer": 27,
+    "alpha": 5,
+    "control1": {
+      "extracted_mean": -6.811549186706543,
+      "random_mean": -0.1348950912555059,
+      "ratio": 0.01980387831871902,
+      "verdict": "GREEN"
+    },
+    "control2": {
+      "coherence_score": 5.0,
+      "verdict": "GREEN"
+    },
+    "control3": {
+      "flip_rate": 0.5,
+      "coherent_flip_rate": 0.5,
+      "total_tested": 4,
+      "verdict": "YELLOW"
+    },
+    "timestamp": "2026-01-16T13:51:09.743274"
+  },
+  {
+    "model": "mistralai/Mistral-7B-Instruct-v0.3",
+    "layer": 27,
+    "alpha": 10,
+    "control1": {
+      "extracted_mean": -6.811549186706543,
+      "random_mean": 0.29129894574483234,
+      "ratio": 0.042765447001885115,
+      "verdict": "GREEN"
+    },
+    "control2": {
+      "coherence_score": 5.0,
+      "verdict": "GREEN"
+    },
+    "control3": {
+      "flip_rate": 0.0,
+      "coherent_flip_rate": 0.0,
+      "total_tested": 4,
+      "verdict": "RED"
+    },
+    "timestamp": "2026-01-16T13:56:54.575922"
+  },
+  {
+    "model": "mistralai/Mistral-7B-Instruct-v0.3",
+    "layer": 27,
+    "alpha": 15,
+    "control1": {
+      "extracted_mean": -6.811549186706543,
+      "random_mean": 0.40487586955229443,
+      "ratio": 0.059439616224522374,
+      "verdict": "GREEN"
+    },
+    "control2": {
+      "coherence_score": 5.0,
+      "verdict": "GREEN"
+    },
+    "control3": {
+      "flip_rate": 0.6666666666666666,
+      "coherent_flip_rate": 0.6666666666666666,
+      "total_tested": 6,
+      "verdict": "GREEN"
+    },
+    "timestamp": "2026-01-16T14:03:03.790409"
+  },
+  {
+    "model": "mistralai/Mistral-7B-Instruct-v0.3",
+    "layer": 27,
+    "alpha": 20,
+    "control1": {
+      "extracted_mean": -6.811549186706543,
+      "random_mean": -0.4769306182861328,
+      "ratio": 0.07001793648013484,
+      "verdict": "GREEN"
+    },
+    "control2": {
+      "coherence_score": 5.0,
+      "verdict": "GREEN"
+    },
+    "control3": {
+      "flip_rate": 0.5714285714285714,
+      "coherent_flip_rate": 0.5714285714285714,
+      "total_tested": 7,
+      "verdict": "GREEN"
+    },
+    "timestamp": "2026-01-16T14:09:52.929009"
+  }
+]

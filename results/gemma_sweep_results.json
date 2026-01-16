@@ -1,0 +1,244 @@
+[
+  {
+    "model": "google/gemma-2-9b-it",
+    "layer": 15,
+    "alpha": 5,
+    "control1": {
+      "extracted_mean": -35.244415283203125,
+      "random_mean": -1.2352204322814941,
+      "ratio": 0.03504726698842919,
+      "verdict": "GREEN"
+    },
+    "control2": {
+      "coherence_score": 5.0,
+      "verdict": "GREEN"
+    },
+    "control3": {
+      "flip_rate": 0.0,
+      "coherent_flip_rate": 0.0,
+      "total_tested": 10,
+      "verdict": "RED"
+    },
+    "timestamp": "2026-01-16T11:33:55.278527"
+  },
+  {
+    "model": "google/gemma-2-9b-it",
+    "layer": 15,
+    "alpha": 10,
+    "control1": {
+      "extracted_mean": -35.244415283203125,
+      "random_mean": 0.02571415901184082,
+      "ratio": 0.0007295952792865808,
+      "verdict": "GREEN"
+    },
+    "control2": {
+      "coherence_score": 5.0,
+      "verdict": "GREEN"
+    },
+    "control3": {
+      "flip_rate": 0.0,
+      "coherent_flip_rate": 0.0,
+      "total_tested": 10,
+      "verdict": "RED"
+    },
+    "timestamp": "2026-01-16T11:49:35.363695"
+  },
+  {
+    "model": "google/gemma-2-9b-it",
+    "layer": 15,
+    "alpha": 15,
+    "control1": {
+      "extracted_mean": -35.244415283203125,
+      "random_mean": -5.609767993291219,
+      "ratio": 0.15916757160572717,
+      "verdict": "RED"
+    },
+    "control2": {
+      "coherence_score": 5.0,
+      "verdict": "GREEN"
+    },
+    "control3": {
+      "flip_rate": 0.0,
+      "coherent_flip_rate": 0.0,
+      "total_tested": 10,
+      "verdict": "RED"
+    },
+    "timestamp": "2026-01-16T12:04:58.404611"
+  },
+  {
+    "model": "google/gemma-2-9b-it",
+    "layer": 15,
+    "alpha": 20,
+    "control1": {
+      "extracted_mean": -35.244415283203125,
+      "random_mean": 1.5209743181864421,
+      "ratio": 0.04315504473445789,
+      "verdict": "GREEN"
+    },
+    "control2": {
+      "coherence_score": 5.0,
+      "verdict": "GREEN"
+    },
+    "control3": {
+      "flip_rate": 0.0,
+      "coherent_flip_rate": 0.0,
+      "total_tested": 10,
+      "verdict": "RED"
+    },
+    "timestamp": "2026-01-16T12:19:53.846706"
+  },
+  {
+    "model": "google/gemma-2-9b-it",
+    "layer": 15,
+    "alpha": 25,
+    "control1": {
+      "extracted_mean": -35.244415283203125,
+      "random_mean": -2.4722525676091514,
+      "ratio": 0.07014593795197345,
+      "verdict": "GREEN"
+    },
+    "control2": {
+      "coherence_score": 5.0,
+      "verdict": "GREEN"
+    },
+    "control3": {
+      "flip_rate": 0.0,
+      "coherent_flip_rate": 0.0,
+      "total_tested": 10,
+      "verdict": "RED"
+    },
+    "timestamp": "2026-01-16T12:34:44.740558"
+  },
+  {
+    "model": "google/gemma-2-9b-it",
+    "layer": 15,
+    "alpha": 30,
+    "control1": {
+      "extracted_mean": -35.244415283203125,
+      "random_mean": 7.0335954030354815,
+      "ratio": 0.19956623897765643,
+      "verdict": "RED"
+    },
+    "control2": {
+      "coherence_score": 5.0,
+      "verdict": "GREEN"
+    },
+    "control3": {
+      "flip_rate": 0.0,
+      "coherent_flip_rate": 0.0,
+      "total_tested": 10,
+      "verdict": "RED"
+    },
+    "timestamp": "2026-01-16T12:49:57.323697"
+  },
+  {
+    "model": "google/gemma-2-9b-it",
+    "layer": 18,
+    "alpha": 5,
+    "control1": {
+      "extracted_mean": -26.302445729573567,
+      "random_mean": -3.1324268182118735,
+      "ratio": 0.11909260646016201,
+      "verdict": "RED"
+    },
+    "control2": {
+      "coherence_score": 5.0,
+      "verdict": "GREEN"
+    },
+    "control3": {
+      "flip_rate": 0.0,
+      "coherent_flip_rate": 0.0,
+      "total_tested": 10,
+      "verdict": "RED"
+    },
+    "timestamp": "2026-01-16T13:05:14.083601"
+  },
+  {
+    "model": "google/gemma-2-9b-it",
+    "layer": 18,
+    "alpha": 10,
+    "control1": {
+      "extracted_mean": -26.302445729573567,
+      "random_mean": 2.693188269933065,
+      "ratio": 0.10239307392258723,
+      "verdict": "RED"
+    },
+    "control2": {
+      "coherence_score": 5.0,
+      "verdict": "GREEN"
+    },
+    "control3": {
+      "flip_rate": 0.1,
+      "coherent_flip_rate": 0.1,
+      "total_tested": 10,
+      "verdict": "RED"
+    },
+    "timestamp": "2026-01-16T13:20:51.071093"
+  },
+  {
+    "model": "google/gemma-2-9b-it",
+    "layer": 18,
+    "alpha": 15,
+    "control1": {
+      "extracted_mean": -26.302445729573567,
+      "random_mean": 5.085321029027303,
+      "ratio": 0.19334023464249725,
+      "verdict": "RED"
+    },
+    "control2": {
+      "coherence_score": 5.0,
+      "verdict": "GREEN"
+    },
+    "control3": {
+      "flip_rate": 0.1111111111111111,
+      "coherent_flip_rate": 0.1111111111111111,
+      "total_tested": 9,
+      "verdict": "RED"
+    },
+    "timestamp": "2026-01-16T13:35:49.284041"
+  },
+  {
+    "model": "google/gemma-2-9b-it",
+    "layer": 18,
+    "alpha": 20,
+    "control1": {
+      "extracted_mean": -26.302445729573567,
+      "random_mean": -3.9603472550710044,
+      "ratio": 0.15056954382831883,
+      "verdict": "RED"
+    },
+    "control2": {
+      "coherence_score": 5.0,
+      "verdict": "GREEN"
+    },
+    "control3": {
+      "flip_rate": 0.0,
+      "coherent_flip_rate": 0.0,
+      "total_tested": 10,
+      "verdict": "RED"
+    },
+    "timestamp": "2026-01-16T13:51:04.762418"
+  },
+  {
+    "model": "google/gemma-2-9b-it",
+    "layer": 18,
+    "alpha": 25,
+    "control1": {
+      "extracted_mean": -26.302445729573567,
+      "random_mean": -1.991228977839152,
+      "ratio": 0.07570508835230796,
+      "verdict": "GREEN"
+    },
+    "control2": {
+      "coherence_score": 5.0,
+      "verdict": "GREEN"
+    },
+    "control3": {
+      "flip_rate": 0.0,
+      "coherent_flip_rate": 0.0,
+      "total_tested": 10,
+      "verdict": "RED"
+    },
+    "timestamp": "2026-01-16T14:06:51.232528"
+  }
+]
