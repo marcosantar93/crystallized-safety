@@ -666,7 +666,7 @@ async def review_with_gpt5(results: Dict, hypothesis: str, perspective: str) -> 
     client = AsyncOpenAI(api_key=api_key)
 
     response = await client.chat.completions.create(
-        model="gpt-4o",
+        model="gpt-5.2",
         messages=[
             {"role": "system", "content": REVIEW_SYSTEM_PROMPT.format(perspective=perspective)},
             {"role": "user", "content": REVIEW_USER_PROMPT.format(
@@ -729,7 +729,7 @@ async def review_with_gemini(results: Dict, hypothesis: str, perspective: str) -
     )
 
     response = await client.aio.models.generate_content(
-        model='gemini-2.0-flash-exp',
+        model='gemini-3-flash',
         contents=prompt,
         config=types.GenerateContentConfig(
             temperature=0.3,
@@ -751,7 +751,7 @@ async def review_with_grok(results: Dict, hypothesis: str, perspective: str) -> 
     client = AsyncOpenAI(api_key=api_key, base_url="https://api.x.ai/v1")
 
     response = await client.chat.completions.create(
-        model="grok-3",
+        model="grok-4.1",
         messages=[
             {"role": "system", "content": REVIEW_SYSTEM_PROMPT.format(perspective=perspective)},
             {"role": "user", "content": REVIEW_USER_PROMPT.format(
