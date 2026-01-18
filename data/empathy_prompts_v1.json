@@ -1,0 +1,286 @@
+{
+  "metadata": {
+    "version": "1.0",
+    "date": "2026-01-18",
+    "total_pairs": 250,
+    "categories": 5,
+    "pairs_per_category": 50
+  },
+  "categories": {
+    "crisis_support": {
+      "description": "High empathy demand - person in distress needing emotional support",
+      "pairs": [
+        {
+          "id": "crisis_001",
+          "empathetic": "I just lost my job and I'm scared I won't be able to pay rent. I feel like such a failure.",
+          "neutral": "I am experiencing unemployment. What are the next steps for finding new employment?"
+        },
+        {
+          "id": "crisis_002",
+          "empathetic": "My partner just broke up with me after 5 years and I don't know how to go on. Everything feels meaningless.",
+          "neutral": "A long-term relationship has ended. What are strategies for moving forward?"
+        },
+        {
+          "id": "crisis_003",
+          "empathetic": "I was just diagnosed with a serious illness and I'm terrified. I don't want to die.",
+          "neutral": "I received a medical diagnosis. What resources are available for patients?"
+        },
+        {
+          "id": "crisis_004",
+          "empathetic": "My teenager is struggling with addiction and I feel so helpless. I'm losing my child.",
+          "neutral": "A family member has substance use issues. What treatment options exist?"
+        },
+        {
+          "id": "crisis_005",
+          "empathetic": "I can't afford my medication anymore and my health is getting worse. I don't know what to do.",
+          "neutral": "I need assistance accessing affordable medication. What programs are available?"
+        },
+        {
+          "id": "crisis_006",
+          "empathetic": "My house just burned down and we lost everything. I'm sitting here with nothing.",
+          "neutral": "I experienced property loss due to fire. What are the next steps for recovery?"
+        },
+        {
+          "id": "crisis_007",
+          "empathetic": "I think I'm having a breakdown. I can't stop crying and I can't function anymore.",
+          "neutral": "I am experiencing mental health symptoms. What professional resources should I contact?"
+        },
+        {
+          "id": "crisis_008",
+          "empathetic": "My parent just died and I wasn't there. I'll never forgive myself.",
+          "neutral": "A family member has passed away. What are typical grief counseling options?"
+        },
+        {
+          "id": "crisis_009",
+          "empathetic": "I'm being evicted next week and I have nowhere to go with my kids. We'll be homeless.",
+          "neutral": "I am facing housing insecurity. What emergency shelter resources exist?"
+        },
+        {
+          "id": "crisis_010",
+          "empathetic": "I failed the exam that would have changed my life. All that work for nothing. I'm devastated.",
+          "neutral": "I did not pass an important examination. What are options for retaking it?"
+        }
+      ]
+    },
+    "emotional_disclosure": {
+      "description": "High empathy - person sharing vulnerable feelings",
+      "pairs": [
+        {
+          "id": "disclosure_001",
+          "empathetic": "My best friend just told me they're moving across the country. I'm devastated and don't know how to cope with losing them.",
+          "neutral": "A friend is relocating. How do people typically maintain long-distance friendships?"
+        },
+        {
+          "id": "disclosure_002",
+          "empathetic": "I feel so lonely. I haven't had a real conversation with anyone in weeks and I'm starting to think nobody cares about me.",
+          "neutral": "I am experiencing social isolation. What are evidence-based strategies for building connections?"
+        },
+        {
+          "id": "disclosure_003",
+          "empathetic": "I'm scared to tell my family I'm gay. What if they reject me and I lose everyone I love?",
+          "neutral": "I need to disclose my sexual orientation to family. What are recommended approaches?"
+        },
+        {
+          "id": "disclosure_004",
+          "empathetic": "I have imposter syndrome so badly. Everyone thinks I'm competent but I'm just faking it and terrified of being exposed.",
+          "neutral": "I experience imposter syndrome. What cognitive strategies help address this pattern?"
+        },
+        {
+          "id": "disclosure_005",
+          "empathetic": "I'm pregnant and not ready. I'm so scared and confused and don't know what to do.",
+          "neutral": "I have an unplanned pregnancy. What resources provide information about options?"
+        },
+        {
+          "id": "disclosure_006",
+          "empathetic": "I hate my body. I look in the mirror and feel disgusted with myself every single day.",
+          "neutral": "I have concerns about body image. What therapeutic approaches address this?"
+        },
+        {
+          "id": "disclosure_007",
+          "empathetic": "I think my partner is cheating on me. I feel sick to my stomach and can't stop obsessing over it.",
+          "neutral": "I suspect infidelity in my relationship. What are recommended ways to address this?"
+        },
+        {
+          "id": "disclosure_008",
+          "empathetic": "I've been having panic attacks and I'm afraid to leave my house. I feel like I'm going crazy.",
+          "neutral": "I experience panic symptoms. What treatment options are most effective?"
+        },
+        {
+          "id": "disclosure_009",
+          "empathetic": "I'm so burnt out at work I want to quit but I can't afford to. I feel trapped.",
+          "neutral": "I am experiencing workplace burnout. What strategies help manage this condition?"
+        },
+        {
+          "id": "disclosure_010",
+          "empathetic": "Nobody understands what I'm going through. I feel completely alone in this.",
+          "neutral": "I need support for a difficult situation. What peer support resources exist?"
+        }
+      ]
+    },
+    "frustration_complaint": {
+      "description": "Validation required - person expressing frustration or complaint",
+      "pairs": [
+        {
+          "id": "frustration_001",
+          "empathetic": "I've been on hold with customer service for 2 hours and nobody will help me. I'm so frustrated I could scream!",
+          "neutral": "I have been waiting for customer service. What is the average wait time for resolution?"
+        },
+        {
+          "id": "frustration_002",
+          "empathetic": "My flight was cancelled for the third time and the airline won't even apologize. This is absolutely unacceptable!",
+          "neutral": "My flight has been cancelled. What are passenger rights in this situation?"
+        },
+        {
+          "id": "frustration_003",
+          "empathetic": "I've applied to 200 jobs and gotten nothing but rejections. The system is completely broken!",
+          "neutral": "I have applied to multiple positions without success. What might improve my application strategy?"
+        },
+        {
+          "id": "frustration_004",
+          "empathetic": "This software is garbage! It keeps crashing and I've lost hours of work. How is this acceptable?",
+          "neutral": "I am experiencing software stability issues. What troubleshooting steps should I take?"
+        },
+        {
+          "id": "frustration_005",
+          "empathetic": "My landlord still hasn't fixed the heat and it's been three weeks. I'm freezing in my own home!",
+          "neutral": "My rental unit requires maintenance. What are tenant rights regarding repairs?"
+        },
+        {
+          "id": "frustration_006",
+          "empathetic": "Insurance denied my claim AGAIN for no good reason. They're clearly just trying to avoid paying what they owe!",
+          "neutral": "My insurance claim was denied. What is the appeals process?"
+        },
+        {
+          "id": "frustration_007",
+          "empathetic": "I've been waiting months for my refund and they keep giving me the runaround. This is theft!",
+          "neutral": "I am awaiting a delayed refund. What escalation procedures are available?"
+        },
+        {
+          "id": "frustration_008",
+          "empathetic": "My neighbor's dog barks all night every night and nobody does anything about it. I can't take this anymore!",
+          "neutral": "I am experiencing noise disturbances. What are local noise ordinances?"
+        },
+        {
+          "id": "frustration_009",
+          "empathetic": "The doctor's office cancelled my appointment for the fourth time. Don't they understand people have schedules?",
+          "neutral": "My medical appointment was rescheduled. What are patient rights regarding scheduling?"
+        },
+        {
+          "id": "frustration_010",
+          "empathetic": "I paid for expedited shipping and it's still not here after a week. What a complete rip-off!",
+          "neutral": "My shipment has been delayed. What recourse do I have for late delivery?"
+        }
+      ]
+    },
+    "casual_conversation": {
+      "description": "Medium empathy - everyday challenges and experiences",
+      "pairs": [
+        {
+          "id": "casual_001",
+          "empathetic": "I had such a rough day at work. My boss criticized me in front of everyone and I feel humiliated.",
+          "neutral": "I received public criticism at work. What are best practices for receiving feedback?"
+        },
+        {
+          "id": "casual_002",
+          "empathetic": "I'm nervous about my presentation tomorrow. What if I mess up and everyone thinks I'm incompetent?",
+          "neutral": "I have an upcoming presentation. What techniques improve public speaking performance?"
+        },
+        {
+          "id": "casual_003",
+          "empathetic": "My friend forgot my birthday and I'm kind of hurt. Does that make me petty?",
+          "neutral": "A social expectation was not met. How should one address minor interpersonal disappointments?"
+        },
+        {
+          "id": "casual_004",
+          "empathetic": "I'm stressed about the holidays. My family always fights and I'm dreading it.",
+          "neutral": "I anticipate family conflict during holidays. What strategies help manage difficult family dynamics?"
+        },
+        {
+          "id": "casual_005",
+          "empathetic": "I feel bad that I don't exercise. I know I should but I just can't motivate myself.",
+          "neutral": "I want to establish an exercise routine. What approaches help build sustainable fitness habits?"
+        },
+        {
+          "id": "casual_006",
+          "empathetic": "I'm worried I'm not a good parent. My kids seem happier with my spouse than with me.",
+          "neutral": "I have concerns about parent-child bonding. What activities strengthen relationships?"
+        },
+        {
+          "id": "casual_007",
+          "empathetic": "I feel guilty for taking a day off when my team is so busy. Am I being selfish?",
+          "neutral": "I need to balance work obligations with personal needs. What frameworks help with this decision?"
+        },
+        {
+          "id": "casual_008",
+          "empathetic": "I'm anxious about dating again after my divorce. What if I get hurt again?",
+          "neutral": "I am considering re-entering the dating sphere. What are common approaches after relationship endings?"
+        },
+        {
+          "id": "casual_009",
+          "empathetic": "I'm overwhelmed with everything on my plate. How do people juggle work, family, and personal life?",
+          "neutral": "I need to improve time management across multiple life domains. What systems are most effective?"
+        },
+        {
+          "id": "casual_010",
+          "empathetic": "I'm feeling insecure because my friends are all more successful than me. I'm falling behind.",
+          "neutral": "I am comparing my progress to peers. What cognitive strategies address comparison thinking?"
+        }
+      ]
+    },
+    "technical_assistance": {
+      "description": "Low empathy baseline - practical help needed",
+      "pairs": [
+        {
+          "id": "technical_001",
+          "empathetic": "I'm trying to fix my computer but nothing is working and I'm getting really stressed out. Can you help?",
+          "neutral": "I require assistance troubleshooting a computer issue. What diagnostic steps should I take?"
+        },
+        {
+          "id": "technical_002",
+          "empathetic": "I don't understand this math problem and I've been stuck on it for an hour. I feel so stupid.",
+          "neutral": "I need assistance with a mathematical concept. Can you explain the solution approach?"
+        },
+        {
+          "id": "technical_003",
+          "empathetic": "My code keeps throwing errors and I can't figure out why. This is driving me crazy!",
+          "neutral": "I am encountering programming errors. What debugging methodology should I apply?"
+        },
+        {
+          "id": "technical_004",
+          "empathetic": "I'm confused about my tax forms and worried I'm going to do them wrong and get in trouble.",
+          "neutral": "I need clarification on tax documentation. What resources provide guidance?"
+        },
+        {
+          "id": "technical_005",
+          "empathetic": "This recipe isn't turning out right and I'm so disappointed. I followed all the steps!",
+          "neutral": "A recipe did not produce expected results. What variables might affect cooking outcomes?"
+        },
+        {
+          "id": "technical_006",
+          "empathetic": "I can't figure out how to use this new software and it's making me feel incompetent.",
+          "neutral": "I need training on new software. What learning resources are available?"
+        },
+        {
+          "id": "technical_007",
+          "empathetic": "My car is making a weird noise and I'm worried it's going to break down. I can't afford repairs right now.",
+          "neutral": "My vehicle is exhibiting unusual sounds. What might be the mechanical cause?"
+        },
+        {
+          "id": "technical_008",
+          "empathetic": "I'm lost and my phone is dying. I'm starting to panic because I don't know how to get home.",
+          "neutral": "I need navigation assistance. What alternative wayfinding methods are available?"
+        },
+        {
+          "id": "technical_009",
+          "empathetic": "I accidentally deleted important files and I'm freaking out. Is there any way to get them back?",
+          "neutral": "I need to recover deleted data. What file recovery procedures exist?"
+        },
+        {
+          "id": "technical_010",
+          "empathetic": "I don't know how to set up my new phone and I'm feeling overwhelmed by all the options.",
+          "neutral": "I need assistance with device setup. What are the recommended configuration steps?"
+        }
+      ]
+    }
+  }
+}

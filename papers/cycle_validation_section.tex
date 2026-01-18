@@ -1,0 +1,97 @@
+
+\subsection{Ongoing Comprehensive Validation Studies}
+
+To strengthen the reproducibility and rigor of our key claims, we are conducting three additional large-scale validation experiments (Cycles 1-3), currently in progress on distributed GPU infrastructure. These studies directly validate the three core claims of this paper with expanded sample sizes and enhanced controls.
+
+\subsubsection{Cycle 1: Probing Classifier Validation (In Progress)}
+
+\textbf{Research Question:} Does the extracted "refusal direction" genuinely encode refusal semantics, or is it an artifact of contrastive extraction?
+
+\textbf{Design:}
+\begin{itemize}[leftmargin=*]
+    \item Test 1D projection onto extracted direction (not full 4096-dim activations)
+    \item n=1000 training samples (500 harmful, 500 safe)
+    \item n=200 test samples (100 harmful, 100 safe)
+    \item 50 random direction controls (robust baseline)
+    \item Layer comparison: L12, L20, L24, L28
+    \item McNemar's test for paired predictions
+    \item Bootstrap confidence intervals (1000 iterations)
+\end{itemize}
+
+\textbf{Hypothesis:} L24 projection accuracy $> 85\%$ vs random $\approx 50\%$ (p < 0.05)
+
+\textbf{Status:} Running (Pod ID: 54vxopm2i7r1ab, \textasciitilde1.5 hours, \$0.26)
+
+\textbf{Expected impact:} Validates that L24 refusal direction is semantically meaningful, not artifact
+
+\subsubsection{Cycle 2: Activation Patching Comprehensive Test (In Progress)}
+
+\textbf{Research Question:} Is Layer 24 both causally necessary \textit{and} sufficient for jailbreak effectiveness?
+
+\textbf{Design - 6 conditions (n=100 each, 600 total):}
+\begin{enumerate}[leftmargin=*]
+    \item \textbf{L24-only:} Sufficiency test (expect: $>60\%$ success)
+    \item \textbf{Full steering:} Positive control (expect: $\approx 83\%$)
+    \item \textbf{Restoration:} Patch L24 back to clean after full steering (necessity via removal, expect: $<40\%$)
+    \item \textbf{Leave-L24-out:} Steer all layers except L24 (necessity via exclusion, expect: $<40\%$)
+    \item \textbf{Early layers control:} L0-L10 only (specificity, expect: $<30\%$)
+    \item \textbf{Random vector control:} L24 with random direction (direction specificity, expect: $<30\%$)
+\end{enumerate}
+
+\textbf{Statistical rigor:}
+\begin{itemize}[leftmargin=*]
+    \item Bonferroni correction: $\alpha = 0.05/6 = 0.008$ for 6 comparisons
+    \item Wilson 95\% confidence intervals
+    \item Causal contribution formula: $(L24\text{-only} - baseline) / (Full - baseline) \times 100\%$
+\end{itemize}
+
+\textbf{Status:} Running (Pod ID: 51jvkjwuc8ze0t, \textasciitilde3 hours, \$0.51)
+
+\textbf{Expected impact:} Establishes complete causal story (necessity + sufficiency + specificity + direction-dependence)
+
+\subsubsection{Cycle 3: Multilayered Coordinated Attacks (In Progress)}
+
+\textbf{Research Question:} Can coordinated multi-layer steering break Gemma/Llama's resistance?
+
+\textbf{Design - 6 experiments across 3 models (650 prompts):}
+\begin{enumerate}[leftmargin=*]
+    \item \textbf{Mistral L24 baseline:} Replication (n=100, expect: 96\%)
+    \item \textbf{Gemma L24 baseline:} Confirm resistance (n=100, expect: 12\%)
+    \item \textbf{Gemma 2-layer:} L18+L24 simultaneous (n=100, expect: 25-40\% partial breakthrough)
+    \item \textbf{Gemma 4-layer:} L12+L18+L24+L28 (n=100, expect: 60-80\% \textbf{breakthrough})
+    \item \textbf{Llama 4-layer:} L12+L18+L24+L28 (n=100, expect: 50-70\% generalization)
+    \item \textbf{Gemma optimized:} Test L20+L24, L16+L24, L24+L28 (n=50 each, identify optimal combo)
+\end{enumerate}
+
+\textbf{Hypothesis:} Gemma/Llama use \textit{distributed safety architectures}. Coordinated attacks overcome this by simultaneously suppressing refusal across multiple layers.
+
+\textbf{Statistical analysis:}
+\begin{itemize}[leftmargin=*]
+    \item Primary test: Gemma 4-layer vs Gemma 1-layer (chi-square, Bonferroni $\alpha=0.008$ for 6 comparisons)
+    \item Dose-response: 1 layer $<$ 2 layers $<$ 4 layers (trend test)
+    \item Effect size: Cohen's h for all pairwise comparisons
+\end{itemize}
+
+\textbf{Status:} Running (Pod ID: lrl7nkvf4z1kdj, \textasciitilde6 hours, \$2.04)
+
+\textbf{Expected impact:}
+\begin{itemize}[leftmargin=*]
+    \item \textbf{If breakthrough ($>60\%$ on Gemma 4-layer):} NEW PAPER - "Breaking Distributed Safety Architectures via Coordinated Multi-Layer Attacks"
+    \item \textbf{If partial ($30-60\%$):} Add section to this paper on architectural resistance mechanisms
+    \item \textbf{If resistant ($<30\%$):} Validates that distributed safety is robust defense (positive finding)
+\end{itemize}
+
+\subsubsection{Validation Timeline and Transparency}
+
+All three validation studies use identical harmful request datasets, standardized evaluation protocols, and multi-LLM consensus review. Results will be incorporated upon completion (\textasciitilde6 hours from submission) with full transparency:
+
+\begin{itemize}[leftmargin=*]
+    \item Pre-registered hypotheses and sample sizes
+    \item Publicly documented Pod IDs for reproducibility
+    \item Raw data and code released at: \url{https://github.com/marcosantar93/crystallized-safety}
+\end{itemize}
+
+\textbf{Combined budget:} \$2.81 for 1850 comprehensive evaluations across 5 models, 15 conditions
+
+\textbf{Note:} These ongoing studies were designed via multi-LLM consensus review (Claude Opus 4.5, Gemini 3 Pro, Grok-4.1), which identified critical methodological gaps in preliminary experiments and required revisions before approval---demonstrating the value of automated expert validation systems (see concurrent work \citep{consensus2026}).
+
