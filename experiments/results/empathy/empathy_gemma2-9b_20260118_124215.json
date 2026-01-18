@@ -1,0 +1,49 @@
+{
+  "model": "gemma2-9b",
+  "model_path": "google/gemma-2-9b-it",
+  "timestamp": "2026-01-18T12:42:15.183865",
+  "measurements": {
+    "probe": {
+      "auroc": 0.95,
+      "n_train": 80,
+      "n_test": 20,
+      "time_seconds": 101.86990245645711
+    },
+    "pca": {
+      "effective_rank": 16,
+      "explained_variance_90": 0.8929076097854318,
+      "total_components": 4096,
+      "time_seconds": 42.277649521014645
+    },
+    "steering": {
+      "max_alpha": 8.538007127926065,
+      "coherence_threshold": 0.7,
+      "n_alphas_tested": 21,
+      "time_seconds": 212.18656262060833
+    },
+    "control": {
+      "control_dimensionality": 9,
+      "control_steering_range": 5.819617260597179,
+      "control_bandwidth": 52.37655534537461,
+      "time_seconds": 97.11409486292288
+    },
+    "sae": {
+      "sae_active_features": 15,
+      "pca_rank": 16,
+      "agreement": true,
+      "time_seconds": 132.40994041865443
+    },
+    "transfer": {
+      "transfer_success_rate": 0.8338147318551259,
+      "source_context": "crisis_support",
+      "target_context": "technical_assistance",
+      "time_seconds": 102.11915402522823
+    }
+  },
+  "bandwidth_metric": {
+    "dimensionality": 16,
+    "steering_range": 8.538007127926065,
+    "bandwidth": 136.60811404681704
+  },
+  "total_time_seconds": 651.6977552709778
+}

@@ -1,0 +1,30 @@
+{
+  "timestamp": "2026-01-18T12:37:37.475143",
+  "pods": {
+    "llama-3.1-8b": "59jwseuowycir0",
+    "qwen2.5-7b": "5g1nv72hm21za3",
+    "mistral-7b": "xbtgdw2s7wcivo"
+  },
+  "results": {
+    "llama-3.1-8b": {
+      "status": "error",
+      "error": "'NoneType' object has no attribute 'get'",
+      "pod_id": "59jwseuowycir0"
+    },
+    "qwen2.5-7b": {
+      "status": "error",
+      "error": "'NoneType' object has no attribute 'get'",
+      "pod_id": "5g1nv72hm21za3"
+    },
+    "mistral-7b": {
+      "status": "error",
+      "error": "'NoneType' object has no attribute 'get'",
+      "pod_id": "xbtgdw2s7wcivo"
+    }
+  },
+  "summary": {
+    "successful": 0,
+    "failed": 3,
+    "total": 3
+  }
+}

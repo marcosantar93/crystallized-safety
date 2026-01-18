@@ -1,0 +1,49 @@
+{
+  "model": "qwen2.5-7b",
+  "model_path": "Qwen/Qwen2.5-7B-Instruct",
+  "timestamp": "2026-01-18T12:42:15.183334",
+  "measurements": {
+    "probe": {
+      "auroc": 0.8354504923611122,
+      "n_train": 80,
+      "n_test": 20,
+      "time_seconds": 146.50872732896244
+    },
+    "pca": {
+      "effective_rank": 10,
+      "explained_variance_90": 0.8898126312031939,
+      "total_components": 4096,
+      "time_seconds": 53.58130311364216
+    },
+    "steering": {
+      "max_alpha": 6.72963556944961,
+      "coherence_threshold": 0.7,
+      "n_alphas_tested": 21,
+      "time_seconds": 197.05016101648792
+    },
+    "control": {
+      "control_dimensionality": 3,
+      "control_steering_range": 5.296356132591041,
+      "control_bandwidth": 15.889068397773123,
+      "time_seconds": 94.85239993993586
+    },
+    "sae": {
+      "sae_active_features": 7,
+      "pca_rank": 10,
+      "agreement": false,
+      "time_seconds": 177.42547771720396
+    },
+    "transfer": {
+      "transfer_success_rate": 0.9183364240372827,
+      "source_context": "crisis_support",
+      "target_context": "technical_assistance",
+      "time_seconds": 98.3439124908796
+    }
+  },
+  "bandwidth_metric": {
+    "dimensionality": 10,
+    "steering_range": 6.72963556944961,
+    "bandwidth": 67.2963556944961
+  },
+  "total_time_seconds": 685.160538845019
+}

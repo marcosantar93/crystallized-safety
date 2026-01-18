@@ -28,21 +28,28 @@ async def review_empathy():
     print("="*80)
     print()
 
-    # Prepare experiment summary for reviewers
+    # Prepare experiment summary for reviewers (v2 REVISED)
     experiment_summary = {
         "hypothesis": "Models have different empathetic bandwidth (dimensionality × steering_range)",
-        "models": ["Llama-3.1-8B", "Qwen2.5-7B", "Mistral-7B", "Gemma2-9B", "Claude-3-Haiku"],
+        "models": ["Llama-3.1-8B", "Qwen2.5-7B", "Mistral-7B", "Gemma2-9B", "DeepSeek-R1-7B"],
         "measurements": [
             "Linear encoding (probe AUROC)",
             "Subspace dimensionality (PCA rank)",
             "Steering range (max α before coherence < 0.7)",
-            "Bandwidth metric (dim × range)"
+            "Bandwidth metric (dim × range)",
+            "Control baseline (non-empathetic bandwidth for syntactic complexity)",
+            "SAE cross-validation (validate PCA with sparse autoencoders)"
         ],
-        "n_samples": 13100,  # 2620 per model × 5 models
-        "budget_usd": 1.85,
-        "timeline_hours": 9.5,
+        "n_samples": 18100,  # 3620 per model × 5 models (UPDATED)
+        "budget_usd": 2.25,  # REVISED with controls
+        "timeline_hours": 10.5,  # UPDATED
         "statistical_tests": ["Bootstrap CI", "ANOVA", "Tukey HSD", "Cohen's d"],
-        "outputs": ["Blog post", "Figures", "Interactive demo", "Methodology doc"]
+        "outputs": ["Blog post", "Figures", "Interactive demo", "Methodology doc"],
+        "council_revisions_implemented": [
+            "Replaced Claude-Haiku with DeepSeek-R1-7B (open-weight)",
+            "Added control baseline: syntactic complexity bandwidth",
+            "Added SAE cross-validation for PCA dimensionality"
+        ]
     }
 
     print("Submitting to consensus system...")

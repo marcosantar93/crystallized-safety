@@ -1,0 +1,49 @@
+{
+  "model": "deepseek-r1-7b",
+  "model_path": "deepseek-ai/DeepSeek-R1-Distill-Llama-7B",
+  "timestamp": "2026-01-18T12:42:15.184108",
+  "measurements": {
+    "probe": {
+      "auroc": 0.8555583711690989,
+      "n_train": 80,
+      "n_test": 20,
+      "time_seconds": 136.22174410396553
+    },
+    "pca": {
+      "effective_rank": 11,
+      "explained_variance_90": 0.8930184300304953,
+      "total_components": 4096,
+      "time_seconds": 47.81114557729692
+    },
+    "steering": {
+      "max_alpha": 8.364845965550492,
+      "coherence_threshold": 0.7,
+      "n_alphas_tested": 21,
+      "time_seconds": 152.9878721146675
+    },
+    "control": {
+      "control_dimensionality": 6,
+      "control_steering_range": 5.780681913662939,
+      "control_bandwidth": 34.68409148197763,
+      "time_seconds": 103.72155481203956
+    },
+    "sae": {
+      "sae_active_features": 10,
+      "pca_rank": 11,
+      "agreement": true,
+      "time_seconds": 184.883603506501
+    },
+    "transfer": {
+      "transfer_success_rate": 0.8554274645202191,
+      "source_context": "crisis_support",
+      "target_context": "technical_assistance",
+      "time_seconds": 99.05430226660422
+    }
+  },
+  "bandwidth_metric": {
+    "dimensionality": 11,
+    "steering_range": 8.364845965550492,
+    "bandwidth": 92.01330562105541
+  },
+  "total_time_seconds": 652.9583649764556
+}
