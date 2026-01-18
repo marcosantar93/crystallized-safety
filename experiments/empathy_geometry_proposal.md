@@ -1,7 +1,13 @@
-# Empathy Geometry Experiment - Full Proposal
+# Empathy Geometry Experiment - Full Proposal (v2 Revised)
 
-**Date:** 2026-01-18
+**Date:** 2026-01-18 (v2 revised after council feedback)
 **Research Question:** Do models have different "empathetic bandwidth" - varying dimensionality and steering range of empathy representations?
+
+**Revision Summary:**
+- ✅ Replaced Claude-3-Haiku → DeepSeek-R1-7B (open-weight for activation access)
+- ✅ Added control baseline: measure bandwidth for non-empathetic feature (syntactic complexity)
+- ✅ Added SAE cross-validation: validate PCA dimensionality against sparse autoencoders
+- ✅ Updated budget: $2.25 (from $1.85)
 
 ---
 
@@ -26,7 +32,9 @@ This would manifest as:
 | **Qwen2.5-7B** | 7B | Decoder-only | Chinese origin, different training |
 | **Mistral-7B-v0.3** | 7B | Decoder-only | Known for capabilities |
 | **Gemma2-9B** | 9B | Decoder-only | Google, different safety training |
-| **Claude-3-Haiku** | ? | Unknown | API probe (if feasible) |
+| **DeepSeek-R1-7B** | 7B | Decoder-only | Reasoning-focused, open-weight |
+
+**Note:** Originally planned Claude-3-Haiku but replaced with DeepSeek-R1-7B per council feedback (need open-weight model for activation extraction).
 
 ### Core Measurements (4 per model)
 
@@ -52,6 +60,41 @@ This would manifest as:
 - **Question:** Does empathy steering transfer across contexts?
 - **Method:** Extract vector on crisis support, apply to technical Q&A
 - **Output:** `{model}_empathy_transfer.json`
+
+#### 5. Control Baseline (Non-Empathetic Feature)
+**Added per council feedback: Validate that bandwidth metric is empathy-specific, not general capacity**
+
+- **Question:** Is high bandwidth specific to empathy, or does it reflect general model capacity?
+- **Method:** Measure bandwidth for a non-empathetic control feature
+- **Control feature:** Syntactic complexity (formal vs casual language)
+  - Extract steering vector for formal language (legal/academic) vs casual (conversational)
+  - Measure dimensionality (PCA rank) and steering range (max α)
+  - Compute control bandwidth = dim × range
+- **Expected result:** If empathy bandwidth ≠ control bandwidth → empathy is a distinct feature
+- **Sample size:** 500 formal + 500 casual prompts (1000 total per model)
+- **Output:** `{model}_control_bandwidth.json`
+
+**Interpretation:**
+- If empathy_bandwidth > control_bandwidth by >30% → empathy has richer representation
+- If empathy_bandwidth ≈ control_bandwidth → bandwidth measures general capacity (null result)
+
+#### 6. SAE Cross-Validation
+**Added per council feedback: Validate PCA dimensionality isn't just polysemantic noise**
+
+- **Question:** Does PCA capture true empathy features or just noise?
+- **Method:** Cross-validate dimensionality using Sparse Autoencoders (SAEs)
+- **Procedure:**
+  1. Train SAE on empathetic response activations (L2 reconstruction + L1 sparsity)
+  2. Count active features (>0.01 activation threshold)
+  3. Compare: SAE active features vs PCA effective rank
+- **Expected result:** If SAE features ≈ PCA rank (±20%) → dimensionality is robust
+- **Sample size:** Same 500 empathetic responses used for PCA
+- **Output:** `{model}_sae_validation.json`
+
+**SAE Architecture:**
+- Hidden units: 8192 (2× model dimension)
+- Sparsity penalty: λ = 0.01
+- Training: 10,000 steps with Adam optimizer
 
 ---
 
@@ -207,9 +250,15 @@ Where:
 | PCA analysis | 500 empathetic responses | 10 min | $0.05 |
 | Steering sweep | 41 α values × 20 prompts = 820 | 30 min | $0.15 |
 | Transfer test | 100 cross-context | 5 min | $0.03 |
-| **Total per model** | **2620 samples** | **60 min** | **$0.31** |
+| **Control baseline** | **1000 formal/casual prompts** | **12 min** | **$0.06** |
+| **SAE validation** | **500 (same as PCA)** | **8 min** | **$0.04** |
+| **Total per model** | **3620 samples** | **80 min** | **$0.41** |
 
-**5 models total:** 13,100 samples, 5 hours, **$1.55**
+**5 models total:** 18,100 samples, 6.7 hours, **$2.05**
+
+**Plus council review:** $0.20 (for revised proposal)
+
+**Grand total:** **$2.25**
 
 ### Statistical Tests
 
@@ -398,6 +447,6 @@ else:
 
 ---
 
-**Budget:** $1.55 (compute) + $0.30 (council review) = **$1.85 total**
-**Timeline:** 9.5 hours end-to-end
-**Output:** Blog post + methodology + interactive demo + 5 figure
+**Budget:** $2.05 (compute) + $0.20 (council review) = **$2.25 total** (revised with control baseline + SAE validation)
+**Timeline:** 10.5 hours end-to-end (updated with new experiments)
+**Output:** Blog post + methodology + interactive demo + 7 figures (added control comparison + SAE validation)
