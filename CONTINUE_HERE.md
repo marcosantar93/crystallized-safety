@@ -1,8 +1,20 @@
 # Crystallized Safety - Continuation Instructions
 
-**Date:** 2026-01-18 10:35 PST
-**Last Updated By:** Claude Sonnet 4.5 (main session)
+**Date:** 2026-01-21
+**Last Updated By:** Claude Sonnet 4.5
 **Next Session Start:** Open Claude Code in this directory
+
+---
+
+## ⚠️ PROJECT SCOPE - READ FIRST
+
+**This repository focuses exclusively on activation steering safety vulnerabilities.**
+
+✅ **IN SCOPE:** Layer-specific steering attacks, Mistral-7B vulnerability, validation cycles, cross-model comparison, publication
+
+❌ **NOT IN SCOPE:** Empathy experiments (moved to separate repository, being worked on elsewhere)
+
+**See `PROJECT_STATUS_2026-01-21.md` for full context.**
 
 ---
 
@@ -34,8 +46,10 @@
 
 ## Priority Tasks for Next Session
 
-### 1. Check Cycle 1-3 Results ⏰ Start in ~1 hour
-**When:** 11:15 PST (Cycle 1 completes)
+**FOCUS: Safety research validation cycles only. Do NOT work on empathy (separate repo).**
+
+### 1. Check Cycle 1-3 Results Status
+**Note:** These were launched on 2026-01-18. Status unknown.
 
 ```bash
 # Check pod status

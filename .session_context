@@ -1,0 +1,35 @@
+# Session Context for Claude Code
+
+## Project Focus
+This is the **crystallized-safety** repository.
+Focus: Layer-specific activation steering vulnerabilities in LLM safety mechanisms.
+
+## What to Work On
+✅ Activation steering safety research
+✅ Validation cycles (Cycles 1-4)
+✅ Paper updates and publication prep
+✅ Mistral/Gemma/Llama vulnerability analysis
+
+## What NOT to Work On
+❌ Empathy experiments (separate repository, user working on it elsewhere)
+❌ Empathy Docker builds
+❌ Empathy analysis scripts
+❌ Anything related to empathy geometry
+
+## Key Files
+- PROJECT_STATUS_2026-01-21.md - Current status and scope (READ THIS FIRST)
+- CONTINUE_HERE.md - Session continuation guide
+- papers/ActivationSteering_CouncilApproved_v4.pdf - Current paper
+- VALIDATION_SUMMARY.md - Validation methodology
+
+## Next Actions
+1. Check Cycles 1-3 completion status (launched 2026-01-18)
+2. Download and analyze validation results
+3. Update paper with findings
+4. Launch Cycle 4 if appropriate
+5. Prepare for publication
+
+## Budget
+Spent: ~$3.81 | Remaining: ~$221 | Cycle 4 approved: $2.25
+
+Last updated: 2026-01-21

@@ -1,7 +1,15 @@
-# Empathy Geometry Experiment - Status Report
+# ⚠️ NOTICE: Empathy Experiments Moved to Separate Repository
+
+**This file is for reference only. Empathy research is being worked on elsewhere by the user.**
+
+**Do not execute empathy experiments in this repository. Focus on safety research only.**
+
+---
+
+# Empathy Geometry Experiment - Status Report (REFERENCE ONLY)
 
 **Date:** January 18, 2026
-**Status:** Ready to Execute (pending Docker build)
+**Status:** Moved to separate repository
 
 ---
 
