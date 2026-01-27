@@ -1,6 +1,5 @@
 # Crystallized Safety: Layer-Specific Vulnerabilities in LLM Safety Mechanisms
 
-[![arXiv](https://img.shields.io/badge/arXiv-2026.XXXXX-b31b1b.svg)](https://arxiv.org)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 > **Major Finding:** Mistral-7B-Instruct exhibits an 83% jailbreak success rate through layer-specific activation steering at Layer 24, demonstrating that current safety training methods are layer-localized and systematically bypassable.
@@ -99,11 +98,11 @@ All experimental data available in `/results`:
 ## Citation
 
 ```bibtex
-@article{crystallized-safety-2026,
+@software{crystallized-safety-2026,
   title={Crystallized Safety: Layer-Specific Vulnerabilities in LLM Safety Mechanisms},
-  author={Research Automation Team},
-  journal={arXiv preprint arXiv:2026.XXXXX},
-  year={2026}
+  author={Santarcangelo, Marco},
+  year={2026},
+  url={https://github.com/marcosantar93/crystallized-safety}
 }
 ```
 

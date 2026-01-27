@@ -250,10 +250,9 @@ Random seed: 42
 If you use this work, please cite:
 
 ```bibtex
-@article{crystallized-safety-2026,
+@software{crystallized-safety-2026,
   title={Crystallized Safety: Layer-Specific Vulnerabilities in Mistral-7B-Instruct},
-  author={Research Automation Team},
-  journal={arXiv preprint arXiv:XXXX.XXXXX},
+  author={Santarcangelo, Marco},
   year={2026},
   url={https://github.com/marcosantar93/crystallized-safety}
 }
