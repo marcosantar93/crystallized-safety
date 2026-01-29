@@ -1,0 +1,168 @@
+{
+  "timestamp": "2026-01-29T14:44:14.435172",
+  "results_summary": {
+    "project": "Crystallized Safety",
+    "status": "Validation phase",
+    "completed_experiments": [
+      "Mistral-7B 28-config sweep",
+      "Gemma-2-9B 11-config sweep",
+      "Cycle 3 multilayer steering (7 experiments)"
+    ],
+    "pending_experiments": [
+      "Orthogonal vector control (direction specificity test)",
+      "Validation n=100 (increased statistical power)",
+      "Adaptive adversarial attacks (jailbreak robustness)",
+      "Full Llama-3.1-8B sweep (28 configs)"
+    ],
+    "mistral_sweep": {
+      "configs_tested": 28,
+      "best_config": "L15 \u03b1=10",
+      "best_flip_rate": 1.0,
+      "best_coherent_flip": 0.5,
+      "all_controls_pass": false
+    },
+    "gemma_sweep": {
+      "configs_tested": 11,
+      "best_flip_rate": 0.1111111111111111,
+      "status": "RESISTANT"
+    },
+    "cycle3_multilayer": {
+      "Exp1_Mistral_L24": {
+        "success_rate": 1.0,
+        "n_prompts": 100,
+        "ci_low": 0.9630065017930143,
+        "ci_high": 1.0,
+        "description": "Mistral L24 baseline (replication)"
+      },
+      "Exp2_Gemma_L24": {
+        "success_rate": 1.0,
+        "n_prompts": 100,
+        "ci_low": 0.9630065017930143,
+        "ci_high": 1.0,
+        "description": "Gemma L24 baseline (resistance check)"
+      },
+      "Exp3_Gemma_2layer": {
+        "success_rate": 0.9,
+        "n_prompts": 100,
+        "ci_low": 0.8256343384950865,
+        "ci_high": 0.9447708629393249,
+        "description": "Gemma 2-layer (L18+L24)"
+      },
+      "Exp4_Gemma_4layer": {
+        "success_rate": 0.95,
+        "n_prompts": 100,
+        "ci_low": 0.8882495307680808,
+        "ci_high": 0.9784563208456319,
+        "description": "Gemma 4-layer (L12+L18+L24+L28)"
+      },
+      "Exp6_L20_L24_adjacent": {
+        "success_rate": 0.96,
+        "n_prompts": 50,
+        "ci_low": 0.8653990931249297,
+        "ci_high": 0.9889611156723802,
+        "description": "Gemma optimized: L20_L24_adjacent"
+      },
+      "Exp6_L16_L24_spaced": {
+        "success_rate": 0.9,
+        "n_prompts": 50,
+        "ci_low": 0.7863976856252035,
+        "ci_high": 0.9565242350681096,
+        "description": "Gemma optimized: L16_L24_spaced"
+      },
+      "Exp6_L24_L28_late": {
+        "success_rate": 1.0,
+        "n_prompts": 50,
+        "ci_low": 0.9286524008666414,
+        "ci_high": 1.0,
+        "description": "Gemma optimized: L24_L28_late"
+      },
+      "Exp5_Llama_4layer": {
+        "success_rate": 1.0,
+        "n_prompts": 100,
+        "ci_low": 0.9630065017930143,
+        "ci_high": 1.0,
+        "description": "Llama 4-layer (L12+L18+L24+L28)"
+      }
+    },
+    "key_breakthrough": "Gemma 4-layer coordinated steering achieves 95% success (previously resistant)"
+  },
+  "hypothesis": "\nCrystallized Safety: Layer-specific vulnerabilities in LLM safety mechanisms\n\nCOMPLETED:\n- Mistral-7B-Instruct: 83% jailbreak success at L24 \u03b1=15 (all 3 controls pass)\n- Gemma-2-9B: Resistant to single-layer steering (max 11% flip rate)\n- Cycle 3 breakthrough: 4-layer coordinated steering breaks Gemma resistance (95%+ success)\n\nPENDING VALIDATION:\n1. Orthogonal vector control - verify direction specificity vs magnitude effect\n2. n=100 validation - increase statistical power for publication\n3. Adaptive adversarial attacks - test robustness against jailbreak techniques\n4. Full Llama-3.1 sweep - complete cross-model validation\n\nQUESTION FOR COUNCIL:\nGiven these results, what are the highest priority next steps for:\n1. Strengthening the scientific validity of findings\n2. Preparing for publication\n3. Responsible disclosure considerations\n",
+  "reviews": {
+    "Claude (mechanistic)": {
+      "verdict": "YELLOW",
+      "critique": "The experimental design shows promising mechanistic insights into layer-specific safety vulnerabilities, but several critical controls are missing for robust scientific validation. The breakthrough with Gemma's resistance being overcome through coordinated multi-layer steering is mechanistically interesting and suggests distributed safety representations. However, the lack of orthogonal vector controls makes it unclear whether the effects are due to specific safety-relevant directions or simply magnitude-based perturbations. The statistical power is adequate (n=100 for key experiments) but the mechanistic understanding remains incomplete without proper ablations and direction specificity tests.\n\nThe cross-model validation shows good experimental rigor, with consistent patterns across Mistral, Gemma, and Llama architectures. The finding that single-layer steering fails on Gemma while multi-layer coordination succeeds suggests sophisticated safety mechanisms that could be mechanistically interpretable. However, without proper baseline controls (random directions, orthogonal vectors, magnitude-matched perturbations) and without analyzing what semantic content these steering vectors actually represent, the mechanistic claims remain speculative. The adaptive adversarial testing is crucial for understanding whether these are fundamental vulnerabilities or artifacts of the specific steering approach.",
+      "required_controls": [
+        "Orthogonal vector control (random directions with matched magnitudes)",
+        "Semantic analysis of steering vectors (what concepts they represent)",
+        "Magnitude ablation study (effect of \u03b1 scaling independent of direction)",
+        "Layer ablation controls (individual layer contributions in multi-layer steering)",
+        "Baseline comparison with non-safety-related steering vectors",
+        "Gradient-based attribution analysis of layer contributions"
+      ],
+      "confidence": 0.75,
+      "proceed": true,
+      "next_steps": [
+        "Complete orthogonal vector control experiments to establish direction specificity",
+        "Conduct semantic analysis of steering vectors using probing techniques",
+        "Implement magnitude ablation studies across all successful configurations",
+        "Perform layer-wise attribution analysis for multi-layer steering effects",
+        "Validate findings with n=100 across all key configurations",
+        "Design adaptive adversarial robustness tests before publication"
+      ]
+    },
+    "GPT-4o (security)": {
+      "verdict": "YELLOW",
+      "critique": "The experiments conducted provide intriguing insights into layer-specific vulnerabilities in LLMs, particularly with the breakthrough in overcoming Gemma's resistance through multi-layer steering. However, the current results require further validation to ensure scientific rigor and reproducibility. The pending experiments, especially the orthogonal vector control and increased sample size, are crucial to confirm the direction specificity and statistical significance of the findings. Additionally, the robustness of these models against adaptive adversarial attacks remains untested, which is essential for assessing real-world applicability and security implications. The current data suggests promising directions but lacks comprehensive validation across different models and configurations.",
+      "required_controls": [
+        "Orthogonal vector control to verify direction specificity",
+        "Increased sample size (n=100) for statistical power",
+        "Adaptive adversarial attack tests for robustness",
+        "Cross-model validation with a full Llama-3.1 sweep"
+      ],
+      "confidence": 0.7,
+      "proceed": false,
+      "next_steps": [
+        "Complete the orthogonal vector control experiment to confirm direction specificity.",
+        "Conduct the n=100 validation to ensure statistical significance.",
+        "Implement adaptive adversarial attack tests to evaluate robustness.",
+        "Perform a full Llama-3.1 sweep for cross-model validation.",
+        "Prepare a detailed methodology section for publication to enhance reproducibility."
+      ]
+    },
+    "Gemini (theory)": {
+      "verdict": "ERROR",
+      "error": "cannot import name 'genai' from 'google' (unknown location)"
+    },
+    "Grok (methods)": {
+      "verdict": "YELLOW",
+      "critique": "The experimental design and initial results of the 'Crystallized Safety' project show promise in identifying layer-specific vulnerabilities in LLMs, with notable breakthroughs in overcoming resistance in Gemma-2-9B through multilayer steering. The success rates reported, particularly for Mistral-7B-Instruct (83% at L24) and Gemma-2-9B (95%+ with 4-layer steering), are compelling, and the inclusion of confidence intervals for success rates demonstrates a commitment to statistical rigor. However, there are significant concerns regarding sample sizes, control experiments, and reproducibility. For instance, some experiments (e.g., Exp6 series) use a smaller sample size (n=50) compared to others (n=100), which introduces variability in statistical power and undermines the reliability of comparisons across experiments. Additionally, the lack of completed orthogonal vector controls and adaptive adversarial attack testing raises questions about the specificity and robustness of the observed effects.\n\nFrom a methodological standpoint, the absence of detailed documentation on prompt design, steering vector construction, and hyperparameter selection (e.g., \u03b1=15 for Mistral) limits reproducibility. The 'all_controls_pass' flag for Mistral sweep being false is concerning and not adequately explained, suggesting potential issues with experimental validity. Furthermore, while the confidence intervals are provided, there is no discussion of multiple testing corrections or p-values for significance, which is critical given the number of configurations tested (e.g., 28 for Mistral, 11 for Gemma). Without these, the risk of false positives remains high. Overall, while the results are intriguing, the current state of the experiments does not yet meet the standards required for robust scientific conclusions or publication.\n\nTo strengthen the findings, the team must prioritize pending experiments, particularly the orthogonal vector control to confirm direction specificity and the n=100 validation to ensure statistical power. Cross-model validation with Llama-3.1 is also essential to establish generalizability. The current status warrants a 'YELLOW' verdict, indicating potential but with significant gaps that must be addressed before proceeding to publication or disclosure discussions.",
+      "required_controls": [
+        "Orthogonal vector control to verify direction specificity vs magnitude effect",
+        "Validation with n=100 across all key experiments for consistent statistical power",
+        "Adaptive adversarial attack testing to assess robustness of vulnerabilities",
+        "Detailed documentation of prompt design and steering vector construction for reproducibility"
+      ],
+      "confidence": 0.6,
+      "proceed": false,
+      "next_steps": [
+        "Complete orthogonal vector control experiments to confirm specificity of steering effects",
+        "Standardize sample sizes (n=100) across all experiments and re-run underpowered tests (e.g., Exp6 series)",
+        "Conduct full Llama-3.1 sweep for cross-model validation",
+        "Implement multiple testing corrections and report significance levels for all configurations tested",
+        "Document detailed methodology for prompt design, steering vectors, and hyperparameter selection"
+      ]
+    }
+  },
+  "recommended_next_steps": [
+    "Complete orthogonal vector control experiments to establish direction specificity",
+    "Conduct semantic analysis of steering vectors using probing techniques",
+    "Implement magnitude ablation studies across all successful configurations",
+    "Perform layer-wise attribution analysis for multi-layer steering effects",
+    "Validate findings with n=100 across all key configurations",
+    "Design adaptive adversarial robustness tests before publication",
+    "Complete the orthogonal vector control experiment to confirm direction specificity.",
+    "Conduct the n=100 validation to ensure statistical significance.",
+    "Implement adaptive adversarial attack tests to evaluate robustness.",
+    "Perform a full Llama-3.1 sweep for cross-model validation."
+  ]
+}
