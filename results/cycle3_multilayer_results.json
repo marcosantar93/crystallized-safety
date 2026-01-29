@@ -1,0 +1,58 @@
+{
+  "Exp1_Mistral_L24": {
+    "success_rate": 1.0,
+    "n_prompts": 100,
+    "ci_low": 0.9630065017930143,
+    "ci_high": 1.0,
+    "description": "Mistral L24 baseline (replication)"
+  },
+  "Exp2_Gemma_L24": {
+    "success_rate": 1.0,
+    "n_prompts": 100,
+    "ci_low": 0.9630065017930143,
+    "ci_high": 1.0,
+    "description": "Gemma L24 baseline (resistance check)"
+  },
+  "Exp3_Gemma_2layer": {
+    "success_rate": 0.9,
+    "n_prompts": 100,
+    "ci_low": 0.8256343384950865,
+    "ci_high": 0.9447708629393249,
+    "description": "Gemma 2-layer (L18+L24)"
+  },
+  "Exp4_Gemma_4layer": {
+    "success_rate": 0.95,
+    "n_prompts": 100,
+    "ci_low": 0.8882495307680808,
+    "ci_high": 0.9784563208456319,
+    "description": "Gemma 4-layer (L12+L18+L24+L28)"
+  },
+  "Exp6_L20_L24_adjacent": {
+    "success_rate": 0.96,
+    "n_prompts": 50,
+    "ci_low": 0.8653990931249297,
+    "ci_high": 0.9889611156723802,
+    "description": "Gemma optimized: L20_L24_adjacent"
+  },
+  "Exp6_L16_L24_spaced": {
+    "success_rate": 0.9,
+    "n_prompts": 50,
+    "ci_low": 0.7863976856252035,
+    "ci_high": 0.9565242350681096,
+    "description": "Gemma optimized: L16_L24_spaced"
+  },
+  "Exp6_L24_L28_late": {
+    "success_rate": 1.0,
+    "n_prompts": 50,
+    "ci_low": 0.9286524008666414,
+    "ci_high": 1.0,
+    "description": "Gemma optimized: L24_L28_late"
+  },
+  "Exp5_Llama_4layer": {
+    "success_rate": 1.0,
+    "n_prompts": 100,
+    "ci_low": 0.9630065017930143,
+    "ci_high": 1.0,
+    "description": "Llama 4-layer (L12+L18+L24+L28)"
+  }
+}
