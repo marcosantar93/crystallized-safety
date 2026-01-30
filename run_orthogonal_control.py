@@ -100,7 +100,7 @@ async def main():
         hypothesis="Orthogonal control: Random direction vs. extracted refusal direction",
         model_name="mistralai/Mistral-7B-Instruct-v0.3",
         target_layer=24,
-        alpha=15.0,
+        alpha=-15.0,  # NEGATIVE alpha to suppress refusal (subtract refusal direction)
         n_extraction=10,
         seed=42
     )

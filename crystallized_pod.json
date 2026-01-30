@@ -1,0 +1,8 @@
+{
+  "id": "l07123ixjezu7x",
+  "name": "crystallized-safety-exp",
+  "costPerHr": 0.22,
+  "machine": {
+    "gpuDisplayName": "RTX 3090"
+  }
+}
