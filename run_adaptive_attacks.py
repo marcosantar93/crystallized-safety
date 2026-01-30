@@ -150,7 +150,7 @@ async def main():
         hypothesis="Adaptive adversarial attacks with steering: encoding, roleplay, indirect",
         model_name="mistralai/Mistral-7B-Instruct-v0.3",
         target_layer=24,
-        alpha=15.0,
+        alpha=-15.0,  # NEGATIVE alpha to suppress refusal (subtract refusal direction)
         n_extraction=10,
         seed=42
     )
