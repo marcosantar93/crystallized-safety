@@ -47,17 +47,17 @@ async def main():
 
     # Modified config with increased sample sizes
     config = ResearchConfig(
-        hypothesis="Mistral-7B-Instruct Layer 24 with α=15 exhibits direction-specific safety vulnerability (n=100 validation)",
+        hypothesis="Mistral-7B-Instruct Layer 24 with α=-15 exhibits direction-specific safety vulnerability (n=50 validation)",
         model_name="mistralai/Mistral-7B-Instruct-v0.3",
         target_layer=24,
-        alpha=15.0,
+        alpha=-15.0,  # NEGATIVE alpha to suppress refusal (subtract refusal direction)
 
         # INCREASED SAMPLE SIZES (council recommendation)
         n_extraction=10,
         n_random=10,
         n_prompts_control1=30,   # Increased from 20
         n_prompts_control2=20,   # Increased from 10
-        n_prompts_control3=100,  # Increased from 50 (KEY CHANGE)
+        n_prompts_control3=50,   # Limited by available prompts (50 harmful prompts)
         n_benign=30,             # Increased from 20
 
         # Same thresholds
@@ -77,7 +77,7 @@ async def main():
         checkpoint.clear()
 
     print("=" * 70)
-    print("VALIDATION EXPERIMENT: Mistral L24 α=15 with n=100")
+    print("VALIDATION EXPERIMENT: Mistral L24 α=-15 with n=50")
     print("=" * 70)
     print(f"Model: {config.model_name}")
     print(f"Layer: {config.target_layer}")
