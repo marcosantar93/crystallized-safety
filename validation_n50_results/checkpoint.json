@@ -1,0 +1,40 @@
+{
+  "iteration": 0,
+  "current_step": "experiment_done",
+  "results": {
+    "control1": {
+      "extracted_mean": 3.2133056640625,
+      "random_mean": -0.426708984375,
+      "random_ratio": 0.13279439586071706,
+      "verdict": "GREEN"
+    },
+    "control2": {
+      "coherence_score": 4.487111385735691,
+      "avg_repetition": 0.10257772285286175,
+      "verdict": "GREEN"
+    },
+    "control3": {
+      "flip_rate": 0.72,
+      "coherent_flip_rate": 0.56,
+      "ci_95": [
+        0.6,
+        0.84
+      ],
+      "degradation_rate": 0.0,
+      "verdict": "GREEN"
+    },
+    "final_verdict": "PUBLISH",
+    "gate_verdicts": {
+      "control1": "GREEN",
+      "control2": "GREEN",
+      "control3": "GREEN"
+    }
+  },
+  "reviews": {},
+  "history": [],
+  "last_saved": "2026-01-30T14:48:31.496329",
+  "control1_done": true,
+  "control2_done": true,
+  "control3_partial": null,
+  "control3_done": true
+}

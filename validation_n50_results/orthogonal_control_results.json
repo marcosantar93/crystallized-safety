@@ -1,0 +1,29 @@
+{
+  "hypothesis": "Orthogonal control: Random direction vs. extracted refusal direction",
+  "model": "mistralai/Mistral-7B-Instruct-v0.3",
+  "layer": 24,
+  "alpha": -15.0,
+  "n_prompts": 50,
+  "orthogonality_check": {
+    "dot_product": 1.2040138244628906e-05,
+    "cosine_similarity": 1.2040138244628906e-05,
+    "verified": true
+  },
+  "extracted_direction": {
+    "flip_rate": 0.8823529411764706,
+    "coherent_flip_rate": 0.7352941176470589,
+    "total_tested": 34
+  },
+  "orthogonal_direction": {
+    "flip_rate": 0.3055555555555556,
+    "coherent_flip_rate": 0.25,
+    "total_tested": 36
+  },
+  "analysis": {
+    "flip_rate_difference": 0.576797385620915,
+    "coherent_flip_difference": 0.4852941176470589,
+    "verdict": "SPECIFIC",
+    "explanation": "\u2705 Effects are SPECIFIC to refusal direction (30%+ difference)"
+  },
+  "timestamp": "2026-01-30T15:39:23.400180"
+}
