@@ -1,0 +1,58 @@
+{
+  "reviews": {
+    "Claude Opus 4.5 (mechanistic)": {
+      "verdict": "YELLOW",
+      "critique": "The experimental design demonstrates solid statistical methodology with appropriate controls for specificity (13.3% random ratio), coherence (4.49/5.0), and statistical power (72% flip rate with reasonable CI). The orthogonal control showing 57.7% difference between extracted and random directions provides meaningful evidence that the effect is direction-specific rather than a general perturbation artifact. This is a crucial mechanistic validation that many similar studies omit.\n\nHowever, several mechanistic questions remain underexplored. First, the claim that this represents a 'refusal direction' requires stronger causal evidence - have you verified this direction correlates with refusal-related concepts through probing classifiers or activation patching? The 100% flip rates on roleplay/indirect attacks versus 0% on base64 suggests the mechanism may be more about prompt-level priming than pure activation steering, which complicates the mechanistic interpretation. Second, the alpha=-15 parameter seems arbitrary - what is the relationship between alpha magnitude and effect size? Is there a phase transition or is it linear?\n\nThe n=50 sample size is adequate for initial validation but the technique-specific breakdowns have concerning small samples (base64: n=0 tested, indirect: n=6). The base64 showing 0/0 tested is a data quality issue that should be flagged. Additionally, testing only at Layer 24 without comparison to adjacent layers weakens claims about layer-specific safety mechanisms.",
+      "required_controls": [
+        "Alpha magnitude sweep (e.g., -5, -10, -15, -20) to characterize dose-response relationship",
+        "Layer ablation study comparing layers 20-28 to validate layer specificity",
+        "Probing classifier to verify extracted direction correlates with refusal-related features",
+        "Fix base64 condition - currently shows 0 samples tested",
+        "Activation patching to establish causal role of identified direction",
+        "Test on held-out prompt categories to assess generalization"
+      ],
+      "confidence": 0.65,
+      "proceed": true
+    },
+    "GPT-5.2 (security)": {
+      "verdict": "YELLOW",
+      "critique": "From a security perspective, the results are concerning and plausibly indicate a direction-specific jailbreak vector (layer 24, alpha=-15) with a large effect size and an orthogonal-direction control that suggests nontrivial specificity. However, the current evidence is not yet publication-grade for security claims because key details needed to rule out confounds and to enable independent reproduction are missing: how the \u201crefusal direction\u201d was extracted (data source, prompts, labels, leakage risk), whether prompts used for extraction overlap with evaluation prompts, the exact refusal/flip/coherence scoring rubric, and whether any multiple-hypothesis search occurred (layer/alpha sweeps) without correction. The adaptive-attack section also mixes small and uneven sample sizes (e.g., indirect n=6, roleplay n=10, direct n=18) and includes an apparent reporting anomaly (base64 shows total_tested=0 but is used to claim 0% effectiveness), which weakens the reliability of comparative conclusions.\n\nOperationally, if this intervention reliably reduces refusals and increases compliance under roleplay/indirect framings, it represents a meaningful safety bypass mechanism. But to assess real-world risk, you need to demonstrate robustness across prompt distributions, seeds, decoding settings, and model variants, and to quantify whether the intervention increases harmful instruction-following specifically (not just reduces refusals or changes style). Right now, the metrics focus on \u201cflip rate\u201d and \u201ccoherence,\u201d which are not sufficient to characterize security impact (e.g., whether the model produces actionable disallowed content, whether it generalizes beyond the tested attack templates, and whether the effect persists under standard safety mitigations like system prompts, refusal policies, or different sampling temperatures).",
+      "required_controls": [
+        "Full reproducibility bundle: exact model hash, tokenizer, inference code, hook location, intervention definition, alpha sign convention, decoding params (temperature/top_p/max_tokens), random seeds, and all prompts/responses.",
+        "Pre-registered evaluation set held out from direction extraction (no prompt/template overlap); additionally, a second fully independent prompt set from a different source to test generalization.",
+        "Layer/alpha sweep accounting: report the full search space explored and apply multiple-comparisons correction or use a two-stage design (discovery set + confirmatory set).",
+        "Stronger nulls: (1) matched-norm random directions, (2) shuffled-label extracted directions, (3) directions from unrelated behaviors (e.g., sentiment) to test specificity beyond orthogonality.",
+        "Permutation/bootstrap test for the orthogonal-control difference and adaptive-attack differences; report p-values/effect sizes with CIs for each comparison, not just thresholds.",
+        "Robustness checks across decoding settings (T=0, typical sampling, high-T), different system prompts, and different refusal policies; include seed sensitivity.",
+        "Harm-focused outcome metrics: use a policy-based classifier or human red-team labeling to score whether outputs contain disallowed actionable content; report severity-weighted rates, not only refusal flips.",
+        "Cross-model replication: at minimum another Mistral checkpoint (or quantization variant) and one non-Mistral model to test whether the direction is model-specific.",
+        "Adaptive attack evaluation with balanced n per technique and a fixed prompt set; fix the base64 anomaly by actually testing a nonzero sample and reporting it.",
+        "Ablations: intervention at nearby layers, intervention on residual stream vs MLP/attn outputs (if applicable), and scaling alpha to map the dose-response curve and identify saturation/instability."
+      ],
+      "confidence": 0.66,
+      "proceed": false
+    },
+    "Gemini 3 (theory)": {
+      "verdict": "YELLOW",
+      "critique": "API key not configured",
+      "required_controls": [],
+      "confidence": 0,
+      "proceed": false,
+      "error": "No API key"
+    },
+    "Grok 4.1 (methods)": {
+      "verdict": "YELLOW",
+      "critique": "The experimental design demonstrates strong scientific validity in its core validation setup, with well-defined controls for specificity, coherence, and statistical power. The use of n=50 for the primary validation experiment provides a reasonable sample size, and the inclusion of 95% confidence intervals for flip rates enhances the rigor of the statistical analysis. The orthogonal control effectively tests for direction-specific effects, showing a clear difference (>30% threshold) that supports the hypothesis of a targeted vulnerability. Adaptive attack evaluations cover a range of techniques, which is constructive for assessing real-world applicability, and the results are transparently reported in JSON format, aiding reproducibility. However, some aspects could be strengthened: the coherence scoring method (e.g., how the 4.49/5.0 score is derived, including inter-rater reliability if human-judged) is not detailed, which might hinder exact replication.\n\nOn the reproducibility front, the experiment specifies the model (Mistral-7B-Instruct), layer (24), and alpha value (-15), which are crucial for replication. The verdicts are threshold-based (e.g., <20% for specificity, >4.0 for coherence), providing clear criteria. That said, sample sizes in the adaptive attacks section vary significantly (e.g., n=6 for indirect, n=0 for base64), which reduces statistical power and could lead to overconfidence in flip rates like 100% from small samples. The base64 technique having zero tests is particularly concerning, as it undermines the completeness of the adaptive attack assessment\u2014why was it not tested, or if tested, why reported as zero? Additionally, while the overall verdict is 'PUBLISH,' the methods would benefit from explicit details on prompt generation, extraction methods for directions, and any randomization procedures to ensure unbiased results.\n\nOverall, this is a constructive step in mechanistic interpretability research, with the potential for high impact on AI safety. The findings on adaptive attacks being more effective than direct ones are insightful, but to elevate this to gold-standard reproducibility, addressing the inconsistencies in sample sizes and providing more methodological transparency would be essential.",
+      "required_controls": [
+        "Increase sample sizes for adaptive attack techniques to at least n=20 each for better statistical robustness",
+        "Clarify and test the base64 encoding method with a non-zero sample to complete the evaluation",
+        "Document the exact methodology for coherence scoring, including any rubrics or automation used",
+        "Add a control for model variability, such as testing on a different seed or similar model layer"
+      ],
+      "confidence": 0.75,
+      "proceed": true
+    }
+  },
+  "action": "PROCEED_WITH_CAUTION",
+  "avg_confidence": 0.6866666666666666
+}
