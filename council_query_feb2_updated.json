@@ -1,0 +1,58 @@
+{
+  "hypothesis": "Crystallized Safety: Layer-specific vulnerabilities in LLM safety mechanisms are DIRECTION-SPECIFIC, not magnitude artifacts.\n\nNEW EVIDENCE (Feb 2, 2026):\nOrthogonal vector control experiment completed with Z-score 4.74, confirming the refusal direction is a real, localized feature.\n\nCOMPLETED EXPERIMENTS:\n1. Mistral-7B: 83-90% jailbreak at L24 α=15\n2. Gemma-2-9B: Resistant to single-layer (11%), but 95%+ with multi-layer\n3. Llama-3.1-8B: 100% success with 4-layer steering\n4. ✅ NEW: Orthogonal vector control - DIRECTION SPECIFIC CONFIRMED\n\nQUESTION FOR COUNCIL:\nGiven the new orthogonal control results showing direction specificity (Z=4.74), what are the remaining gaps before publication?",
+
+  "results": {
+    "orthogonal_control_experiment": {
+      "model": "Mistral-7B-Instruct-v0.3",
+      "layer": 24,
+      "alpha": 15,
+      "n_samples": 50,
+      "n_random_vectors": 20,
+      "n_orthogonal_vectors": 20,
+      "baseline_compliance": 0.44,
+      "extracted_direction_compliance": 0.90,
+      "random_vectors_mean": 0.448,
+      "random_vectors_std": 0.092,
+      "orthogonal_vectors_mean": 0.474,
+      "orthogonal_vectors_std": 0.091,
+      "z_score": 4.74,
+      "p_value": "<0.001",
+      "verdict": "DIRECTION_SPECIFIC"
+    },
+    "prior_validated_results": {
+      "mistral_7b_L24": {
+        "success_rate": 0.83,
+        "n": 100,
+        "method": "single-layer steering"
+      },
+      "gemma_9b_single_layer": {
+        "success_rate": 0.11,
+        "status": "RESISTANT"
+      },
+      "gemma_9b_4layer": {
+        "success_rate": 0.95,
+        "n": 100,
+        "method": "coordinated multi-layer",
+        "layers": [12, 18, 24, 28]
+      },
+      "llama_8b_4layer": {
+        "success_rate": 1.0,
+        "n": 100,
+        "method": "4-layer steering"
+      }
+    },
+    "theoretical_claims": [
+      "RLHF installs a diode, not a knob",
+      "Safety can be 'crystallized' (single-point) or 'liquid' (distributed)",
+      "Vulnerability is architectural, not a training bug"
+    ]
+  },
+
+  "specific_questions": [
+    "Is the orthogonal control (Z=4.74) sufficient evidence for direction specificity?",
+    "Should we replicate on Gemma/Llama or is Mistral enough?",
+    "What sample size is needed for publication (current n=50)?",
+    "Is 'crystallized vs liquid safety' framing scientifically rigorous?",
+    "Any concerns about responsible disclosure?"
+  ]
+}

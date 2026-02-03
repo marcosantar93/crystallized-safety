@@ -1,0 +1,39 @@
+{
+  "hypothesis": "Activation steering exploits direction-specific safety representations, not random perturbation effects. The 'refusal direction' is a real, localized feature that can be surgically manipulated.",
+  
+  "results": {
+    "experiment": "Orthogonal Vector Control + Random Controls",
+    "model": "Mistral-7B-Instruct-v0.3",
+    "layer": 24,
+    "alpha": 15,
+    "n_samples": 50,
+    "n_random_vectors": 20,
+    "n_orthogonal_vectors": 20,
+    
+    "findings": {
+      "baseline_compliance": 0.44,
+      "extracted_direction_compliance": 0.90,
+      "random_vectors_mean": 0.448,
+      "random_vectors_std": 0.092,
+      "orthogonal_vectors_mean": 0.474,
+      "orthogonal_vectors_std": 0.091,
+      "z_score": 4.74,
+      "p_value": "<0.001"
+    },
+    
+    "interpretation": "The extracted refusal direction achieves 90% compliance vs 44-47% for random/orthogonal vectors (baseline level). Z-score of 4.74 indicates the effect is highly specific to the extracted direction.",
+    
+    "prior_results": {
+      "mistral_7b": "83% jailbreak at L24, α=15",
+      "gemma_2_9b": "Resistant to single-layer (11%), but 95%+ with multi-layer coordinated steering",
+      "llama_3_1_8b": "100% success with 4-layer steering"
+    }
+  },
+  
+  "questions_for_council": [
+    "Are these controls sufficient to claim direction specificity?",
+    "What additional validations would strengthen the paper?",
+    "Should we prioritize n=100 validation or cross-model replication?",
+    "Is the 'crystallized vs liquid safety' framing scientifically sound?"
+  ]
+}

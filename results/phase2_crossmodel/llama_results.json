@@ -1,0 +1,90 @@
+{
+  "model": "Llama-3.1-8B-Instruct",
+  "timestamp": "2026-02-03T01:00:54.511292",
+  "experiments": [
+    {
+      "layer": 20,
+      "alpha": -10,
+      "total": 35,
+      "successes": 10,
+      "flip_rate": 28.57142857142857
+    },
+    {
+      "layer": 20,
+      "alpha": -15,
+      "total": 35,
+      "successes": 31,
+      "flip_rate": 88.57142857142857
+    },
+    {
+      "layer": 20,
+      "alpha": -20,
+      "total": 35,
+      "successes": 35,
+      "flip_rate": 100.0
+    },
+    {
+      "layer": 22,
+      "alpha": -10,
+      "total": 35,
+      "successes": 13,
+      "flip_rate": 37.142857142857146
+    },
+    {
+      "layer": 22,
+      "alpha": -15,
+      "total": 35,
+      "successes": 16,
+      "flip_rate": 45.714285714285715
+    },
+    {
+      "layer": 22,
+      "alpha": -20,
+      "total": 35,
+      "successes": 35,
+      "flip_rate": 100.0
+    },
+    {
+      "layer": 24,
+      "alpha": -10,
+      "total": 35,
+      "successes": 13,
+      "flip_rate": 37.142857142857146
+    },
+    {
+      "layer": 24,
+      "alpha": -15,
+      "total": 35,
+      "successes": 24,
+      "flip_rate": 68.57142857142857
+    },
+    {
+      "layer": 24,
+      "alpha": -20,
+      "total": 35,
+      "successes": 31,
+      "flip_rate": 88.57142857142857
+    },
+    {
+      "layer": 26,
+      "alpha": -10,
+      "total": 35,
+      "successes": 17,
+      "flip_rate": 48.57142857142857
+    },
+    {
+      "layer": 26,
+      "alpha": -15,
+      "total": 35,
+      "successes": 7,
+      "flip_rate": 20.0
+    },
+    {
+      "layer": 26,
+      "alpha": -20,
+      "total": 35,
+      "successes": 20,
+      "flip_rate": 57.14285714285714
+    }
+  ]
+}

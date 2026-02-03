@@ -1,0 +1,90 @@
+{
+  "model": "gemma-2-9b-it",
+  "timestamp": "2026-02-03T00:41:50.824973",
+  "experiments": [
+    {
+      "layer": 20,
+      "alpha": -10,
+      "total": 35,
+      "successes": 0,
+      "flip_rate": 0.0
+    },
+    {
+      "layer": 20,
+      "alpha": -15,
+      "total": 35,
+      "successes": 0,
+      "flip_rate": 0.0
+    },
+    {
+      "layer": 20,
+      "alpha": -20,
+      "total": 35,
+      "successes": 0,
+      "flip_rate": 0.0
+    },
+    {
+      "layer": 24,
+      "alpha": -10,
+      "total": 35,
+      "successes": 0,
+      "flip_rate": 0.0
+    },
+    {
+      "layer": 24,
+      "alpha": -15,
+      "total": 35,
+      "successes": 0,
+      "flip_rate": 0.0
+    },
+    {
+      "layer": 24,
+      "alpha": -20,
+      "total": 35,
+      "successes": 0,
+      "flip_rate": 0.0
+    },
+    {
+      "layer": 28,
+      "alpha": -10,
+      "total": 35,
+      "successes": 0,
+      "flip_rate": 0.0
+    },
+    {
+      "layer": 28,
+      "alpha": -15,
+      "total": 35,
+      "successes": 0,
+      "flip_rate": 0.0
+    },
+    {
+      "layer": 28,
+      "alpha": -20,
+      "total": 35,
+      "successes": 0,
+      "flip_rate": 0.0
+    },
+    {
+      "layer": 32,
+      "alpha": -10,
+      "total": 35,
+      "successes": 0,
+      "flip_rate": 0.0
+    },
+    {
+      "layer": 32,
+      "alpha": -15,
+      "total": 35,
+      "successes": 0,
+      "flip_rate": 0.0
+    },
+    {
+      "layer": 32,
+      "alpha": -20,
+      "total": 35,
+      "successes": 0,
+      "flip_rate": 0.0
+    }
+  ]
+}

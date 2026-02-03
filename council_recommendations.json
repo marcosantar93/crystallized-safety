@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-01-29T14:44:14.435172",
+  "timestamp": "2026-02-02T17:36:38.731370",
   "results_summary": {
     "project": "Crystallized Safety",
     "status": "Validation phase",
@@ -90,43 +90,43 @@
   "reviews": {
     "Claude (mechanistic)": {
       "verdict": "YELLOW",
-      "critique": "The experimental design shows promising mechanistic insights into layer-specific safety vulnerabilities, but several critical controls are missing for robust scientific validation. The breakthrough with Gemma's resistance being overcome through coordinated multi-layer steering is mechanistically interesting and suggests distributed safety representations. However, the lack of orthogonal vector controls makes it unclear whether the effects are due to specific safety-relevant directions or simply magnitude-based perturbations. The statistical power is adequate (n=100 for key experiments) but the mechanistic understanding remains incomplete without proper ablations and direction specificity tests.\n\nThe cross-model validation shows good experimental rigor, with consistent patterns across Mistral, Gemma, and Llama architectures. The finding that single-layer steering fails on Gemma while multi-layer coordination succeeds suggests sophisticated safety mechanisms that could be mechanistically interpretable. However, without proper baseline controls (random directions, orthogonal vectors, magnitude-matched perturbations) and without analyzing what semantic content these steering vectors actually represent, the mechanistic claims remain speculative. The adaptive adversarial testing is crucial for understanding whether these are fundamental vulnerabilities or artifacts of the specific steering approach.",
+      "critique": "The experimental design shows promising mechanistic insights into layer-specific safety vulnerabilities, but several critical controls are missing for robust scientific validation. The breakthrough with Gemma's resistance being overcome by coordinated multi-layer steering (95% success vs 11% single-layer) suggests genuine mechanistic understanding rather than simple prompt engineering. However, the lack of orthogonal vector controls raises concerns about whether observed effects are due to specific safety-relevant directions or general magnitude-based perturbations. The statistical power is adequate (n=100 for key experiments) but the missing cross-model validation with Llama-3.1 limits generalizability claims. The experimental progression from single-layer to multi-layer steering shows systematic hypothesis testing, which is methodologically sound.",
       "required_controls": [
-        "Orthogonal vector control (random directions with matched magnitudes)",
-        "Semantic analysis of steering vectors (what concepts they represent)",
-        "Magnitude ablation study (effect of \u03b1 scaling independent of direction)",
-        "Layer ablation controls (individual layer contributions in multi-layer steering)",
-        "Baseline comparison with non-safety-related steering vectors",
-        "Gradient-based attribution analysis of layer contributions"
+        "Orthogonal vector control (random directions with same magnitude)",
+        "Magnitude ablation study (same directions, varying alpha values)",
+        "Layer ablation controls (individual layer contributions in multi-layer setup)",
+        "Semantic coherence validation (automated scoring of response quality)",
+        "Baseline comparison with standard jailbreak techniques",
+        "Cross-model replication on Llama-3.1-8B (full 28-config sweep)"
       ],
       "confidence": 0.75,
       "proceed": true,
       "next_steps": [
         "Complete orthogonal vector control experiments to establish direction specificity",
-        "Conduct semantic analysis of steering vectors using probing techniques",
-        "Implement magnitude ablation studies across all successful configurations",
-        "Perform layer-wise attribution analysis for multi-layer steering effects",
-        "Validate findings with n=100 across all key configurations",
-        "Design adaptive adversarial robustness tests before publication"
+        "Conduct magnitude ablation studies to separate direction vs. amplitude effects",
+        "Perform layer ablation analysis to identify critical layers in multi-layer steering",
+        "Complete Llama-3.1 validation sweep for cross-model generalization",
+        "Implement automated coherence scoring to validate response quality",
+        "Prepare controlled comparison with existing jailbreak methods for baseline establishment"
       ]
     },
     "GPT-4o (security)": {
       "verdict": "YELLOW",
-      "critique": "The experiments conducted provide intriguing insights into layer-specific vulnerabilities in LLMs, particularly with the breakthrough in overcoming Gemma's resistance through multi-layer steering. However, the current results require further validation to ensure scientific rigor and reproducibility. The pending experiments, especially the orthogonal vector control and increased sample size, are crucial to confirm the direction specificity and statistical significance of the findings. Additionally, the robustness of these models against adaptive adversarial attacks remains untested, which is essential for assessing real-world applicability and security implications. The current data suggests promising directions but lacks comprehensive validation across different models and configurations.",
+      "critique": "The experiment results provide promising insights into layer-specific vulnerabilities in LLM safety mechanisms, particularly with the breakthrough in coordinated multi-layer steering. However, there are several aspects that require further validation to strengthen the scientific validity of these findings. The current results are based on a limited number of configurations and models, which may not fully capture the generalizability of the observed vulnerabilities across different architectures and settings. Additionally, the pending experiments, such as orthogonal vector control and increased sample size (n=100), are crucial for ensuring that the observed effects are not artifacts of specific configurations or statistical anomalies. The robustness of the models against adaptive adversarial attacks also needs to be thoroughly assessed to understand the practical implications of these vulnerabilities in real-world scenarios.",
       "required_controls": [
-        "Orthogonal vector control to verify direction specificity",
-        "Increased sample size (n=100) for statistical power",
-        "Adaptive adversarial attack tests for robustness",
+        "Orthogonal vector control to verify direction specificity versus magnitude effect",
+        "Increased sample size (n=100) for statistical validation",
+        "Adaptive adversarial attacks to test robustness against jailbreak techniques",
         "Cross-model validation with a full Llama-3.1 sweep"
       ],
       "confidence": 0.7,
       "proceed": false,
       "next_steps": [
-        "Complete the orthogonal vector control experiment to confirm direction specificity.",
-        "Conduct the n=100 validation to ensure statistical significance.",
-        "Implement adaptive adversarial attack tests to evaluate robustness.",
-        "Perform a full Llama-3.1 sweep for cross-model validation.",
-        "Prepare a detailed methodology section for publication to enhance reproducibility."
+        "Conduct orthogonal vector control experiments to determine the specificity of direction versus magnitude effects.",
+        "Increase the sample size to n=100 for all experiments to enhance statistical power and reliability.",
+        "Develop and test adaptive adversarial attack strategies to evaluate the robustness of the models against sophisticated jailbreak techniques.",
+        "Complete the full Llama-3.1 sweep to ensure cross-model validation and generalizability of the findings.",
+        "Consider responsible disclosure strategies, including engaging with model developers to discuss potential vulnerabilities and mitigation strategies."
       ]
     },
     "Gemini (theory)": {
@@ -135,34 +135,35 @@
     },
     "Grok (methods)": {
       "verdict": "YELLOW",
-      "critique": "The experimental design and initial results of the 'Crystallized Safety' project show promise in identifying layer-specific vulnerabilities in LLMs, with notable breakthroughs in overcoming resistance in Gemma-2-9B through multilayer steering. The success rates reported, particularly for Mistral-7B-Instruct (83% at L24) and Gemma-2-9B (95%+ with 4-layer steering), are compelling, and the inclusion of confidence intervals for success rates demonstrates a commitment to statistical rigor. However, there are significant concerns regarding sample sizes, control experiments, and reproducibility. For instance, some experiments (e.g., Exp6 series) use a smaller sample size (n=50) compared to others (n=100), which introduces variability in statistical power and undermines the reliability of comparisons across experiments. Additionally, the lack of completed orthogonal vector controls and adaptive adversarial attack testing raises questions about the specificity and robustness of the observed effects.\n\nFrom a methodological standpoint, the absence of detailed documentation on prompt design, steering vector construction, and hyperparameter selection (e.g., \u03b1=15 for Mistral) limits reproducibility. The 'all_controls_pass' flag for Mistral sweep being false is concerning and not adequately explained, suggesting potential issues with experimental validity. Furthermore, while the confidence intervals are provided, there is no discussion of multiple testing corrections or p-values for significance, which is critical given the number of configurations tested (e.g., 28 for Mistral, 11 for Gemma). Without these, the risk of false positives remains high. Overall, while the results are intriguing, the current state of the experiments does not yet meet the standards required for robust scientific conclusions or publication.\n\nTo strengthen the findings, the team must prioritize pending experiments, particularly the orthogonal vector control to confirm direction specificity and the n=100 validation to ensure statistical power. Cross-model validation with Llama-3.1 is also essential to establish generalizability. The current status warrants a 'YELLOW' verdict, indicating potential but with significant gaps that must be addressed before proceeding to publication or disclosure discussions.",
+      "critique": "The experimental design and initial results of the 'Crystallized Safety' project show promise in identifying layer-specific vulnerabilities in LLMs and demonstrating breakthroughs in overcoming resistance through multilayer steering. The success rates reported for Mistral-7B and Gemma-2-9B under various configurations are compelling, particularly the 95%+ success in breaking Gemma's resistance with 4-layer coordinated steering. The inclusion of confidence intervals for success rates is a positive step toward statistical rigor, and the sample sizes (n=50 to n=100) provide a reasonable basis for preliminary conclusions. However, there are notable gaps in the experimental methodology that undermine the scientific validity and reproducibility of the findings. Key controls, such as orthogonal vector testing for direction specificity, are pending, and the lack of detailed documentation on prompt design, evaluation criteria for 'success,' and hyperparameter selection (e.g., \u03b1=15) limits the ability to replicate these results. Additionally, the variability in sample sizes (n=50 vs. n=100) across experiments introduces potential bias in comparing success rates, and the absence of p-values or effect size measures hinders the assessment of statistical significance.\n\nFrom a statistical perspective, the current dataset lacks sufficient power for definitive claims, especially for experiments with n=50, where confidence intervals are wider and less reliable. The pending validation with n=100 is critical to address this, but it should be accompanied by a clear statistical analysis plan (e.g., hypothesis testing, correction for multiple comparisons) to avoid p-hacking or overinterpretation of results. Furthermore, the experiments do not yet account for potential confounding factors, such as the specific nature of jailbreak prompts or model fine-tuning differences, which could influence the generalizability of findings across models like Llama-3.1. While the results are intriguing, the lack of robustness testing against adaptive adversarial attacks raises concerns about whether these vulnerabilities are exploitable in real-world scenarios or merely artifacts of the experimental setup.\n\nOverall, the project is on a promising trajectory but requires significant additional work to meet publication standards. The pending experiments listed are essential, and further methodological clarity is needed to ensure reproducibility. I recommend proceeding with caution, prioritizing the completion of controls and validations before drawing firm conclusions or preparing for disclosure. The current evidence is suggestive but not yet robust enough to warrant a 'GREEN' verdict.",
       "required_controls": [
-        "Orthogonal vector control to verify direction specificity vs magnitude effect",
+        "Orthogonal vector control to verify direction specificity vs. magnitude effect",
         "Validation with n=100 across all key experiments for consistent statistical power",
-        "Adaptive adversarial attack testing to assess robustness of vulnerabilities",
-        "Detailed documentation of prompt design and steering vector construction for reproducibility"
+        "Detailed documentation of prompt design and success evaluation criteria",
+        "Robustness testing against adaptive adversarial attacks",
+        "Statistical analysis plan including hypothesis testing and correction for multiple comparisons"
       ],
       "confidence": 0.6,
-      "proceed": false,
+      "proceed": true,
       "next_steps": [
-        "Complete orthogonal vector control experiments to confirm specificity of steering effects",
-        "Standardize sample sizes (n=100) across all experiments and re-run underpowered tests (e.g., Exp6 series)",
-        "Conduct full Llama-3.1 sweep for cross-model validation",
-        "Implement multiple testing corrections and report significance levels for all configurations tested",
-        "Document detailed methodology for prompt design, steering vectors, and hyperparameter selection"
+        "Complete orthogonal vector control to confirm specificity of steering effects",
+        "Increase sample size to n=100 for all experiments and perform statistical significance testing",
+        "Conduct robustness testing with adaptive adversarial attacks to validate real-world relevance",
+        "Document experimental methodology (prompts, hyperparameters, evaluation criteria) for reproducibility",
+        "Finalize Llama-3.1 sweep for cross-model validation and generalizability"
       ]
     }
   },
   "recommended_next_steps": [
     "Complete orthogonal vector control experiments to establish direction specificity",
-    "Conduct semantic analysis of steering vectors using probing techniques",
-    "Implement magnitude ablation studies across all successful configurations",
-    "Perform layer-wise attribution analysis for multi-layer steering effects",
-    "Validate findings with n=100 across all key configurations",
-    "Design adaptive adversarial robustness tests before publication",
-    "Complete the orthogonal vector control experiment to confirm direction specificity.",
-    "Conduct the n=100 validation to ensure statistical significance.",
-    "Implement adaptive adversarial attack tests to evaluate robustness.",
-    "Perform a full Llama-3.1 sweep for cross-model validation."
+    "Conduct magnitude ablation studies to separate direction vs. amplitude effects",
+    "Perform layer ablation analysis to identify critical layers in multi-layer steering",
+    "Complete Llama-3.1 validation sweep for cross-model generalization",
+    "Implement automated coherence scoring to validate response quality",
+    "Prepare controlled comparison with existing jailbreak methods for baseline establishment",
+    "Conduct orthogonal vector control experiments to determine the specificity of direction versus magnitude effects.",
+    "Increase the sample size to n=100 for all experiments to enhance statistical power and reliability.",
+    "Develop and test adaptive adversarial attack strategies to evaluate the robustness of the models against sophisticated jailbreak techniques.",
+    "Complete the full Llama-3.1 sweep to ensure cross-model validation and generalizability of the findings."
   ]
 }
