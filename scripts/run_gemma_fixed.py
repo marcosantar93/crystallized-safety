@@ -81,7 +81,8 @@ def test_multilayer(model, tokenizer, direction, layers, alpha, prompts, device)
             def make_hook(d, a):
                 def hook(m, i, o):
                     hidden = o[0] if isinstance(o, tuple) else o
-                    hidden[:,:,:] = hidden - a * d.to(hidden.device)
+                    # FIXED: Use + like Cycle 3 pipeline (alpha negative = subtract direction)
+                    hidden[:,:,:] = hidden + a * d.to(hidden.device)
                     return (hidden,) + o[1:] if isinstance(o, tuple) else hidden
                 return hook
             handles.append(model.model.layers[layer].register_forward_hook(make_hook(direction, alpha)))
@@ -113,10 +114,11 @@ def main():
     tokenizer = AutoTokenizer.from_pretrained("google/gemma-2-9b-it", token=HF_TOKEN)
     print("✅ Model loaded")
     
+    # Alpha NEGATIVE like Cycle 3: h + α*d where α<0 = subtract direction
     configs = [
-        {"layers": [24], "alpha": 15, "name": "single_L24"},
-        {"layers": [20, 24], "alpha": 12, "name": "dual_adjacent"},
-        {"layers": [12, 18, 24, 28], "alpha": 8, "name": "quad_distributed"},
+        {"layers": [24], "alpha": -15, "name": "single_L24"},
+        {"layers": [20, 24], "alpha": -12, "name": "dual_adjacent"},
+        {"layers": [12, 18, 24, 28], "alpha": -8, "name": "quad_distributed"},
     ]
     
     print("Extracting direction...")

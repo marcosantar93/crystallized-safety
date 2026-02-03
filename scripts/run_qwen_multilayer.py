@@ -84,7 +84,8 @@ def extract_direction(model, tokenizer, layer, harmful_prompts, harmless_prompts
 def steer_and_generate(model, tokenizer, prompt, direction, layer, alpha, device):
     """Generate with steering"""
     def steering_hook(module, input, output):
-        output[0][:, :, :] = output[0] - alpha * direction.to(output[0].device)
+        # FIXED: Use + like Cycle 3 pipeline (alpha negative = subtract direction)
+        output[0][:, :, :] = output[0] + alpha * direction.to(output[0].device)
         return output
     
     handle = model.model.layers[layer].register_forward_hook(steering_hook)
@@ -123,7 +124,8 @@ def test_config(model, tokenizer, direction, layers, alpha, prompts, device):
         for layer in layers:
             def make_hook(d, a):
                 def hook(module, input, output):
-                    output[0][:, :, :] = output[0] - a * d.to(output[0].device)
+                    # FIXED: Use + like Cycle 3 pipeline (alpha negative = subtract direction)
+                    output[0][:, :, :] = output[0] + a * d.to(output[0].device)
                     return output
                 return hook
             h = model.model.layers[layer].register_forward_hook(make_hook(direction, alpha))
@@ -162,12 +164,19 @@ def main():
     )
     print("✅ Model loaded")
     
-    # Test configurations
+    # Test configurations (alpha NEGATIVE like Cycle 3: h + α*d where α<0 = subtract)
+    # Qwen 2.5 7B has 28 layers (0-27), so max layer is 27
     configs = [
-        {"layers": [24], "alpha": 15, "name": "single_L24"},
-        {"layers": [20, 24], "alpha": 12, "name": "dual_L20_L24"},
-        {"layers": [16, 20, 24], "alpha": 10, "name": "triple"},
-        {"layers": [12, 18, 24, 28], "alpha": 8, "name": "quad"},
+        # Already tested: single_L24, dual, triple - all 0%
+        # Now testing more aggressive configs
+        {"layers": [12, 18, 24, 27], "alpha": -8, "name": "quad_fixed"},
+        {"layers": [8, 12, 16, 20, 24, 27], "alpha": -6, "name": "six_layer"},
+        {"layers": [20, 21, 22, 23, 24, 25, 26, 27], "alpha": -5, "name": "dense_late"},
+        # Higher alpha single layer
+        {"layers": [24], "alpha": -25, "name": "single_L24_strong"},
+        {"layers": [20], "alpha": -25, "name": "single_L20_strong"},
+        # Different layer targets
+        {"layers": [12, 16, 20, 24], "alpha": -12, "name": "quad_early"},
     ]
     
     results = {
