@@ -1,0 +1,16 @@
+[
+  {
+    "model": "mistralai/Mistral-7B-Instruct-v0.3",
+    "layer": 20,
+    "alpha": -15.0,
+    "error": "CUDA error: CUBLAS_STATUS_INVALID_VALUE when calling `cublasGemmEx( handle, opa, opb, m, n, k, alpha_ptr, a, CUDA_R_16F, lda, b, CUDA_R_16F, ldb, beta_ptr, c, std::is_same_v<C_Dtype, float> ? CUDA_R_32F : CUDA_R_16F, ldc, compute_type, CUBLAS_GEMM_DEFAULT_TENSOR_OP)`",
+    "timestamp": "2026-02-04T16:05:21.809091"
+  },
+  {
+    "model": "mistralai/Mistral-7B-Instruct-v0.3",
+    "layer": 24,
+    "alpha": -15.0,
+    "error": "CUDA error: CUBLAS_STATUS_INVALID_VALUE when calling `cublasGemmEx( handle, opa, opb, m, n, k, alpha_ptr, a, CUDA_R_16F, lda, b, CUDA_R_16F, ldb, beta_ptr, c, std::is_same_v<C_Dtype, float> ? CUDA_R_32F : CUDA_R_16F, ldc, compute_type, CUBLAS_GEMM_DEFAULT_TENSOR_OP)`",
+    "timestamp": "2026-02-04T16:05:21.812248"
+  }
+]
