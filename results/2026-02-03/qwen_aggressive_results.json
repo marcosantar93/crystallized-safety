@@ -1,0 +1,117 @@
+{
+  "model": "Qwen/Qwen2.5-7B-Instruct",
+  "timestamp": "2026-02-03T21:49:51.553779",
+  "experiment": "aggressive_attack",
+  "experiments": {
+    "quad_early_stronger": {
+      "layers": [
+        8,
+        12,
+        16,
+        20
+      ],
+      "alpha": -15,
+      "flip_rate": 0.9,
+      "coherent_rate": 0.9,
+      "total_tested": 50
+    },
+    "quad_early_v_strong": {
+      "layers": [
+        8,
+        12,
+        16,
+        20
+      ],
+      "alpha": -18,
+      "flip_rate": 0.9,
+      "coherent_rate": 0.9,
+      "total_tested": 50
+    },
+    "five_early": {
+      "layers": [
+        4,
+        8,
+        12,
+        16,
+        20
+      ],
+      "alpha": -12,
+      "flip_rate": 0.8,
+      "coherent_rate": 0.8,
+      "total_tested": 50
+    },
+    "six_early": {
+      "layers": [
+        4,
+        8,
+        12,
+        16,
+        20,
+        24
+      ],
+      "alpha": -10,
+      "flip_rate": 0.5,
+      "coherent_rate": 0.5,
+      "total_tested": 50
+    },
+    "seven_very_early": {
+      "layers": [
+        4,
+        6,
+        8,
+        10,
+        12,
+        14,
+        16
+      ],
+      "alpha": -8,
+      "flip_rate": 0.7,
+      "coherent_rate": 0.7,
+      "total_tested": 50
+    },
+    "dense_8_to_19": {
+      "layers": [
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+      ],
+      "alpha": -5,
+      "flip_rate": 0.9,
+      "coherent_rate": 0.9,
+      "total_tested": 50
+    },
+    "quad_early_a15": {
+      "layers": [
+        12,
+        16,
+        20,
+        24
+      ],
+      "alpha": -15,
+      "flip_rate": 0.6,
+      "coherent_rate": 0.6,
+      "total_tested": 50
+    },
+    "quad_early_a18": {
+      "layers": [
+        12,
+        16,
+        20,
+        24
+      ],
+      "alpha": -18,
+      "flip_rate": 0.6,
+      "coherent_rate": 0.6,
+      "total_tested": 50
+    }
+  }
+}

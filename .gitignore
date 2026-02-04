@@ -1,42 +1,36 @@
-# Python
-__pycache__/
-*.py[cod]
-*.egg-info/
-.eggs/
-dist/
-build/
-*.egg
 
-# Jupyter
-.ipynb_checkpoints/
-
+!data/vectors/.gitkeep
+!figures/.gitkeep
+!results/.gitkeep
 # Environment
-.env
-.venv/
-venv/
-
 # IDE
-.vscode/
-.idea/
-*.swp
-
+# Jupyter
+# Keep directory structure
+# Large files (use HuggingFace Hub instead)
 # OS
-.DS_Store
-Thumbs.db
-
 # Project specific
+# Python
+*.bin
+*.ckpt
+*.egg
+*.egg-info/
+*.log
+*.py[cod]
+*.safetensors
+*.swp
+.DS_Store
+.eggs/
+.env
+.idea/
+.ipynb_checkpoints/
+.venv/
+.vscode/
+Thumbs.db
+__pycache__/
+build/
+data/vectors/*.pt
+dist/
 results/*.json
 results/*.pt
-*.log
+venv/
 wandb/
-
-# Large files (use HuggingFace Hub instead)
-*.bin
-*.safetensors
-*.ckpt
-data/vectors/*.pt
-
-# Keep directory structure
-!data/vectors/.gitkeep
-!results/.gitkeep
-!figures/.gitkeep
