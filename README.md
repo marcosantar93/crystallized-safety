@@ -1,8 +1,22 @@
-# Crystallized Safety: Sign Inversion and Model Robustness in Activation Steering
+# Crystallized Safety
+
+### Mapping Safety Mechanism Architecture in LLMs via Activation Steering
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
 
-> **Key Finding:** The standard method for extracting "refusal directions" actually extracts safety *reinforcement* directions. To bypass safety via activation steering, you must steer in the **opposite** direction.
+> **Key Finding:** Safety robustness varies dramatically across model families. Some models have "liquid" safety (single-layer bypass possible), while others have "crystallized" safety (distributed, robust architecture).
+
+| Model | Single-Layer Bypass | Status |
+|-------|:------------------:|--------|
+| Llama-3.1-8B | **100%** | 🔴 Liquid |
+| Mistral-7B | **88.6%** | 🟡 Vulnerable |
+| Qwen2.5-7B | **0%** | 🟢 Crystallized |
+| Gemma-2-9B | **0%** | 🟢 Crystallized |
+
+📖 **New here?** Start with [QUICKSTART.md](QUICKSTART.md) | 📊 **Full results:** [RESULTS.md](RESULTS.md)
+
+---
 
 ## Overview
 
@@ -173,4 +187,4 @@ Marco Santarcangelo - [marcosantar93@gmail.com](mailto:marcosantar93@gmail.com)
 
 ---
 
-**Last Updated:** February 1, 2026
+**Last Updated:** February 4, 2026
