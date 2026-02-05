@@ -430,7 +430,7 @@ def weighted_consensus(reviews: list[dict]) -> dict:
     """Calculate weighted consensus based on model expertise."""
     valid_reviews = [r for r in reviews if "error" not in r]
     if not valid_reviews:
-        return {"verdict": "ERROR", "confidence": 0, "action": "NO_VALID_REVIEWS"}
+        return {"verdict": "ERROR", "confidence": 0, "action": "NO_VALID_REVIEWS", "verdict_scores": {"GREEN": 0, "YELLOW": 0, "RED": 0}}
 
     # Get weights for each model
     model_weights = {cfg["name"]: cfg["weight"] for cfg in COUNCIL_CONFIG.values()}
@@ -750,7 +750,7 @@ Given these results, what are the highest priority next steps for:
     print(f"Converged: {'Yes' if council_result['converged'] else 'No'}")
     print()
     print("Verdict Scores (weighted):")
-    for verdict, score in consensus["verdict_scores"].items():
+    for verdict, score in consensus.get("verdict_scores", {}).items():
         print(f"  {verdict}: {score:.2f}")
 
     # Display individual reviews
