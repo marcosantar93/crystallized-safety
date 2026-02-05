@@ -42,11 +42,11 @@ load_dotenv()
 
 COUNCIL_CONFIG = {
     "claude": {
-        "name": "Claude Opus 4.5",
-        "model": "claude-opus-4-5-20251101",
-        "model_fast": "claude-sonnet-4-20250514",
+        "name": "Claude Opus 4.6",
+        "model": "claude-opus-4-6",
+        "model_fast": "claude-sonnet-4-5",
         "role": "mechanistic interpretability",
-        "weight": 1.2,
+        "weight": 1.25,  # Most intelligent model, adaptive thinking
         "expertise": ["activation analysis", "causal interventions", "representation learning"],
     },
     "gpt": {
@@ -592,7 +592,7 @@ async def run_council(
     all_rounds = []
 
     reviewers = [
-        ("Claude Opus 4.5", review_with_claude, COUNCIL_CONFIG["claude"]),
+        ("Claude Opus 4.6", review_with_claude, COUNCIL_CONFIG["claude"]),
         ("GPT-5.2 Pro", review_with_gpt, COUNCIL_CONFIG["gpt"]),
         ("Gemini 3 Flash", review_with_gemini, COUNCIL_CONFIG["gemini"]),
         ("Grok 4", review_with_grok, COUNCIL_CONFIG["grok"]),
