@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 export PATH=$PATH:/home/ubuntu/.local/bin
-export HF_TOKEN=$HF_TOKEN
+# HF_TOKEN loaded from environment or .env
 
 echo "=========================================="
 echo "CRYSTALLIZED SAFETY - AUTOMATED SWEEP"
