@@ -66,11 +66,11 @@ COUNCIL_CONFIG = {
         "expertise": ["information theory", "formal verification", "mathematical rigor"],
     },
     "grok": {
-        "name": "Grok 4.1",
-        "model": "grok-4-1",
-        "model_fast": "grok-3-fast",
+        "name": "Grok 4",
+        "model": "grok-4-0709",
+        "model_fast": "grok-3",
         "role": "experimental methods and statistics",
-        "weight": 1.2,  # #1 on LMArena
+        "weight": 1.2,  # Top tier on LMArena
         "expertise": ["statistical power", "experimental design", "reproducibility"],
     },
 }
@@ -557,7 +557,7 @@ async def run_council(
         ("Claude Opus 4.5", review_with_claude, COUNCIL_CONFIG["claude"]),
         ("GPT-5.2 Pro", review_with_gpt, COUNCIL_CONFIG["gpt"]),
         ("Gemini 3 Flash", review_with_gemini, COUNCIL_CONFIG["gemini"]),
-        ("Grok 4.1", review_with_grok, COUNCIL_CONFIG["grok"]),
+        ("Grok 4", review_with_grok, COUNCIL_CONFIG["grok"]),
     ]
 
     previous_reviews_text = ""
