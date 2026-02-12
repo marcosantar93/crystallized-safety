@@ -1,0 +1,114 @@
+[
+  {
+    "model": "mistralai/Mistral-7B-Instruct-v0.3",
+    "layer": 16,
+    "alpha": -5.0,
+    "error": "CUDA error: CUBLAS_STATUS_INVALID_VALUE when calling `cublasGemmEx( handle, opa, opb, m, n, k, alpha_ptr, a, CUDA_R_16F, lda, b, CUDA_R_16F, ldb, beta_ptr, c, std::is_same_v<C_Dtype, float> ? CUDA_R_32F : CUDA_R_16F, ldc, compute_type, CUBLAS_GEMM_DEFAULT_TENSOR_OP)`",
+    "timestamp": "2026-02-04T16:13:45.915610"
+  },
+  {
+    "model": "mistralai/Mistral-7B-Instruct-v0.3",
+    "layer": 16,
+    "alpha": -10.0,
+    "error": "CUDA error: CUBLAS_STATUS_INVALID_VALUE when calling `cublasGemmEx( handle, opa, opb, m, n, k, alpha_ptr, a, CUDA_R_16F, lda, b, CUDA_R_16F, ldb, beta_ptr, c, std::is_same_v<C_Dtype, float> ? CUDA_R_32F : CUDA_R_16F, ldc, compute_type, CUBLAS_GEMM_DEFAULT_TENSOR_OP)`",
+    "timestamp": "2026-02-04T16:13:45.918659"
+  },
+  {
+    "model": "mistralai/Mistral-7B-Instruct-v0.3",
+    "layer": 16,
+    "alpha": -15.0,
+    "error": "CUDA error: CUBLAS_STATUS_INVALID_VALUE when calling `cublasGemmEx( handle, opa, opb, m, n, k, alpha_ptr, a, CUDA_R_16F, lda, b, CUDA_R_16F, ldb, beta_ptr, c, std::is_same_v<C_Dtype, float> ? CUDA_R_32F : CUDA_R_16F, ldc, compute_type, CUBLAS_GEMM_DEFAULT_TENSOR_OP)`",
+    "timestamp": "2026-02-04T16:13:45.921094"
+  },
+  {
+    "model": "mistralai/Mistral-7B-Instruct-v0.3",
+    "layer": 16,
+    "alpha": -20.0,
+    "error": "CUDA error: CUBLAS_STATUS_INVALID_VALUE when calling `cublasGemmEx( handle, opa, opb, m, n, k, alpha_ptr, a, CUDA_R_16F, lda, b, CUDA_R_16F, ldb, beta_ptr, c, std::is_same_v<C_Dtype, float> ? CUDA_R_32F : CUDA_R_16F, ldc, compute_type, CUBLAS_GEMM_DEFAULT_TENSOR_OP)`",
+    "timestamp": "2026-02-04T16:13:45.923537"
+  },
+  {
+    "model": "mistralai/Mistral-7B-Instruct-v0.3",
+    "layer": 20,
+    "alpha": -5.0,
+    "error": "CUDA error: CUBLAS_STATUS_INVALID_VALUE when calling `cublasGemmEx( handle, opa, opb, m, n, k, alpha_ptr, a, CUDA_R_16F, lda, b, CUDA_R_16F, ldb, beta_ptr, c, std::is_same_v<C_Dtype, float> ? CUDA_R_32F : CUDA_R_16F, ldc, compute_type, CUBLAS_GEMM_DEFAULT_TENSOR_OP)`",
+    "timestamp": "2026-02-04T16:13:45.925949"
+  },
+  {
+    "model": "mistralai/Mistral-7B-Instruct-v0.3",
+    "layer": 20,
+    "alpha": -10.0,
+    "error": "CUDA error: CUBLAS_STATUS_INVALID_VALUE when calling `cublasGemmEx( handle, opa, opb, m, n, k, alpha_ptr, a, CUDA_R_16F, lda, b, CUDA_R_16F, ldb, beta_ptr, c, std::is_same_v<C_Dtype, float> ? CUDA_R_32F : CUDA_R_16F, ldc, compute_type, CUBLAS_GEMM_DEFAULT_TENSOR_OP)`",
+    "timestamp": "2026-02-04T16:13:45.928346"
+  },
+  {
+    "model": "mistralai/Mistral-7B-Instruct-v0.3",
+    "layer": 20,
+    "alpha": -15.0,
+    "error": "CUDA error: CUBLAS_STATUS_INVALID_VALUE when calling `cublasGemmEx( handle, opa, opb, m, n, k, alpha_ptr, a, CUDA_R_16F, lda, b, CUDA_R_16F, ldb, beta_ptr, c, std::is_same_v<C_Dtype, float> ? CUDA_R_32F : CUDA_R_16F, ldc, compute_type, CUBLAS_GEMM_DEFAULT_TENSOR_OP)`",
+    "timestamp": "2026-02-04T16:13:45.930800"
+  },
+  {
+    "model": "mistralai/Mistral-7B-Instruct-v0.3",
+    "layer": 20,
+    "alpha": -20.0,
+    "error": "CUDA error: CUBLAS_STATUS_INVALID_VALUE when calling `cublasGemmEx( handle, opa, opb, m, n, k, alpha_ptr, a, CUDA_R_16F, lda, b, CUDA_R_16F, ldb, beta_ptr, c, std::is_same_v<C_Dtype, float> ? CUDA_R_32F : CUDA_R_16F, ldc, compute_type, CUBLAS_GEMM_DEFAULT_TENSOR_OP)`",
+    "timestamp": "2026-02-04T16:13:45.933201"
+  },
+  {
+    "model": "mistralai/Mistral-7B-Instruct-v0.3",
+    "layer": 24,
+    "alpha": -5.0,
+    "error": "CUDA error: CUBLAS_STATUS_INVALID_VALUE when calling `cublasGemmEx( handle, opa, opb, m, n, k, alpha_ptr, a, CUDA_R_16F, lda, b, CUDA_R_16F, ldb, beta_ptr, c, std::is_same_v<C_Dtype, float> ? CUDA_R_32F : CUDA_R_16F, ldc, compute_type, CUBLAS_GEMM_DEFAULT_TENSOR_OP)`",
+    "timestamp": "2026-02-04T16:13:45.935614"
+  },
+  {
+    "model": "mistralai/Mistral-7B-Instruct-v0.3",
+    "layer": 24,
+    "alpha": -10.0,
+    "error": "CUDA error: CUBLAS_STATUS_INVALID_VALUE when calling `cublasGemmEx( handle, opa, opb, m, n, k, alpha_ptr, a, CUDA_R_16F, lda, b, CUDA_R_16F, ldb, beta_ptr, c, std::is_same_v<C_Dtype, float> ? CUDA_R_32F : CUDA_R_16F, ldc, compute_type, CUBLAS_GEMM_DEFAULT_TENSOR_OP)`",
+    "timestamp": "2026-02-04T16:13:45.938110"
+  },
+  {
+    "model": "mistralai/Mistral-7B-Instruct-v0.3",
+    "layer": 24,
+    "alpha": -15.0,
+    "error": "CUDA error: CUBLAS_STATUS_INVALID_VALUE when calling `cublasGemmEx( handle, opa, opb, m, n, k, alpha_ptr, a, CUDA_R_16F, lda, b, CUDA_R_16F, ldb, beta_ptr, c, std::is_same_v<C_Dtype, float> ? CUDA_R_32F : CUDA_R_16F, ldc, compute_type, CUBLAS_GEMM_DEFAULT_TENSOR_OP)`",
+    "timestamp": "2026-02-04T16:13:45.940535"
+  },
+  {
+    "model": "mistralai/Mistral-7B-Instruct-v0.3",
+    "layer": 24,
+    "alpha": -20.0,
+    "error": "CUDA error: CUBLAS_STATUS_INVALID_VALUE when calling `cublasGemmEx( handle, opa, opb, m, n, k, alpha_ptr, a, CUDA_R_16F, lda, b, CUDA_R_16F, ldb, beta_ptr, c, std::is_same_v<C_Dtype, float> ? CUDA_R_32F : CUDA_R_16F, ldc, compute_type, CUBLAS_GEMM_DEFAULT_TENSOR_OP)`",
+    "timestamp": "2026-02-04T16:13:45.943013"
+  },
+  {
+    "model": "mistralai/Mistral-7B-Instruct-v0.3",
+    "layer": 28,
+    "alpha": -5.0,
+    "error": "CUDA error: CUBLAS_STATUS_INVALID_VALUE when calling `cublasGemmEx( handle, opa, opb, m, n, k, alpha_ptr, a, CUDA_R_16F, lda, b, CUDA_R_16F, ldb, beta_ptr, c, std::is_same_v<C_Dtype, float> ? CUDA_R_32F : CUDA_R_16F, ldc, compute_type, CUBLAS_GEMM_DEFAULT_TENSOR_OP)`",
+    "timestamp": "2026-02-04T16:13:45.945516"
+  },
+  {
+    "model": "mistralai/Mistral-7B-Instruct-v0.3",
+    "layer": 28,
+    "alpha": -10.0,
+    "error": "CUDA error: CUBLAS_STATUS_INVALID_VALUE when calling `cublasGemmEx( handle, opa, opb, m, n, k, alpha_ptr, a, CUDA_R_16F, lda, b, CUDA_R_16F, ldb, beta_ptr, c, std::is_same_v<C_Dtype, float> ? CUDA_R_32F : CUDA_R_16F, ldc, compute_type, CUBLAS_GEMM_DEFAULT_TENSOR_OP)`",
+    "timestamp": "2026-02-04T16:13:45.947994"
+  },
+  {
+    "model": "mistralai/Mistral-7B-Instruct-v0.3",
+    "layer": 28,
+    "alpha": -15.0,
+    "error": "CUDA error: CUBLAS_STATUS_INVALID_VALUE when calling `cublasGemmEx( handle, opa, opb, m, n, k, alpha_ptr, a, CUDA_R_16F, lda, b, CUDA_R_16F, ldb, beta_ptr, c, std::is_same_v<C_Dtype, float> ? CUDA_R_32F : CUDA_R_16F, ldc, compute_type, CUBLAS_GEMM_DEFAULT_TENSOR_OP)`",
+    "timestamp": "2026-02-04T16:13:45.950443"
+  },
+  {
+    "model": "mistralai/Mistral-7B-Instruct-v0.3",
+    "layer": 28,
+    "alpha": -20.0,
+    "error": "CUDA error: CUBLAS_STATUS_INVALID_VALUE when calling `cublasGemmEx( handle, opa, opb, m, n, k, alpha_ptr, a, CUDA_R_16F, lda, b, CUDA_R_16F, ldb, beta_ptr, c, std::is_same_v<C_Dtype, float> ? CUDA_R_32F : CUDA_R_16F, ldc, compute_type, CUBLAS_GEMM_DEFAULT_TENSOR_OP)`",
+    "timestamp": "2026-02-04T16:13:45.952956"
+  }
+]

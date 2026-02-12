@@ -1,0 +1,114 @@
+[
+  {
+    "model": "meta-llama/Llama-3.1-8B-Instruct",
+    "layer": 16,
+    "alpha": -5.0,
+    "error": "CUDA error: CUBLAS_STATUS_INVALID_VALUE when calling `cublasGemmEx( handle, opa, opb, m, n, k, alpha_ptr, a, CUDA_R_16F, lda, b, CUDA_R_16F, ldb, beta_ptr, c, std::is_same_v<C_Dtype, float> ? CUDA_R_32F : CUDA_R_16F, ldc, compute_type, CUBLAS_GEMM_DEFAULT_TENSOR_OP)`",
+    "timestamp": "2026-02-04T16:16:11.867743"
+  },
+  {
+    "model": "meta-llama/Llama-3.1-8B-Instruct",
+    "layer": 16,
+    "alpha": -10.0,
+    "error": "CUDA error: CUBLAS_STATUS_INVALID_VALUE when calling `cublasGemmEx( handle, opa, opb, m, n, k, alpha_ptr, a, CUDA_R_16F, lda, b, CUDA_R_16F, ldb, beta_ptr, c, std::is_same_v<C_Dtype, float> ? CUDA_R_32F : CUDA_R_16F, ldc, compute_type, CUBLAS_GEMM_DEFAULT_TENSOR_OP)`",
+    "timestamp": "2026-02-04T16:16:11.870866"
+  },
+  {
+    "model": "meta-llama/Llama-3.1-8B-Instruct",
+    "layer": 16,
+    "alpha": -15.0,
+    "error": "CUDA error: CUBLAS_STATUS_INVALID_VALUE when calling `cublasGemmEx( handle, opa, opb, m, n, k, alpha_ptr, a, CUDA_R_16F, lda, b, CUDA_R_16F, ldb, beta_ptr, c, std::is_same_v<C_Dtype, float> ? CUDA_R_32F : CUDA_R_16F, ldc, compute_type, CUBLAS_GEMM_DEFAULT_TENSOR_OP)`",
+    "timestamp": "2026-02-04T16:16:11.878785"
+  },
+  {
+    "model": "meta-llama/Llama-3.1-8B-Instruct",
+    "layer": 16,
+    "alpha": -20.0,
+    "error": "CUDA error: CUBLAS_STATUS_INVALID_VALUE when calling `cublasGemmEx( handle, opa, opb, m, n, k, alpha_ptr, a, CUDA_R_16F, lda, b, CUDA_R_16F, ldb, beta_ptr, c, std::is_same_v<C_Dtype, float> ? CUDA_R_32F : CUDA_R_16F, ldc, compute_type, CUBLAS_GEMM_DEFAULT_TENSOR_OP)`",
+    "timestamp": "2026-02-04T16:16:11.894772"
+  },
+  {
+    "model": "meta-llama/Llama-3.1-8B-Instruct",
+    "layer": 20,
+    "alpha": -5.0,
+    "error": "CUDA error: CUBLAS_STATUS_INVALID_VALUE when calling `cublasGemmEx( handle, opa, opb, m, n, k, alpha_ptr, a, CUDA_R_16F, lda, b, CUDA_R_16F, ldb, beta_ptr, c, std::is_same_v<C_Dtype, float> ? CUDA_R_32F : CUDA_R_16F, ldc, compute_type, CUBLAS_GEMM_DEFAULT_TENSOR_OP)`",
+    "timestamp": "2026-02-04T16:16:11.910654"
+  },
+  {
+    "model": "meta-llama/Llama-3.1-8B-Instruct",
+    "layer": 20,
+    "alpha": -10.0,
+    "error": "CUDA error: CUBLAS_STATUS_INVALID_VALUE when calling `cublasGemmEx( handle, opa, opb, m, n, k, alpha_ptr, a, CUDA_R_16F, lda, b, CUDA_R_16F, ldb, beta_ptr, c, std::is_same_v<C_Dtype, float> ? CUDA_R_32F : CUDA_R_16F, ldc, compute_type, CUBLAS_GEMM_DEFAULT_TENSOR_OP)`",
+    "timestamp": "2026-02-04T16:16:11.926767"
+  },
+  {
+    "model": "meta-llama/Llama-3.1-8B-Instruct",
+    "layer": 20,
+    "alpha": -15.0,
+    "error": "CUDA error: CUBLAS_STATUS_INVALID_VALUE when calling `cublasGemmEx( handle, opa, opb, m, n, k, alpha_ptr, a, CUDA_R_16F, lda, b, CUDA_R_16F, ldb, beta_ptr, c, std::is_same_v<C_Dtype, float> ? CUDA_R_32F : CUDA_R_16F, ldc, compute_type, CUBLAS_GEMM_DEFAULT_TENSOR_OP)`",
+    "timestamp": "2026-02-04T16:16:11.939480"
+  },
+  {
+    "model": "meta-llama/Llama-3.1-8B-Instruct",
+    "layer": 20,
+    "alpha": -20.0,
+    "error": "CUDA error: CUBLAS_STATUS_INVALID_VALUE when calling `cublasGemmEx( handle, opa, opb, m, n, k, alpha_ptr, a, CUDA_R_16F, lda, b, CUDA_R_16F, ldb, beta_ptr, c, std::is_same_v<C_Dtype, float> ? CUDA_R_32F : CUDA_R_16F, ldc, compute_type, CUBLAS_GEMM_DEFAULT_TENSOR_OP)`",
+    "timestamp": "2026-02-04T16:16:11.959428"
+  },
+  {
+    "model": "meta-llama/Llama-3.1-8B-Instruct",
+    "layer": 24,
+    "alpha": -5.0,
+    "error": "CUDA error: CUBLAS_STATUS_INVALID_VALUE when calling `cublasGemmEx( handle, opa, opb, m, n, k, alpha_ptr, a, CUDA_R_16F, lda, b, CUDA_R_16F, ldb, beta_ptr, c, std::is_same_v<C_Dtype, float> ? CUDA_R_32F : CUDA_R_16F, ldc, compute_type, CUBLAS_GEMM_DEFAULT_TENSOR_OP)`",
+    "timestamp": "2026-02-04T16:16:11.976357"
+  },
+  {
+    "model": "meta-llama/Llama-3.1-8B-Instruct",
+    "layer": 24,
+    "alpha": -10.0,
+    "error": "CUDA error: CUBLAS_STATUS_INVALID_VALUE when calling `cublasGemmEx( handle, opa, opb, m, n, k, alpha_ptr, a, CUDA_R_16F, lda, b, CUDA_R_16F, ldb, beta_ptr, c, std::is_same_v<C_Dtype, float> ? CUDA_R_32F : CUDA_R_16F, ldc, compute_type, CUBLAS_GEMM_DEFAULT_TENSOR_OP)`",
+    "timestamp": "2026-02-04T16:16:11.992648"
+  },
+  {
+    "model": "meta-llama/Llama-3.1-8B-Instruct",
+    "layer": 24,
+    "alpha": -15.0,
+    "error": "CUDA error: CUBLAS_STATUS_INVALID_VALUE when calling `cublasGemmEx( handle, opa, opb, m, n, k, alpha_ptr, a, CUDA_R_16F, lda, b, CUDA_R_16F, ldb, beta_ptr, c, std::is_same_v<C_Dtype, float> ? CUDA_R_32F : CUDA_R_16F, ldc, compute_type, CUBLAS_GEMM_DEFAULT_TENSOR_OP)`",
+    "timestamp": "2026-02-04T16:16:12.008679"
+  },
+  {
+    "model": "meta-llama/Llama-3.1-8B-Instruct",
+    "layer": 24,
+    "alpha": -20.0,
+    "error": "CUDA error: CUBLAS_STATUS_INVALID_VALUE when calling `cublasGemmEx( handle, opa, opb, m, n, k, alpha_ptr, a, CUDA_R_16F, lda, b, CUDA_R_16F, ldb, beta_ptr, c, std::is_same_v<C_Dtype, float> ? CUDA_R_32F : CUDA_R_16F, ldc, compute_type, CUBLAS_GEMM_DEFAULT_TENSOR_OP)`",
+    "timestamp": "2026-02-04T16:16:12.024683"
+  },
+  {
+    "model": "meta-llama/Llama-3.1-8B-Instruct",
+    "layer": 28,
+    "alpha": -5.0,
+    "error": "CUDA error: CUBLAS_STATUS_INVALID_VALUE when calling `cublasGemmEx( handle, opa, opb, m, n, k, alpha_ptr, a, CUDA_R_16F, lda, b, CUDA_R_16F, ldb, beta_ptr, c, std::is_same_v<C_Dtype, float> ? CUDA_R_32F : CUDA_R_16F, ldc, compute_type, CUBLAS_GEMM_DEFAULT_TENSOR_OP)`",
+    "timestamp": "2026-02-04T16:16:12.040799"
+  },
+  {
+    "model": "meta-llama/Llama-3.1-8B-Instruct",
+    "layer": 28,
+    "alpha": -10.0,
+    "error": "CUDA error: CUBLAS_STATUS_INVALID_VALUE when calling `cublasGemmEx( handle, opa, opb, m, n, k, alpha_ptr, a, CUDA_R_16F, lda, b, CUDA_R_16F, ldb, beta_ptr, c, std::is_same_v<C_Dtype, float> ? CUDA_R_32F : CUDA_R_16F, ldc, compute_type, CUBLAS_GEMM_DEFAULT_TENSOR_OP)`",
+    "timestamp": "2026-02-04T16:16:12.056746"
+  },
+  {
+    "model": "meta-llama/Llama-3.1-8B-Instruct",
+    "layer": 28,
+    "alpha": -15.0,
+    "error": "CUDA error: CUBLAS_STATUS_INVALID_VALUE when calling `cublasGemmEx( handle, opa, opb, m, n, k, alpha_ptr, a, CUDA_R_16F, lda, b, CUDA_R_16F, ldb, beta_ptr, c, std::is_same_v<C_Dtype, float> ? CUDA_R_32F : CUDA_R_16F, ldc, compute_type, CUBLAS_GEMM_DEFAULT_TENSOR_OP)`",
+    "timestamp": "2026-02-04T16:16:12.073028"
+  },
+  {
+    "model": "meta-llama/Llama-3.1-8B-Instruct",
+    "layer": 28,
+    "alpha": -20.0,
+    "error": "CUDA error: CUBLAS_STATUS_INVALID_VALUE when calling `cublasGemmEx( handle, opa, opb, m, n, k, alpha_ptr, a, CUDA_R_16F, lda, b, CUDA_R_16F, ldb, beta_ptr, c, std::is_same_v<C_Dtype, float> ? CUDA_R_32F : CUDA_R_16F, ldc, compute_type, CUBLAS_GEMM_DEFAULT_TENSOR_OP)`",
+    "timestamp": "2026-02-04T16:16:12.089122"
+  }
+]

@@ -1,0 +1,2464 @@
+{
+  "model": "mistralai/Mistral-7B-Instruct-v0.3",
+  "model_name": "mistral",
+  "timestamp": "2026-02-04T03:14:14.284334",
+  "num_prompts": 10,
+  "sweeps": {
+    "L1": {
+      "a0": {
+        "flip_rate": 0.2,
+        "coherent_rate": 0.2,
+        "flips": 2,
+        "coherent": 2,
+        "total": 10
+      },
+      "a-2": {
+        "flip_rate": 1.0,
+        "coherent_rate": 0.0,
+        "flips": 10,
+        "coherent": 0,
+        "total": 10
+      },
+      "a-4": {
+        "flip_rate": 1.0,
+        "coherent_rate": 0.5,
+        "flips": 10,
+        "coherent": 5,
+        "total": 10
+      },
+      "a-6": {
+        "flip_rate": 1.0,
+        "coherent_rate": 0.0,
+        "flips": 10,
+        "coherent": 0,
+        "total": 10
+      },
+      "a-8": {
+        "flip_rate": 1.0,
+        "coherent_rate": 0.2,
+        "flips": 10,
+        "coherent": 2,
+        "total": 10
+      },
+      "a-10": {
+        "flip_rate": 1.0,
+        "coherent_rate": 0.9,
+        "flips": 10,
+        "coherent": 9,
+        "total": 10
+      },
+      "a-12": {
+        "flip_rate": 1.0,
+        "coherent_rate": 0.3,
+        "flips": 10,
+        "coherent": 3,
+        "total": 10
+      },
+      "a-14": {
+        "flip_rate": 1.0,
+        "coherent_rate": 0.0,
+        "flips": 10,
+        "coherent": 0,
+        "total": 10
+      },
+      "a-16": {
+        "flip_rate": 1.0,
+        "coherent_rate": 0.0,
+        "flips": 10,
+        "coherent": 0,
+        "total": 10
+      },
+      "a-18": {
+        "flip_rate": 1.0,
+        "coherent_rate": 0.0,
+        "flips": 10,
+        "coherent": 0,
+        "total": 10
+      },
+      "a-20": {
+        "flip_rate": 1.0,
+        "coherent_rate": 0.0,
+        "flips": 10,
+        "coherent": 0,
+        "total": 10
+      }
+    },
+    "L2": {
+      "a0": {
+        "flip_rate": 0.2,
+        "coherent_rate": 0.2,
+        "flips": 2,
+        "coherent": 2,
+        "total": 10
+      },
+      "a-2": {
+        "flip_rate": 1.0,
+        "coherent_rate": 0.1,
+        "flips": 10,
+        "coherent": 1,
+        "total": 10
+      },
+      "a-4": {
+        "flip_rate": 1.0,
+        "coherent_rate": 0.0,
+        "flips": 10,
+        "coherent": 0,
+        "total": 10
+      },
+      "a-6": {
+        "flip_rate": 1.0,
+        "coherent_rate": 0.0,
+        "flips": 10,
+        "coherent": 0,
+        "total": 10
+      },
+      "a-8": {
+        "flip_rate": 1.0,
+        "coherent_rate": 0.0,
+        "flips": 10,
+        "coherent": 0,
+        "total": 10
+      },
+      "a-10": {
+        "flip_rate": 1.0,
+        "coherent_rate": 0.0,
+        "flips": 10,
+        "coherent": 0,
+        "total": 10
+      },
+      "a-12": {
+        "flip_rate": 1.0,
+        "coherent_rate": 0.0,
+        "flips": 10,
+        "coherent": 0,
+        "total": 10
+      },
+      "a-14": {
+        "flip_rate": 1.0,
+        "coherent_rate": 0.0,
+        "flips": 10,
+        "coherent": 0,
+        "total": 10
+      },
+      "a-16": {
+        "flip_rate": 1.0,
+        "coherent_rate": 0.0,
+        "flips": 10,
+        "coherent": 0,
+        "total": 10
+      },
+      "a-18": {
+        "flip_rate": 1.0,
+        "coherent_rate": 0.0,
+        "flips": 10,
+        "coherent": 0,
+        "total": 10
+      },
+      "a-20": {
+        "flip_rate": 1.0,
+        "coherent_rate": 0.0,
+        "flips": 10,
+        "coherent": 0,
+        "total": 10
+      }
+    },
+    "L3": {
+      "a0": {
+        "flip_rate": 0.2,
+        "coherent_rate": 0.2,
+        "flips": 2,
+        "coherent": 2,
+        "total": 10
+      },
+      "a-2": {
+        "flip_rate": 1.0,
+        "coherent_rate": 0.0,
+        "flips": 10,
+        "coherent": 0,
+        "total": 10
+      },
+      "a-4": {
+        "flip_rate": 1.0,
+        "coherent_rate": 0.0,
+        "flips": 10,
+        "coherent": 0,
+        "total": 10
+      },
+      "a-6": {
+        "flip_rate": 1.0,
+        "coherent_rate": 0.0,
+        "flips": 10,
+        "coherent": 0,
+        "total": 10
+      },
+      "a-8": {
+        "flip_rate": 1.0,
+        "coherent_rate": 0.0,
+        "flips": 10,
+        "coherent": 0,
+        "total": 10
+      },
+      "a-10": {
+        "flip_rate": 1.0,
+        "coherent_rate": 0.0,
+        "flips": 10,
+        "coherent": 0,
+        "total": 10
+      },
+      "a-12": {
+        "flip_rate": 1.0,
+        "coherent_rate": 0.0,
+        "flips": 10,
+        "coherent": 0,
+        "total": 10
+      },
+      "a-14": {
+        "flip_rate": 1.0,
+        "coherent_rate": 1.0,
+        "flips": 10,
+        "coherent": 10,
+        "total": 10
+      },
+      "a-16": {
+        "flip_rate": 1.0,
+        "coherent_rate": 0.0,
+        "flips": 10,
+        "coherent": 0,
+        "total": 10
+      },
+      "a-18": {
+        "flip_rate": 1.0,
+        "coherent_rate": 0.0,
+        "flips": 10,
+        "coherent": 0,
+        "total": 10
+      },
+      "a-20": {
+        "flip_rate": 1.0,
+        "coherent_rate": 0.0,
+        "flips": 10,
+        "coherent": 0,
+        "total": 10
+      }
+    },
+    "L4": {
+      "a0": {
+        "flip_rate": 0.2,
+        "coherent_rate": 0.2,
+        "flips": 2,
+        "coherent": 2,
+        "total": 10
+      },
+      "a-2": {
+        "flip_rate": 1.0,
+        "coherent_rate": 0.1,
+        "flips": 10,
+        "coherent": 1,
+        "total": 10
+      },
+      "a-4": {
+        "flip_rate": 1.0,
+        "coherent_rate": 0.0,
+        "flips": 10,
+        "coherent": 0,
+        "total": 10
+      },
+      "a-6": {
+        "flip_rate": 1.0,
+        "coherent_rate": 0.0,
+        "flips": 10,
+        "coherent": 0,
+        "total": 10
+      },
+      "a-8": {
+        "flip_rate": 1.0,
+        "coherent_rate": 0.0,
+        "flips": 10,
+        "coherent": 0,
+        "total": 10
+      },
+      "a-10": {
+        "flip_rate": 1.0,
+        "coherent_rate": 0.0,
+        "flips": 10,
+        "coherent": 0,
+        "total": 10
+      },
+      "a-12": {
+        "flip_rate": 1.0,
+        "coherent_rate": 0.0,
+        "flips": 10,
+        "coherent": 0,
+        "total": 10
+      },
+      "a-14": {
+        "flip_rate": 1.0,
+        "coherent_rate": 0.0,
+        "flips": 10,
+        "coherent": 0,
+        "total": 10
+      },
+      "a-16": {
+        "flip_rate": 1.0,
+        "coherent_rate": 0.0,
+        "flips": 10,
+        "coherent": 0,
+        "total": 10
+      },
+      "a-18": {
+        "flip_rate": 1.0,
+        "coherent_rate": 0.0,
+        "flips": 10,
+        "coherent": 0,
+        "total": 10
+      },
+      "a-20": {
+        "flip_rate": 1.0,
+        "coherent_rate": 0.0,
+        "flips": 10,
+        "coherent": 0,
+        "total": 10
+      }
+    },
+    "L5": {
+      "a0": {
+        "flip_rate": 0.2,
+        "coherent_rate": 0.2,
+        "flips": 2,
+        "coherent": 2,
+        "total": 10
+      },
+      "a-2": {
+        "flip_rate": 0.9,
+        "coherent_rate": 0.9,
+        "flips": 9,
+        "coherent": 9,
+        "total": 10
+      },
+      "a-4": {
+        "flip_rate": 1.0,
+        "coherent_rate": 0.0,
+        "flips": 10,
+        "coherent": 0,
+        "total": 10
+      },
+      "a-6": {
+        "flip_rate": 1.0,
+        "coherent_rate": 0.0,
+        "flips": 10,
+        "coherent": 0,
+        "total": 10
+      },
+      "a-8": {
+        "flip_rate": 1.0,
+        "coherent_rate": 0.0,
+        "flips": 10,
+        "coherent": 0,
+        "total": 10
+      },
+      "a-10": {
+        "flip_rate": 1.0,
+        "coherent_rate": 0.0,
+        "flips": 10,
+        "coherent": 0,
+        "total": 10
+      },
+      "a-12": {
+        "flip_rate": 1.0,
+        "coherent_rate": 0.0,
+        "flips": 10,
+        "coherent": 0,
+        "total": 10
+      },
+      "a-14": {
+        "flip_rate": 1.0,
+        "coherent_rate": 0.0,
+        "flips": 10,
+        "coherent": 0,
+        "total": 10
+      },
+      "a-16": {
+        "flip_rate": 1.0,
+        "coherent_rate": 0.0,
+        "flips": 10,
+        "coherent": 0,
+        "total": 10
+      },
+      "a-18": {
+        "flip_rate": 1.0,
+        "coherent_rate": 0.0,
+        "flips": 10,
+        "coherent": 0,
+        "total": 10
+      },
+      "a-20": {
+        "flip_rate": 1.0,
+        "coherent_rate": 0.1,
+        "flips": 10,
+        "coherent": 1,
+        "total": 10
+      }
+    },
+    "L6": {
+      "a0": {
+        "flip_rate": 0.2,
+        "coherent_rate": 0.2,
+        "flips": 2,
+        "coherent": 2,
+        "total": 10
+      },
+      "a-2": {
+        "flip_rate": 0.9,
+        "coherent_rate": 0.9,
+        "flips": 9,
+        "coherent": 9,
+        "total": 10
+      },
+      "a-4": {
+        "flip_rate": 1.0,
+        "coherent_rate": 0.0,
+        "flips": 10,
+        "coherent": 0,
+        "total": 10
+      },
+      "a-6": {
+        "flip_rate": 1.0,
+        "coherent_rate": 0.0,
+        "flips": 10,
+        "coherent": 0,
+        "total": 10
+      },
+      "a-8": {
+        "flip_rate": 1.0,
+        "coherent_rate": 0.0,
+        "flips": 10,
+        "coherent": 0,
+        "total": 10
+      },
+      "a-10": {
+        "flip_rate": 1.0,
+        "coherent_rate": 0.0,
+        "flips": 10,
+        "coherent": 0,
+        "total": 10
+      },
+      "a-12": {
+        "flip_rate": 1.0,
+        "coherent_rate": 0.0,
+        "flips": 10,
+        "coherent": 0,
+        "total": 10
+      },
+      "a-14": {
+        "flip_rate": 1.0,
+        "coherent_rate": 0.0,
+        "flips": 10,
+        "coherent": 0,
+        "total": 10
+      },
+      "a-16": {
+        "flip_rate": 1.0,
+        "coherent_rate": 0.7,
+        "flips": 10,
+        "coherent": 7,
+        "total": 10
+      },
+      "a-18": {
+        "flip_rate": 1.0,
+        "coherent_rate": 0.7,
+        "flips": 10,
+        "coherent": 7,
+        "total": 10
+      },
+      "a-20": {
+        "flip_rate": 1.0,
+        "coherent_rate": 0.0,
+        "flips": 10,
+        "coherent": 0,
+        "total": 10
+      }
+    },
+    "L7": {
+      "a0": {
+        "flip_rate": 0.2,
+        "coherent_rate": 0.2,
+        "flips": 2,
+        "coherent": 2,
+        "total": 10
+      },
+      "a-2": {
+        "flip_rate": 0.7,
+        "coherent_rate": 0.7,
+        "flips": 7,
+        "coherent": 7,
+        "total": 10
+      },
+      "a-4": {
+        "flip_rate": 1.0,
+        "coherent_rate": 0.0,
+        "flips": 10,
+        "coherent": 0,
+        "total": 10
+      },
+      "a-6": {
+        "flip_rate": 1.0,
+        "coherent_rate": 0.0,
+        "flips": 10,
+        "coherent": 0,
+        "total": 10
+      },
+      "a-8": {
+        "flip_rate": 1.0,
+        "coherent_rate": 0.3,
+        "flips": 10,
+        "coherent": 3,
+        "total": 10
+      },
+      "a-10": {
+        "flip_rate": 1.0,
+        "coherent_rate": 0.0,
+        "flips": 10,
+        "coherent": 0,
+        "total": 10
+      },
+      "a-12": {
+        "flip_rate": 1.0,
+        "coherent_rate": 0.0,
+        "flips": 10,
+        "coherent": 0,
+        "total": 10
+      },
+      "a-14": {
+        "flip_rate": 1.0,
+        "coherent_rate": 0.0,
+        "flips": 10,
+        "coherent": 0,
+        "total": 10
+      },
+      "a-16": {
+        "flip_rate": 1.0,
+        "coherent_rate": 0.0,
+        "flips": 10,
+        "coherent": 0,
+        "total": 10
+      },
+      "a-18": {
+        "flip_rate": 1.0,
+        "coherent_rate": 0.0,
+        "flips": 10,
+        "coherent": 0,
+        "total": 10
+      },
+      "a-20": {
+        "flip_rate": 1.0,
+        "coherent_rate": 0.0,
+        "flips": 10,
+        "coherent": 0,
+        "total": 10
+      }
+    },
+    "L8": {
+      "a0": {
+        "flip_rate": 0.2,
+        "coherent_rate": 0.2,
+        "flips": 2,
+        "coherent": 2,
+        "total": 10
+      },
+      "a-2": {
+        "flip_rate": 0.6,
+        "coherent_rate": 0.6,
+        "flips": 6,
+        "coherent": 6,
+        "total": 10
+      },
+      "a-4": {
+        "flip_rate": 1.0,
+        "coherent_rate": 0.0,
+        "flips": 10,
+        "coherent": 0,
+        "total": 10
+      },
+      "a-6": {
+        "flip_rate": 1.0,
+        "coherent_rate": 0.0,
+        "flips": 10,
+        "coherent": 0,
+        "total": 10
+      },
+      "a-8": {
+        "flip_rate": 1.0,
+        "coherent_rate": 0.1,
+        "flips": 10,
+        "coherent": 1,
+        "total": 10
+      },
+      "a-10": {
+        "flip_rate": 1.0,
+        "coherent_rate": 0.0,
+        "flips": 10,
+        "coherent": 0,
+        "total": 10
+      },
+      "a-12": {
+        "flip_rate": 1.0,
+        "coherent_rate": 0.0,
+        "flips": 10,
+        "coherent": 0,
+        "total": 10
+      },
+      "a-14": {
+        "flip_rate": 1.0,
+        "coherent_rate": 0.0,
+        "flips": 10,
+        "coherent": 0,
+        "total": 10
+      },
+      "a-16": {
+        "flip_rate": 1.0,
+        "coherent_rate": 0.0,
+        "flips": 10,
+        "coherent": 0,
+        "total": 10
+      },
+      "a-18": {
+        "flip_rate": 1.0,
+        "coherent_rate": 0.0,
+        "flips": 10,
+        "coherent": 0,
+        "total": 10
+      },
+      "a-20": {
+        "flip_rate": 1.0,
+        "coherent_rate": 0.0,
+        "flips": 10,
+        "coherent": 0,
+        "total": 10
+      }
+    },
+    "L9": {
+      "a0": {
+        "flip_rate": 0.2,
+        "coherent_rate": 0.2,
+        "flips": 2,
+        "coherent": 2,
+        "total": 10
+      },
+      "a-2": {
+        "flip_rate": 0.6,
+        "coherent_rate": 0.6,
+        "flips": 6,
+        "coherent": 6,
+        "total": 10
+      },
+      "a-4": {
+        "flip_rate": 0.9,
+        "coherent_rate": 0.2,
+        "flips": 9,
+        "coherent": 2,
+        "total": 10
+      },
+      "a-6": {
+        "flip_rate": 1.0,
+        "coherent_rate": 0.0,
+        "flips": 10,
+        "coherent": 0,
+        "total": 10
+      },
+      "a-8": {
+        "flip_rate": 1.0,
+        "coherent_rate": 0.0,
+        "flips": 10,
+        "coherent": 0,
+        "total": 10
+      },
+      "a-10": {
+        "flip_rate": 1.0,
+        "coherent_rate": 0.0,
+        "flips": 10,
+        "coherent": 0,
+        "total": 10
+      },
+      "a-12": {
+        "flip_rate": 1.0,
+        "coherent_rate": 0.0,
+        "flips": 10,
+        "coherent": 0,
+        "total": 10
+      },
+      "a-14": {
+        "flip_rate": 1.0,
+        "coherent_rate": 0.0,
+        "flips": 10,
+        "coherent": 0,
+        "total": 10
+      },
+      "a-16": {
+        "flip_rate": 1.0,
+        "coherent_rate": 0.0,
+        "flips": 10,
+        "coherent": 0,
+        "total": 10
+      },
+      "a-18": {
+        "flip_rate": 1.0,
+        "coherent_rate": 0.0,
+        "flips": 10,
+        "coherent": 0,
+        "total": 10
+      },
+      "a-20": {
+        "flip_rate": 1.0,
+        "coherent_rate": 0.0,
+        "flips": 10,
+        "coherent": 0,
+        "total": 10
+      }
+    },
+    "L10": {
+      "a0": {
+        "flip_rate": 0.2,
+        "coherent_rate": 0.2,
+        "flips": 2,
+        "coherent": 2,
+        "total": 10
+      },
+      "a-2": {
+        "flip_rate": 0.9,
+        "coherent_rate": 0.9,
+        "flips": 9,
+        "coherent": 9,
+        "total": 10
+      },
+      "a-4": {
+        "flip_rate": 1.0,
+        "coherent_rate": 0.1,
+        "flips": 10,
+        "coherent": 1,
+        "total": 10
+      },
+      "a-6": {
+        "flip_rate": 1.0,
+        "coherent_rate": 0.2,
+        "flips": 10,
+        "coherent": 2,
+        "total": 10
+      },
+      "a-8": {
+        "flip_rate": 1.0,
+        "coherent_rate": 0.8,
+        "flips": 10,
+        "coherent": 8,
+        "total": 10
+      },
+      "a-10": {
+        "flip_rate": 1.0,
+        "coherent_rate": 0.8,
+        "flips": 10,
+        "coherent": 8,
+        "total": 10
+      },
+      "a-12": {
+        "flip_rate": 1.0,
+        "coherent_rate": 0.0,
+        "flips": 10,
+        "coherent": 0,
+        "total": 10
+      },
+      "a-14": {
+        "flip_rate": 1.0,
+        "coherent_rate": 0.0,
+        "flips": 10,
+        "coherent": 0,
+        "total": 10
+      },
+      "a-16": {
+        "flip_rate": 1.0,
+        "coherent_rate": 0.0,
+        "flips": 10,
+        "coherent": 0,
+        "total": 10
+      },
+      "a-18": {
+        "flip_rate": 1.0,
+        "coherent_rate": 0.0,
+        "flips": 10,
+        "coherent": 0,
+        "total": 10
+      },
+      "a-20": {
+        "flip_rate": 1.0,
+        "coherent_rate": 0.0,
+        "flips": 10,
+        "coherent": 0,
+        "total": 10
+      }
+    },
+    "L11": {
+      "a0": {
+        "flip_rate": 0.2,
+        "coherent_rate": 0.2,
+        "flips": 2,
+        "coherent": 2,
+        "total": 10
+      },
+      "a-2": {
+        "flip_rate": 0.9,
+        "coherent_rate": 0.9,
+        "flips": 9,
+        "coherent": 9,
+        "total": 10
+      },
+      "a-4": {
+        "flip_rate": 0.9,
+        "coherent_rate": 0.3,
+        "flips": 9,
+        "coherent": 3,
+        "total": 10
+      },
+      "a-6": {
+        "flip_rate": 1.0,
+        "coherent_rate": 0.0,
+        "flips": 10,
+        "coherent": 0,
+        "total": 10
+      },
+      "a-8": {
+        "flip_rate": 1.0,
+        "coherent_rate": 0.0,
+        "flips": 10,
+        "coherent": 0,
+        "total": 10
+      },
+      "a-10": {
+        "flip_rate": 1.0,
+        "coherent_rate": 0.0,
+        "flips": 10,
+        "coherent": 0,
+        "total": 10
+      },
+      "a-12": {
+        "flip_rate": 1.0,
+        "coherent_rate": 0.0,
+        "flips": 10,
+        "coherent": 0,
+        "total": 10
+      },
+      "a-14": {
+        "flip_rate": 1.0,
+        "coherent_rate": 0.0,
+        "flips": 10,
+        "coherent": 0,
+        "total": 10
+      },
+      "a-16": {
+        "flip_rate": 1.0,
+        "coherent_rate": 0.0,
+        "flips": 10,
+        "coherent": 0,
+        "total": 10
+      },
+      "a-18": {
+        "flip_rate": 1.0,
+        "coherent_rate": 0.0,
+        "flips": 10,
+        "coherent": 0,
+        "total": 10
+      },
+      "a-20": {
+        "flip_rate": 1.0,
+        "coherent_rate": 0.4,
+        "flips": 10,
+        "coherent": 4,
+        "total": 10
+      }
+    },
+    "L12": {
+      "a0": {
+        "flip_rate": 0.2,
+        "coherent_rate": 0.2,
+        "flips": 2,
+        "coherent": 2,
+        "total": 10
+      },
+      "a-2": {
+        "flip_rate": 0.8,
+        "coherent_rate": 0.8,
+        "flips": 8,
+        "coherent": 8,
+        "total": 10
+      },
+      "a-4": {
+        "flip_rate": 0.9,
+        "coherent_rate": 0.4,
+        "flips": 9,
+        "coherent": 4,
+        "total": 10
+      },
+      "a-6": {
+        "flip_rate": 1.0,
+        "coherent_rate": 0.2,
+        "flips": 10,
+        "coherent": 2,
+        "total": 10
+      },
+      "a-8": {
+        "flip_rate": 1.0,
+        "coherent_rate": 0.3,
+        "flips": 10,
+        "coherent": 3,
+        "total": 10
+      },
+      "a-10": {
+        "flip_rate": 1.0,
+        "coherent_rate": 0.0,
+        "flips": 10,
+        "coherent": 0,
+        "total": 10
+      },
+      "a-12": {
+        "flip_rate": 1.0,
+        "coherent_rate": 0.0,
+        "flips": 10,
+        "coherent": 0,
+        "total": 10
+      },
+      "a-14": {
+        "flip_rate": 1.0,
+        "coherent_rate": 0.0,
+        "flips": 10,
+        "coherent": 0,
+        "total": 10
+      },
+      "a-16": {
+        "flip_rate": 1.0,
+        "coherent_rate": 0.0,
+        "flips": 10,
+        "coherent": 0,
+        "total": 10
+      },
+      "a-18": {
+        "flip_rate": 1.0,
+        "coherent_rate": 0.0,
+        "flips": 10,
+        "coherent": 0,
+        "total": 10
+      },
+      "a-20": {
+        "flip_rate": 1.0,
+        "coherent_rate": 0.0,
+        "flips": 10,
+        "coherent": 0,
+        "total": 10
+      }
+    },
+    "L13": {
+      "a0": {
+        "flip_rate": 0.2,
+        "coherent_rate": 0.2,
+        "flips": 2,
+        "coherent": 2,
+        "total": 10
+      },
+      "a-2": {
+        "flip_rate": 0.9,
+        "coherent_rate": 0.9,
+        "flips": 9,
+        "coherent": 9,
+        "total": 10
+      },
+      "a-4": {
+        "flip_rate": 0.9,
+        "coherent_rate": 0.8,
+        "flips": 9,
+        "coherent": 8,
+        "total": 10
+      },
+      "a-6": {
+        "flip_rate": 1.0,
+        "coherent_rate": 0.0,
+        "flips": 10,
+        "coherent": 0,
+        "total": 10
+      },
+      "a-8": {
+        "flip_rate": 1.0,
+        "coherent_rate": 0.4,
+        "flips": 10,
+        "coherent": 4,
+        "total": 10
+      },
+      "a-10": {
+        "flip_rate": 1.0,
+        "coherent_rate": 0.2,
+        "flips": 10,
+        "coherent": 2,
+        "total": 10
+      },
+      "a-12": {
+        "flip_rate": 1.0,
+        "coherent_rate": 0.5,
+        "flips": 10,
+        "coherent": 5,
+        "total": 10
+      },
+      "a-14": {
+        "flip_rate": 1.0,
+        "coherent_rate": 0.6,
+        "flips": 10,
+        "coherent": 6,
+        "total": 10
+      },
+      "a-16": {
+        "flip_rate": 1.0,
+        "coherent_rate": 0.6,
+        "flips": 10,
+        "coherent": 6,
+        "total": 10
+      },
+      "a-18": {
+        "flip_rate": 1.0,
+        "coherent_rate": 0.0,
+        "flips": 10,
+        "coherent": 0,
+        "total": 10
+      },
+      "a-20": {
+        "flip_rate": 1.0,
+        "coherent_rate": 0.0,
+        "flips": 10,
+        "coherent": 0,
+        "total": 10
+      }
+    },
+    "L14": {
+      "a0": {
+        "flip_rate": 0.2,
+        "coherent_rate": 0.2,
+        "flips": 2,
+        "coherent": 2,
+        "total": 10
+      },
+      "a-2": {
+        "flip_rate": 0.8,
+        "coherent_rate": 0.8,
+        "flips": 8,
+        "coherent": 8,
+        "total": 10
+      },
+      "a-4": {
+        "flip_rate": 0.9,
+        "coherent_rate": 0.9,
+        "flips": 9,
+        "coherent": 9,
+        "total": 10
+      },
+      "a-6": {
+        "flip_rate": 1.0,
+        "coherent_rate": 0.0,
+        "flips": 10,
+        "coherent": 0,
+        "total": 10
+      },
+      "a-8": {
+        "flip_rate": 1.0,
+        "coherent_rate": 0.0,
+        "flips": 10,
+        "coherent": 0,
+        "total": 10
+      },
+      "a-10": {
+        "flip_rate": 1.0,
+        "coherent_rate": 0.0,
+        "flips": 10,
+        "coherent": 0,
+        "total": 10
+      },
+      "a-12": {
+        "flip_rate": 1.0,
+        "coherent_rate": 0.0,
+        "flips": 10,
+        "coherent": 0,
+        "total": 10
+      },
+      "a-14": {
+        "flip_rate": 1.0,
+        "coherent_rate": 0.0,
+        "flips": 10,
+        "coherent": 0,
+        "total": 10
+      },
+      "a-16": {
+        "flip_rate": 1.0,
+        "coherent_rate": 0.0,
+        "flips": 10,
+        "coherent": 0,
+        "total": 10
+      },
+      "a-18": {
+        "flip_rate": 1.0,
+        "coherent_rate": 0.0,
+        "flips": 10,
+        "coherent": 0,
+        "total": 10
+      },
+      "a-20": {
+        "flip_rate": 1.0,
+        "coherent_rate": 0.9,
+        "flips": 10,
+        "coherent": 9,
+        "total": 10
+      }
+    },
+    "L15": {
+      "a0": {
+        "flip_rate": 0.2,
+        "coherent_rate": 0.2,
+        "flips": 2,
+        "coherent": 2,
+        "total": 10
+      },
+      "a-2": {
+        "flip_rate": 0.5,
+        "coherent_rate": 0.5,
+        "flips": 5,
+        "coherent": 5,
+        "total": 10
+      },
+      "a-4": {
+        "flip_rate": 0.8,
+        "coherent_rate": 0.8,
+        "flips": 8,
+        "coherent": 8,
+        "total": 10
+      },
+      "a-6": {
+        "flip_rate": 1.0,
+        "coherent_rate": 0.0,
+        "flips": 10,
+        "coherent": 0,
+        "total": 10
+      },
+      "a-8": {
+        "flip_rate": 1.0,
+        "coherent_rate": 0.3,
+        "flips": 10,
+        "coherent": 3,
+        "total": 10
+      },
+      "a-10": {
+        "flip_rate": 1.0,
+        "coherent_rate": 0.3,
+        "flips": 10,
+        "coherent": 3,
+        "total": 10
+      },
+      "a-12": {
+        "flip_rate": 1.0,
+        "coherent_rate": 0.1,
+        "flips": 10,
+        "coherent": 1,
+        "total": 10
+      },
+      "a-14": {
+        "flip_rate": 1.0,
+        "coherent_rate": 0.1,
+        "flips": 10,
+        "coherent": 1,
+        "total": 10
+      },
+      "a-16": {
+        "flip_rate": 1.0,
+        "coherent_rate": 0.0,
+        "flips": 10,
+        "coherent": 0,
+        "total": 10
+      },
+      "a-18": {
+        "flip_rate": 1.0,
+        "coherent_rate": 0.0,
+        "flips": 10,
+        "coherent": 0,
+        "total": 10
+      },
+      "a-20": {
+        "flip_rate": 1.0,
+        "coherent_rate": 0.0,
+        "flips": 10,
+        "coherent": 0,
+        "total": 10
+      }
+    },
+    "L16": {
+      "a0": {
+        "flip_rate": 0.2,
+        "coherent_rate": 0.2,
+        "flips": 2,
+        "coherent": 2,
+        "total": 10
+      },
+      "a-2": {
+        "flip_rate": 0.2,
+        "coherent_rate": 0.2,
+        "flips": 2,
+        "coherent": 2,
+        "total": 10
+      },
+      "a-4": {
+        "flip_rate": 0.7,
+        "coherent_rate": 0.7,
+        "flips": 7,
+        "coherent": 7,
+        "total": 10
+      },
+      "a-6": {
+        "flip_rate": 0.9,
+        "coherent_rate": 0.5,
+        "flips": 9,
+        "coherent": 5,
+        "total": 10
+      },
+      "a-8": {
+        "flip_rate": 1.0,
+        "coherent_rate": 0.0,
+        "flips": 10,
+        "coherent": 0,
+        "total": 10
+      },
+      "a-10": {
+        "flip_rate": 1.0,
+        "coherent_rate": 0.2,
+        "flips": 10,
+        "coherent": 2,
+        "total": 10
+      },
+      "a-12": {
+        "flip_rate": 1.0,
+        "coherent_rate": 0.1,
+        "flips": 10,
+        "coherent": 1,
+        "total": 10
+      },
+      "a-14": {
+        "flip_rate": 1.0,
+        "coherent_rate": 0.1,
+        "flips": 10,
+        "coherent": 1,
+        "total": 10
+      },
+      "a-16": {
+        "flip_rate": 1.0,
+        "coherent_rate": 0.0,
+        "flips": 10,
+        "coherent": 0,
+        "total": 10
+      },
+      "a-18": {
+        "flip_rate": 1.0,
+        "coherent_rate": 0.0,
+        "flips": 10,
+        "coherent": 0,
+        "total": 10
+      },
+      "a-20": {
+        "flip_rate": 1.0,
+        "coherent_rate": 0.0,
+        "flips": 10,
+        "coherent": 0,
+        "total": 10
+      }
+    },
+    "L17": {
+      "a0": {
+        "flip_rate": 0.2,
+        "coherent_rate": 0.2,
+        "flips": 2,
+        "coherent": 2,
+        "total": 10
+      },
+      "a-2": {
+        "flip_rate": 0.3,
+        "coherent_rate": 0.3,
+        "flips": 3,
+        "coherent": 3,
+        "total": 10
+      },
+      "a-4": {
+        "flip_rate": 0.5,
+        "coherent_rate": 0.5,
+        "flips": 5,
+        "coherent": 5,
+        "total": 10
+      },
+      "a-6": {
+        "flip_rate": 0.9,
+        "coherent_rate": 0.8,
+        "flips": 9,
+        "coherent": 8,
+        "total": 10
+      },
+      "a-8": {
+        "flip_rate": 1.0,
+        "coherent_rate": 0.1,
+        "flips": 10,
+        "coherent": 1,
+        "total": 10
+      },
+      "a-10": {
+        "flip_rate": 1.0,
+        "coherent_rate": 0.0,
+        "flips": 10,
+        "coherent": 0,
+        "total": 10
+      },
+      "a-12": {
+        "flip_rate": 1.0,
+        "coherent_rate": 0.0,
+        "flips": 10,
+        "coherent": 0,
+        "total": 10
+      },
+      "a-14": {
+        "flip_rate": 1.0,
+        "coherent_rate": 0.0,
+        "flips": 10,
+        "coherent": 0,
+        "total": 10
+      },
+      "a-16": {
+        "flip_rate": 1.0,
+        "coherent_rate": 0.4,
+        "flips": 10,
+        "coherent": 4,
+        "total": 10
+      },
+      "a-18": {
+        "flip_rate": 1.0,
+        "coherent_rate": 0.4,
+        "flips": 10,
+        "coherent": 4,
+        "total": 10
+      },
+      "a-20": {
+        "flip_rate": 1.0,
+        "coherent_rate": 0.5,
+        "flips": 10,
+        "coherent": 5,
+        "total": 10
+      }
+    },
+    "L18": {
+      "a0": {
+        "flip_rate": 0.2,
+        "coherent_rate": 0.2,
+        "flips": 2,
+        "coherent": 2,
+        "total": 10
+      },
+      "a-2": {
+        "flip_rate": 0.6,
+        "coherent_rate": 0.6,
+        "flips": 6,
+        "coherent": 6,
+        "total": 10
+      },
+      "a-4": {
+        "flip_rate": 0.7,
+        "coherent_rate": 0.7,
+        "flips": 7,
+        "coherent": 7,
+        "total": 10
+      },
+      "a-6": {
+        "flip_rate": 0.8,
+        "coherent_rate": 0.8,
+        "flips": 8,
+        "coherent": 8,
+        "total": 10
+      },
+      "a-8": {
+        "flip_rate": 1.0,
+        "coherent_rate": 0.5,
+        "flips": 10,
+        "coherent": 5,
+        "total": 10
+      },
+      "a-10": {
+        "flip_rate": 1.0,
+        "coherent_rate": 0.0,
+        "flips": 10,
+        "coherent": 0,
+        "total": 10
+      },
+      "a-12": {
+        "flip_rate": 1.0,
+        "coherent_rate": 0.0,
+        "flips": 10,
+        "coherent": 0,
+        "total": 10
+      },
+      "a-14": {
+        "flip_rate": 1.0,
+        "coherent_rate": 0.0,
+        "flips": 10,
+        "coherent": 0,
+        "total": 10
+      },
+      "a-16": {
+        "flip_rate": 1.0,
+        "coherent_rate": 0.0,
+        "flips": 10,
+        "coherent": 0,
+        "total": 10
+      },
+      "a-18": {
+        "flip_rate": 1.0,
+        "coherent_rate": 0.0,
+        "flips": 10,
+        "coherent": 0,
+        "total": 10
+      },
+      "a-20": {
+        "flip_rate": 1.0,
+        "coherent_rate": 0.0,
+        "flips": 10,
+        "coherent": 0,
+        "total": 10
+      }
+    },
+    "L19": {
+      "a0": {
+        "flip_rate": 0.2,
+        "coherent_rate": 0.2,
+        "flips": 2,
+        "coherent": 2,
+        "total": 10
+      },
+      "a-2": {
+        "flip_rate": 0.3,
+        "coherent_rate": 0.3,
+        "flips": 3,
+        "coherent": 3,
+        "total": 10
+      },
+      "a-4": {
+        "flip_rate": 0.3,
+        "coherent_rate": 0.3,
+        "flips": 3,
+        "coherent": 3,
+        "total": 10
+      },
+      "a-6": {
+        "flip_rate": 0.6,
+        "coherent_rate": 0.6,
+        "flips": 6,
+        "coherent": 6,
+        "total": 10
+      },
+      "a-8": {
+        "flip_rate": 1.0,
+        "coherent_rate": 1.0,
+        "flips": 10,
+        "coherent": 10,
+        "total": 10
+      },
+      "a-10": {
+        "flip_rate": 1.0,
+        "coherent_rate": 0.4,
+        "flips": 10,
+        "coherent": 4,
+        "total": 10
+      },
+      "a-12": {
+        "flip_rate": 1.0,
+        "coherent_rate": 0.0,
+        "flips": 10,
+        "coherent": 0,
+        "total": 10
+      },
+      "a-14": {
+        "flip_rate": 1.0,
+        "coherent_rate": 0.0,
+        "flips": 10,
+        "coherent": 0,
+        "total": 10
+      },
+      "a-16": {
+        "flip_rate": 1.0,
+        "coherent_rate": 0.1,
+        "flips": 10,
+        "coherent": 1,
+        "total": 10
+      },
+      "a-18": {
+        "flip_rate": 1.0,
+        "coherent_rate": 0.0,
+        "flips": 10,
+        "coherent": 0,
+        "total": 10
+      },
+      "a-20": {
+        "flip_rate": 1.0,
+        "coherent_rate": 0.0,
+        "flips": 10,
+        "coherent": 0,
+        "total": 10
+      }
+    },
+    "L20": {
+      "a0": {
+        "flip_rate": 0.2,
+        "coherent_rate": 0.2,
+        "flips": 2,
+        "coherent": 2,
+        "total": 10
+      },
+      "a-2": {
+        "flip_rate": 0.2,
+        "coherent_rate": 0.2,
+        "flips": 2,
+        "coherent": 2,
+        "total": 10
+      },
+      "a-4": {
+        "flip_rate": 0.3,
+        "coherent_rate": 0.3,
+        "flips": 3,
+        "coherent": 3,
+        "total": 10
+      },
+      "a-6": {
+        "flip_rate": 0.3,
+        "coherent_rate": 0.3,
+        "flips": 3,
+        "coherent": 3,
+        "total": 10
+      },
+      "a-8": {
+        "flip_rate": 0.7,
+        "coherent_rate": 0.7,
+        "flips": 7,
+        "coherent": 7,
+        "total": 10
+      },
+      "a-10": {
+        "flip_rate": 0.8,
+        "coherent_rate": 0.8,
+        "flips": 8,
+        "coherent": 8,
+        "total": 10
+      },
+      "a-12": {
+        "flip_rate": 0.9,
+        "coherent_rate": 0.4,
+        "flips": 9,
+        "coherent": 4,
+        "total": 10
+      },
+      "a-14": {
+        "flip_rate": 1.0,
+        "coherent_rate": 0.1,
+        "flips": 10,
+        "coherent": 1,
+        "total": 10
+      },
+      "a-16": {
+        "flip_rate": 1.0,
+        "coherent_rate": 0.0,
+        "flips": 10,
+        "coherent": 0,
+        "total": 10
+      },
+      "a-18": {
+        "flip_rate": 1.0,
+        "coherent_rate": 0.0,
+        "flips": 10,
+        "coherent": 0,
+        "total": 10
+      },
+      "a-20": {
+        "flip_rate": 1.0,
+        "coherent_rate": 0.1,
+        "flips": 10,
+        "coherent": 1,
+        "total": 10
+      }
+    },
+    "L21": {
+      "a0": {
+        "flip_rate": 0.2,
+        "coherent_rate": 0.2,
+        "flips": 2,
+        "coherent": 2,
+        "total": 10
+      },
+      "a-2": {
+        "flip_rate": 0.2,
+        "coherent_rate": 0.2,
+        "flips": 2,
+        "coherent": 2,
+        "total": 10
+      },
+      "a-4": {
+        "flip_rate": 0.4,
+        "coherent_rate": 0.4,
+        "flips": 4,
+        "coherent": 4,
+        "total": 10
+      },
+      "a-6": {
+        "flip_rate": 0.6,
+        "coherent_rate": 0.6,
+        "flips": 6,
+        "coherent": 6,
+        "total": 10
+      },
+      "a-8": {
+        "flip_rate": 0.5,
+        "coherent_rate": 0.5,
+        "flips": 5,
+        "coherent": 5,
+        "total": 10
+      },
+      "a-10": {
+        "flip_rate": 0.5,
+        "coherent_rate": 0.4,
+        "flips": 5,
+        "coherent": 4,
+        "total": 10
+      },
+      "a-12": {
+        "flip_rate": 0.6,
+        "coherent_rate": 0.5,
+        "flips": 6,
+        "coherent": 5,
+        "total": 10
+      },
+      "a-14": {
+        "flip_rate": 0.9,
+        "coherent_rate": 0.0,
+        "flips": 9,
+        "coherent": 0,
+        "total": 10
+      },
+      "a-16": {
+        "flip_rate": 1.0,
+        "coherent_rate": 0.1,
+        "flips": 10,
+        "coherent": 1,
+        "total": 10
+      },
+      "a-18": {
+        "flip_rate": 1.0,
+        "coherent_rate": 0.0,
+        "flips": 10,
+        "coherent": 0,
+        "total": 10
+      },
+      "a-20": {
+        "flip_rate": 1.0,
+        "coherent_rate": 0.0,
+        "flips": 10,
+        "coherent": 0,
+        "total": 10
+      }
+    },
+    "L22": {
+      "a0": {
+        "flip_rate": 0.2,
+        "coherent_rate": 0.2,
+        "flips": 2,
+        "coherent": 2,
+        "total": 10
+      },
+      "a-2": {
+        "flip_rate": 0.3,
+        "coherent_rate": 0.3,
+        "flips": 3,
+        "coherent": 3,
+        "total": 10
+      },
+      "a-4": {
+        "flip_rate": 0.3,
+        "coherent_rate": 0.3,
+        "flips": 3,
+        "coherent": 3,
+        "total": 10
+      },
+      "a-6": {
+        "flip_rate": 0.3,
+        "coherent_rate": 0.3,
+        "flips": 3,
+        "coherent": 3,
+        "total": 10
+      },
+      "a-8": {
+        "flip_rate": 0.5,
+        "coherent_rate": 0.5,
+        "flips": 5,
+        "coherent": 5,
+        "total": 10
+      },
+      "a-10": {
+        "flip_rate": 0.4,
+        "coherent_rate": 0.4,
+        "flips": 4,
+        "coherent": 4,
+        "total": 10
+      },
+      "a-12": {
+        "flip_rate": 0.6,
+        "coherent_rate": 0.6,
+        "flips": 6,
+        "coherent": 6,
+        "total": 10
+      },
+      "a-14": {
+        "flip_rate": 0.8,
+        "coherent_rate": 0.7,
+        "flips": 8,
+        "coherent": 7,
+        "total": 10
+      },
+      "a-16": {
+        "flip_rate": 1.0,
+        "coherent_rate": 0.0,
+        "flips": 10,
+        "coherent": 0,
+        "total": 10
+      },
+      "a-18": {
+        "flip_rate": 1.0,
+        "coherent_rate": 0.3,
+        "flips": 10,
+        "coherent": 3,
+        "total": 10
+      },
+      "a-20": {
+        "flip_rate": 1.0,
+        "coherent_rate": 0.2,
+        "flips": 10,
+        "coherent": 2,
+        "total": 10
+      }
+    },
+    "L23": {
+      "a0": {
+        "flip_rate": 0.2,
+        "coherent_rate": 0.2,
+        "flips": 2,
+        "coherent": 2,
+        "total": 10
+      },
+      "a-2": {
+        "flip_rate": 0.2,
+        "coherent_rate": 0.2,
+        "flips": 2,
+        "coherent": 2,
+        "total": 10
+      },
+      "a-4": {
+        "flip_rate": 0.4,
+        "coherent_rate": 0.4,
+        "flips": 4,
+        "coherent": 4,
+        "total": 10
+      },
+      "a-6": {
+        "flip_rate": 0.2,
+        "coherent_rate": 0.2,
+        "flips": 2,
+        "coherent": 2,
+        "total": 10
+      },
+      "a-8": {
+        "flip_rate": 0.3,
+        "coherent_rate": 0.3,
+        "flips": 3,
+        "coherent": 3,
+        "total": 10
+      },
+      "a-10": {
+        "flip_rate": 0.3,
+        "coherent_rate": 0.3,
+        "flips": 3,
+        "coherent": 3,
+        "total": 10
+      },
+      "a-12": {
+        "flip_rate": 0.4,
+        "coherent_rate": 0.3,
+        "flips": 4,
+        "coherent": 3,
+        "total": 10
+      },
+      "a-14": {
+        "flip_rate": 0.7,
+        "coherent_rate": 0.5,
+        "flips": 7,
+        "coherent": 5,
+        "total": 10
+      },
+      "a-16": {
+        "flip_rate": 0.9,
+        "coherent_rate": 0.5,
+        "flips": 9,
+        "coherent": 5,
+        "total": 10
+      },
+      "a-18": {
+        "flip_rate": 1.0,
+        "coherent_rate": 0.3,
+        "flips": 10,
+        "coherent": 3,
+        "total": 10
+      },
+      "a-20": {
+        "flip_rate": 1.0,
+        "coherent_rate": 0.1,
+        "flips": 10,
+        "coherent": 1,
+        "total": 10
+      }
+    },
+    "L24": {
+      "a0": {
+        "flip_rate": 0.2,
+        "coherent_rate": 0.2,
+        "flips": 2,
+        "coherent": 2,
+        "total": 10
+      },
+      "a-2": {
+        "flip_rate": 0.2,
+        "coherent_rate": 0.2,
+        "flips": 2,
+        "coherent": 2,
+        "total": 10
+      },
+      "a-4": {
+        "flip_rate": 0.2,
+        "coherent_rate": 0.2,
+        "flips": 2,
+        "coherent": 2,
+        "total": 10
+      },
+      "a-6": {
+        "flip_rate": 0.2,
+        "coherent_rate": 0.2,
+        "flips": 2,
+        "coherent": 2,
+        "total": 10
+      },
+      "a-8": {
+        "flip_rate": 0.3,
+        "coherent_rate": 0.3,
+        "flips": 3,
+        "coherent": 3,
+        "total": 10
+      },
+      "a-10": {
+        "flip_rate": 0.5,
+        "coherent_rate": 0.5,
+        "flips": 5,
+        "coherent": 5,
+        "total": 10
+      },
+      "a-12": {
+        "flip_rate": 0.3,
+        "coherent_rate": 0.3,
+        "flips": 3,
+        "coherent": 3,
+        "total": 10
+      },
+      "a-14": {
+        "flip_rate": 0.4,
+        "coherent_rate": 0.2,
+        "flips": 4,
+        "coherent": 2,
+        "total": 10
+      },
+      "a-16": {
+        "flip_rate": 0.7,
+        "coherent_rate": 0.3,
+        "flips": 7,
+        "coherent": 3,
+        "total": 10
+      },
+      "a-18": {
+        "flip_rate": 1.0,
+        "coherent_rate": 0.0,
+        "flips": 10,
+        "coherent": 0,
+        "total": 10
+      },
+      "a-20": {
+        "flip_rate": 1.0,
+        "coherent_rate": 0.0,
+        "flips": 10,
+        "coherent": 0,
+        "total": 10
+      }
+    },
+    "L25": {
+      "a0": {
+        "flip_rate": 0.2,
+        "coherent_rate": 0.2,
+        "flips": 2,
+        "coherent": 2,
+        "total": 10
+      },
+      "a-2": {
+        "flip_rate": 0.2,
+        "coherent_rate": 0.2,
+        "flips": 2,
+        "coherent": 2,
+        "total": 10
+      },
+      "a-4": {
+        "flip_rate": 0.2,
+        "coherent_rate": 0.2,
+        "flips": 2,
+        "coherent": 2,
+        "total": 10
+      },
+      "a-6": {
+        "flip_rate": 0.4,
+        "coherent_rate": 0.4,
+        "flips": 4,
+        "coherent": 4,
+        "total": 10
+      },
+      "a-8": {
+        "flip_rate": 0.4,
+        "coherent_rate": 0.4,
+        "flips": 4,
+        "coherent": 4,
+        "total": 10
+      },
+      "a-10": {
+        "flip_rate": 0.5,
+        "coherent_rate": 0.5,
+        "flips": 5,
+        "coherent": 5,
+        "total": 10
+      },
+      "a-12": {
+        "flip_rate": 0.4,
+        "coherent_rate": 0.3,
+        "flips": 4,
+        "coherent": 3,
+        "total": 10
+      },
+      "a-14": {
+        "flip_rate": 0.6,
+        "coherent_rate": 0.6,
+        "flips": 6,
+        "coherent": 6,
+        "total": 10
+      },
+      "a-16": {
+        "flip_rate": 0.6,
+        "coherent_rate": 0.5,
+        "flips": 6,
+        "coherent": 5,
+        "total": 10
+      },
+      "a-18": {
+        "flip_rate": 0.9,
+        "coherent_rate": 0.3,
+        "flips": 9,
+        "coherent": 3,
+        "total": 10
+      },
+      "a-20": {
+        "flip_rate": 0.9,
+        "coherent_rate": 0.2,
+        "flips": 9,
+        "coherent": 2,
+        "total": 10
+      }
+    },
+    "L26": {
+      "a0": {
+        "flip_rate": 0.2,
+        "coherent_rate": 0.2,
+        "flips": 2,
+        "coherent": 2,
+        "total": 10
+      },
+      "a-2": {
+        "flip_rate": 0.2,
+        "coherent_rate": 0.2,
+        "flips": 2,
+        "coherent": 2,
+        "total": 10
+      },
+      "a-4": {
+        "flip_rate": 0.2,
+        "coherent_rate": 0.2,
+        "flips": 2,
+        "coherent": 2,
+        "total": 10
+      },
+      "a-6": {
+        "flip_rate": 0.2,
+        "coherent_rate": 0.2,
+        "flips": 2,
+        "coherent": 2,
+        "total": 10
+      },
+      "a-8": {
+        "flip_rate": 0.3,
+        "coherent_rate": 0.3,
+        "flips": 3,
+        "coherent": 3,
+        "total": 10
+      },
+      "a-10": {
+        "flip_rate": 0.4,
+        "coherent_rate": 0.4,
+        "flips": 4,
+        "coherent": 4,
+        "total": 10
+      },
+      "a-12": {
+        "flip_rate": 0.5,
+        "coherent_rate": 0.5,
+        "flips": 5,
+        "coherent": 5,
+        "total": 10
+      },
+      "a-14": {
+        "flip_rate": 0.4,
+        "coherent_rate": 0.4,
+        "flips": 4,
+        "coherent": 4,
+        "total": 10
+      },
+      "a-16": {
+        "flip_rate": 0.6,
+        "coherent_rate": 0.6,
+        "flips": 6,
+        "coherent": 6,
+        "total": 10
+      },
+      "a-18": {
+        "flip_rate": 0.5,
+        "coherent_rate": 0.5,
+        "flips": 5,
+        "coherent": 5,
+        "total": 10
+      },
+      "a-20": {
+        "flip_rate": 0.8,
+        "coherent_rate": 0.4,
+        "flips": 8,
+        "coherent": 4,
+        "total": 10
+      }
+    },
+    "L27": {
+      "a0": {
+        "flip_rate": 0.2,
+        "coherent_rate": 0.2,
+        "flips": 2,
+        "coherent": 2,
+        "total": 10
+      },
+      "a-2": {
+        "flip_rate": 0.2,
+        "coherent_rate": 0.2,
+        "flips": 2,
+        "coherent": 2,
+        "total": 10
+      },
+      "a-4": {
+        "flip_rate": 0.2,
+        "coherent_rate": 0.2,
+        "flips": 2,
+        "coherent": 2,
+        "total": 10
+      },
+      "a-6": {
+        "flip_rate": 0.3,
+        "coherent_rate": 0.3,
+        "flips": 3,
+        "coherent": 3,
+        "total": 10
+      },
+      "a-8": {
+        "flip_rate": 0.5,
+        "coherent_rate": 0.5,
+        "flips": 5,
+        "coherent": 5,
+        "total": 10
+      },
+      "a-10": {
+        "flip_rate": 0.5,
+        "coherent_rate": 0.5,
+        "flips": 5,
+        "coherent": 5,
+        "total": 10
+      },
+      "a-12": {
+        "flip_rate": 0.3,
+        "coherent_rate": 0.3,
+        "flips": 3,
+        "coherent": 3,
+        "total": 10
+      },
+      "a-14": {
+        "flip_rate": 0.3,
+        "coherent_rate": 0.3,
+        "flips": 3,
+        "coherent": 3,
+        "total": 10
+      },
+      "a-16": {
+        "flip_rate": 0.2,
+        "coherent_rate": 0.2,
+        "flips": 2,
+        "coherent": 2,
+        "total": 10
+      },
+      "a-18": {
+        "flip_rate": 0.3,
+        "coherent_rate": 0.2,
+        "flips": 3,
+        "coherent": 2,
+        "total": 10
+      },
+      "a-20": {
+        "flip_rate": 0.6,
+        "coherent_rate": 0.2,
+        "flips": 6,
+        "coherent": 2,
+        "total": 10
+      }
+    },
+    "L28": {
+      "a0": {
+        "flip_rate": 0.2,
+        "coherent_rate": 0.2,
+        "flips": 2,
+        "coherent": 2,
+        "total": 10
+      },
+      "a-2": {
+        "flip_rate": 0.2,
+        "coherent_rate": 0.2,
+        "flips": 2,
+        "coherent": 2,
+        "total": 10
+      },
+      "a-4": {
+        "flip_rate": 0.2,
+        "coherent_rate": 0.2,
+        "flips": 2,
+        "coherent": 2,
+        "total": 10
+      },
+      "a-6": {
+        "flip_rate": 0.2,
+        "coherent_rate": 0.2,
+        "flips": 2,
+        "coherent": 2,
+        "total": 10
+      },
+      "a-8": {
+        "flip_rate": 0.3,
+        "coherent_rate": 0.3,
+        "flips": 3,
+        "coherent": 3,
+        "total": 10
+      },
+      "a-10": {
+        "flip_rate": 0.3,
+        "coherent_rate": 0.3,
+        "flips": 3,
+        "coherent": 3,
+        "total": 10
+      },
+      "a-12": {
+        "flip_rate": 0.2,
+        "coherent_rate": 0.2,
+        "flips": 2,
+        "coherent": 2,
+        "total": 10
+      },
+      "a-14": {
+        "flip_rate": 0.4,
+        "coherent_rate": 0.4,
+        "flips": 4,
+        "coherent": 4,
+        "total": 10
+      },
+      "a-16": {
+        "flip_rate": 0.3,
+        "coherent_rate": 0.3,
+        "flips": 3,
+        "coherent": 3,
+        "total": 10
+      },
+      "a-18": {
+        "flip_rate": 0.3,
+        "coherent_rate": 0.3,
+        "flips": 3,
+        "coherent": 3,
+        "total": 10
+      },
+      "a-20": {
+        "flip_rate": 0.3,
+        "coherent_rate": 0.2,
+        "flips": 3,
+        "coherent": 2,
+        "total": 10
+      }
+    },
+    "L29": {
+      "a0": {
+        "flip_rate": 0.2,
+        "coherent_rate": 0.2,
+        "flips": 2,
+        "coherent": 2,
+        "total": 10
+      },
+      "a-2": {
+        "flip_rate": 0.2,
+        "coherent_rate": 0.2,
+        "flips": 2,
+        "coherent": 2,
+        "total": 10
+      },
+      "a-4": {
+        "flip_rate": 0.3,
+        "coherent_rate": 0.3,
+        "flips": 3,
+        "coherent": 3,
+        "total": 10
+      },
+      "a-6": {
+        "flip_rate": 0.2,
+        "coherent_rate": 0.2,
+        "flips": 2,
+        "coherent": 2,
+        "total": 10
+      },
+      "a-8": {
+        "flip_rate": 0.4,
+        "coherent_rate": 0.4,
+        "flips": 4,
+        "coherent": 4,
+        "total": 10
+      },
+      "a-10": {
+        "flip_rate": 0.3,
+        "coherent_rate": 0.3,
+        "flips": 3,
+        "coherent": 3,
+        "total": 10
+      },
+      "a-12": {
+        "flip_rate": 0.4,
+        "coherent_rate": 0.4,
+        "flips": 4,
+        "coherent": 4,
+        "total": 10
+      },
+      "a-14": {
+        "flip_rate": 0.5,
+        "coherent_rate": 0.5,
+        "flips": 5,
+        "coherent": 5,
+        "total": 10
+      },
+      "a-16": {
+        "flip_rate": 0.1,
+        "coherent_rate": 0.1,
+        "flips": 1,
+        "coherent": 1,
+        "total": 10
+      },
+      "a-18": {
+        "flip_rate": 0.3,
+        "coherent_rate": 0.3,
+        "flips": 3,
+        "coherent": 3,
+        "total": 10
+      },
+      "a-20": {
+        "flip_rate": 0.5,
+        "coherent_rate": 0.5,
+        "flips": 5,
+        "coherent": 5,
+        "total": 10
+      }
+    },
+    "L30": {
+      "a0": {
+        "flip_rate": 0.2,
+        "coherent_rate": 0.2,
+        "flips": 2,
+        "coherent": 2,
+        "total": 10
+      },
+      "a-2": {
+        "flip_rate": 0.3,
+        "coherent_rate": 0.3,
+        "flips": 3,
+        "coherent": 3,
+        "total": 10
+      },
+      "a-4": {
+        "flip_rate": 0.2,
+        "coherent_rate": 0.2,
+        "flips": 2,
+        "coherent": 2,
+        "total": 10
+      },
+      "a-6": {
+        "flip_rate": 0.2,
+        "coherent_rate": 0.2,
+        "flips": 2,
+        "coherent": 2,
+        "total": 10
+      },
+      "a-8": {
+        "flip_rate": 0.4,
+        "coherent_rate": 0.4,
+        "flips": 4,
+        "coherent": 4,
+        "total": 10
+      },
+      "a-10": {
+        "flip_rate": 0.3,
+        "coherent_rate": 0.3,
+        "flips": 3,
+        "coherent": 3,
+        "total": 10
+      },
+      "a-12": {
+        "flip_rate": 0.4,
+        "coherent_rate": 0.4,
+        "flips": 4,
+        "coherent": 4,
+        "total": 10
+      },
+      "a-14": {
+        "flip_rate": 0.3,
+        "coherent_rate": 0.3,
+        "flips": 3,
+        "coherent": 3,
+        "total": 10
+      },
+      "a-16": {
+        "flip_rate": 0.2,
+        "coherent_rate": 0.2,
+        "flips": 2,
+        "coherent": 2,
+        "total": 10
+      },
+      "a-18": {
+        "flip_rate": 0.2,
+        "coherent_rate": 0.2,
+        "flips": 2,
+        "coherent": 2,
+        "total": 10
+      },
+      "a-20": {
+        "flip_rate": 0.3,
+        "coherent_rate": 0.3,
+        "flips": 3,
+        "coherent": 3,
+        "total": 10
+      }
+    },
+    "L31": {
+      "a0": {
+        "flip_rate": 0.2,
+        "coherent_rate": 0.2,
+        "flips": 2,
+        "coherent": 2,
+        "total": 10
+      },
+      "a-2": {
+        "flip_rate": 0.3,
+        "coherent_rate": 0.3,
+        "flips": 3,
+        "coherent": 3,
+        "total": 10
+      },
+      "a-4": {
+        "flip_rate": 0.4,
+        "coherent_rate": 0.4,
+        "flips": 4,
+        "coherent": 4,
+        "total": 10
+      },
+      "a-6": {
+        "flip_rate": 0.4,
+        "coherent_rate": 0.4,
+        "flips": 4,
+        "coherent": 4,
+        "total": 10
+      },
+      "a-8": {
+        "flip_rate": 0.5,
+        "coherent_rate": 0.5,
+        "flips": 5,
+        "coherent": 5,
+        "total": 10
+      },
+      "a-10": {
+        "flip_rate": 0.5,
+        "coherent_rate": 0.5,
+        "flips": 5,
+        "coherent": 5,
+        "total": 10
+      },
+      "a-12": {
+        "flip_rate": 0.5,
+        "coherent_rate": 0.5,
+        "flips": 5,
+        "coherent": 5,
+        "total": 10
+      },
+      "a-14": {
+        "flip_rate": 0.5,
+        "coherent_rate": 0.5,
+        "flips": 5,
+        "coherent": 5,
+        "total": 10
+      },
+      "a-16": {
+        "flip_rate": 0.3,
+        "coherent_rate": 0.3,
+        "flips": 3,
+        "coherent": 3,
+        "total": 10
+      },
+      "a-18": {
+        "flip_rate": 0.2,
+        "coherent_rate": 0.2,
+        "flips": 2,
+        "coherent": 2,
+        "total": 10
+      },
+      "a-20": {
+        "flip_rate": 0.2,
+        "coherent_rate": 0.2,
+        "flips": 2,
+        "coherent": 2,
+        "total": 10
+      }
+    }
+  },
+  "best": {
+    "config": [
+      "L1",
+      "a-2"
+    ],
+    "flip_rate": 1.0
+  }
+}

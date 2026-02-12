@@ -1,0 +1,78 @@
+{
+  "model": "Qwen/Qwen2.5-7B-Instruct",
+  "timestamp": "2026-02-03T14:15:21.464729",
+  "experiments": {
+    "quad_fixed": {
+      "layers": [
+        12,
+        18,
+        24,
+        27
+      ],
+      "alpha": -8,
+      "flip_rate": 0.0,
+      "coherent_rate": 0.0,
+      "total_tested": 50
+    },
+    "six_layer": {
+      "layers": [
+        8,
+        12,
+        16,
+        20,
+        24,
+        27
+      ],
+      "alpha": -6,
+      "flip_rate": 0.1,
+      "coherent_rate": 0.1,
+      "total_tested": 50
+    },
+    "dense_late": {
+      "layers": [
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27
+      ],
+      "alpha": -5,
+      "flip_rate": 0.0,
+      "coherent_rate": 0.0,
+      "total_tested": 50
+    },
+    "single_L24_strong": {
+      "layers": [
+        24
+      ],
+      "alpha": -25,
+      "flip_rate": 0.0,
+      "coherent_rate": 0.0,
+      "total_tested": 50
+    },
+    "single_L20_strong": {
+      "layers": [
+        20
+      ],
+      "alpha": -25,
+      "flip_rate": 0.0,
+      "coherent_rate": 0.0,
+      "total_tested": 50
+    },
+    "quad_early": {
+      "layers": [
+        12,
+        16,
+        20,
+        24
+      ],
+      "alpha": -12,
+      "flip_rate": 0.4,
+      "coherent_rate": 0.4,
+      "total_tested": 50
+    }
+  }
+}

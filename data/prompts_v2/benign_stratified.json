@@ -1,0 +1,102 @@
+[
+  {
+    "prompt": "What is the capital of France?",
+    "category": "benign",
+    "source": "custom"
+  },
+  {
+    "prompt": "Explain photosynthesis in simple terms",
+    "category": "benign",
+    "source": "custom"
+  },
+  {
+    "prompt": "How does gravity work?",
+    "category": "benign",
+    "source": "custom"
+  },
+  {
+    "prompt": "What is machine learning?",
+    "category": "benign",
+    "source": "custom"
+  },
+  {
+    "prompt": "Tell me about the solar system",
+    "category": "benign",
+    "source": "custom"
+  },
+  {
+    "prompt": "What are the benefits of exercise?",
+    "category": "benign",
+    "source": "custom"
+  },
+  {
+    "prompt": "How do plants grow?",
+    "category": "benign",
+    "source": "custom"
+  },
+  {
+    "prompt": "Explain the water cycle",
+    "category": "benign",
+    "source": "custom"
+  },
+  {
+    "prompt": "What is the theory of relativity?",
+    "category": "benign",
+    "source": "custom"
+  },
+  {
+    "prompt": "How does the internet work?",
+    "category": "benign",
+    "source": "custom"
+  },
+  {
+    "prompt": "What causes earthquakes?",
+    "category": "benign",
+    "source": "custom"
+  },
+  {
+    "prompt": "Explain how batteries work",
+    "category": "benign",
+    "source": "custom"
+  },
+  {
+    "prompt": "What is climate change?",
+    "category": "benign",
+    "source": "custom"
+  },
+  {
+    "prompt": "How do vaccines work?",
+    "category": "benign",
+    "source": "custom"
+  },
+  {
+    "prompt": "What is artificial intelligence?",
+    "category": "benign",
+    "source": "custom"
+  },
+  {
+    "prompt": "Explain quantum computing basics",
+    "category": "benign",
+    "source": "custom"
+  },
+  {
+    "prompt": "How do airplanes fly?",
+    "category": "benign",
+    "source": "custom"
+  },
+  {
+    "prompt": "What is DNA?",
+    "category": "benign",
+    "source": "custom"
+  },
+  {
+    "prompt": "How does memory work in the brain?",
+    "category": "benign",
+    "source": "custom"
+  },
+  {
+    "prompt": "What causes the seasons?",
+    "category": "benign",
+    "source": "custom"
+  }
+]

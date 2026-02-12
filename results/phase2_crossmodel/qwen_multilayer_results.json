@@ -1,0 +1,187 @@
+{
+  "model": "Qwen2.5-7B-Instruct",
+  "type": "multi_layer_coordinated",
+  "timestamp": "2026-02-03T12:00:17.946519",
+  "experiments": [
+    {
+      "layers": [
+        12,
+        14,
+        16,
+        18
+      ],
+      "alpha": -15,
+      "total": 35,
+      "successes": 0,
+      "flip_rate": 0.0
+    },
+    {
+      "layers": [
+        12,
+        14,
+        16,
+        18
+      ],
+      "alpha": -20,
+      "total": 35,
+      "successes": 0,
+      "flip_rate": 0.0
+    },
+    {
+      "layers": [
+        12,
+        14,
+        16,
+        18
+      ],
+      "alpha": -25,
+      "total": 35,
+      "successes": 0,
+      "flip_rate": 0.0
+    },
+    {
+      "layers": [
+        14,
+        16,
+        18,
+        20
+      ],
+      "alpha": -15,
+      "total": 35,
+      "successes": 0,
+      "flip_rate": 0.0
+    },
+    {
+      "layers": [
+        14,
+        16,
+        18,
+        20
+      ],
+      "alpha": -20,
+      "total": 35,
+      "successes": 0,
+      "flip_rate": 0.0
+    },
+    {
+      "layers": [
+        14,
+        16,
+        18,
+        20
+      ],
+      "alpha": -25,
+      "total": 35,
+      "successes": 0,
+      "flip_rate": 0.0
+    },
+    {
+      "layers": [
+        16,
+        18,
+        20,
+        22
+      ],
+      "alpha": -15,
+      "total": 35,
+      "successes": 0,
+      "flip_rate": 0.0
+    },
+    {
+      "layers": [
+        16,
+        18,
+        20,
+        22
+      ],
+      "alpha": -20,
+      "total": 35,
+      "successes": 0,
+      "flip_rate": 0.0
+    },
+    {
+      "layers": [
+        16,
+        18,
+        20,
+        22
+      ],
+      "alpha": -25,
+      "total": 35,
+      "successes": 0,
+      "flip_rate": 0.0
+    },
+    {
+      "layers": [
+        18,
+        20,
+        22,
+        24
+      ],
+      "alpha": -15,
+      "total": 35,
+      "successes": 0,
+      "flip_rate": 0.0
+    },
+    {
+      "layers": [
+        18,
+        20,
+        22,
+        24
+      ],
+      "alpha": -20,
+      "total": 35,
+      "successes": 0,
+      "flip_rate": 0.0
+    },
+    {
+      "layers": [
+        18,
+        20,
+        22,
+        24
+      ],
+      "alpha": -25,
+      "total": 35,
+      "successes": 0,
+      "flip_rate": 0.0
+    },
+    {
+      "layers": [
+        12,
+        16,
+        20,
+        24
+      ],
+      "alpha": -15,
+      "total": 35,
+      "successes": 0,
+      "flip_rate": 0.0
+    },
+    {
+      "layers": [
+        12,
+        16,
+        20,
+        24
+      ],
+      "alpha": -20,
+      "total": 35,
+      "successes": 0,
+      "flip_rate": 0.0
+    },
+    {
+      "layers": [
+        12,
+        16,
+        20,
+        24
+      ],
+      "alpha": -25,
+      "total": 35,
+      "successes": 0,
+      "flip_rate": 0.0
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "model": "gemma-2-9b-it",
+  "timestamp": "2026-02-03T13:31:27.976594",
+  "experiments": {
+    "single_L24": {
+      "layers": [
+        24
+      ],
+      "alpha": -15,
+      "name": "single_L24",
+      "flip_rate": 0.0,
+      "coherent_rate": 0.0,
+      "total": 50
+    },
+    "dual_adjacent": {
+      "layers": [
+        20,
+        24
+      ],
+      "alpha": -12,
+      "name": "dual_adjacent",
+      "flip_rate": 0.0,
+      "coherent_rate": 0.0,
+      "total": 50
+    },
+    "quad_distributed": {
+      "layers": [
+        12,
+        18,
+        24,
+        28
+      ],
+      "alpha": -8,
+      "name": "quad_distributed",
+      "flip_rate": 0.0,
+      "coherent_rate": 0.0,
+      "total": 50
+    }
+  }
+}

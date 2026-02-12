@@ -209,21 +209,26 @@ def cleanup_memory():
 # MODEL LOADING
 # =============================================================================
 
-def load_model(config):
-    """Load model without quantization (fp16)."""
-    from transformers import AutoModelForCausalLM, AutoTokenizer
-    import torch
-    
-    print(f"🔄 Loading model: {config.model_name} (fp16, no quant)")
-    
+def load_model(config: ResearchConfig):
+    """Load model with 8-bit quantization."""
+    from transformers import AutoModelForCausalLM, AutoTokenizer, BitsAndBytesConfig
+
+    print(f"🔄 Loading model: {config.model_name}")
+
+    quantization_config = BitsAndBytesConfig(
+        load_in_8bit=True,
+        llm_int8_threshold=6.0
+    )
+
     model = AutoModelForCausalLM.from_pretrained(
         config.model_name,
+        quantization_config=quantization_config,
         device_map="auto",
-        torch_dtype=torch.bfloat16,
+        torch_dtype=torch.float16,
     )
     tokenizer = AutoTokenizer.from_pretrained(config.model_name)
     model.eval()
-    
+
     print(f"✅ Model loaded on {next(model.parameters()).device}")
     return model, tokenizer
 
