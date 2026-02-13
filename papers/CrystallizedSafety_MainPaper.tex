@@ -76,6 +76,8 @@ We systematically test crystallized safety across three major model families---G
 
 \textbf{Robustness of alignment:} \citet{wei2024jailbroken} documented various jailbreak methods but focused on prompt-level attacks. We test activation-level attacks, finding models robust at this level too.
 
+\textbf{The Assistant Axis:} \citet{mack2025assistant} identified a single ``assistant axis'' direction in LLM representation space that encodes the transition from base model to instruction-tuned assistant behavior. Their finding that a one-dimensional direction captures the assistant persona suggests safety alignment may similarly rely on low-dimensional structure. Our crystallized safety framework extends this insight: while safety directions \textit{exist} (consistent with the assistant axis being readable), they resist manipulation because modern alignment distributes safety across \textit{multiple redundant subspaces} rather than a single axis. The assistant axis finding predicts that steering should work; our results show it doesn't for safety---precisely because safety is protected by multi-subspace redundancy that a single-axis intervention cannot overcome.
+
 \section{Crystallized Safety: Concept Definition}
 
 \subsection{The Readable $\neq$ Controllable Distinction}
