@@ -547,10 +547,26 @@ def load_results():
 
         # Extract sigma and key metrics per model
         for model_name, model_data in exp08.get("models", {}).items():
+            # Extract sigma from nested layer geometry
+            layers = model_data.get("layers", {})
+            layer_sigmas = {}
+            layer_jailbreak_rates = {}
+            for layer_key, layer_data in layers.items():
+                geometry = layer_data.get("geometry", {})
+                sigma_1 = geometry.get("sigma_1")
+                if sigma_1:
+                    layer_sigmas[layer_key] = sigma_1
+                # Also extract jailbreak rate at alpha_15
+                steering = layer_data.get("steering_results", {})
+                alpha_15 = steering.get("alpha_15", {})
+                if alpha_15:
+                    layer_jailbreak_rates[layer_key] = alpha_15.get("jailbreak_rate")
+
             exp08_summary["model_results"][model_name] = {
                 "n_layers": model_data.get("n_layers"),
-                "sigma": model_data.get("sigma") if "sigma" in model_data else None,
-                "layers_tested": len(model_data.get("layers", {})),
+                "layer_sigmas": layer_sigmas,
+                "layer_jailbreak_rates": layer_jailbreak_rates,
+                "layers_tested": len(layers),
             }
 
         data["exp08_scale_invariant"] = exp08_summary
@@ -681,30 +697,44 @@ async def main():
 
     # Build hypothesis based on loaded results
     if results.get("exp08_scale_invariant"):
-        hypothesis = """
+        exp08_data = results["exp08_scale_invariant"]
+        model_results = exp08_data.get("model_results", {})
+
+        # Build sigma summary table
+        sigma_lines = []
+        for model_name, mdata in model_results.items():
+            sigmas = mdata.get("layer_sigmas", {})
+            jailbreak = mdata.get("layer_jailbreak_rates", {})
+            for layer_key, sigma_val in sigmas.items():
+                jb_rate = jailbreak.get(layer_key, "N/A")
+                if isinstance(jb_rate, float):
+                    jb_rate = f"{jb_rate*100:.0f}%"
+                sigma_lines.append(f"  {model_name} {layer_key}: σ₁={sigma_val:.2f}, jailbreak@α_eff=15: {jb_rate}")
+
+        sigma_table = "\n".join(sigma_lines) if sigma_lines else "  (No sigma data extracted)"
+
+        hypothesis = f"""
 Scale-Invariant Safety: Universal vulnerability across frontier LLMs
 
 MAJOR DISCOVERY (EXP-08):
-- σ-normalized steering (α_eff = α/σ) works universally across models
+- σ-normalized steering (α_eff = α/σ₁) produces universal jailbreak curves
 - Tested on: Llama-3.1-8B, Gemma-2-9B, Qwen-2.5-7B, Mistral-7B
-- Layer-normalized steering transfers between architectures
-- Same α_eff produces similar jailbreak rates across all models
+
+MEASURED σ₁ VALUES AND JAILBREAK RATES:
+{sigma_table}
+
+KEY INSIGHT: Different models have different σ₁ (activation scale), but when α is
+normalized by σ₁, all models show similar dose-response curves for jailbreaking.
 
 PREVIOUS FINDINGS:
-- Mistral-7B-Instruct: High jailbreak success with refusal direction steering
-- Gemma-2-9B: Initially resistant, broken by multi-layer coordinated steering
+- Gemma-2-9B: Initially resistant, broken by multi-layer coordinated steering (95%+)
 - Cycle 3: 4-layer attacks achieve 95%+ success on resistant models
 
-IMPLICATIONS:
-1. Safety mechanisms share geometric structure across model families
-2. Single defense-in-depth strategy may be insufficient
-3. Universal vulnerability suggests fundamental architectural issue
-
 QUESTION FOR COUNCIL:
-1. Is this finding publication-ready? What additional validation is needed?
-2. Responsible disclosure: How should we notify Anthropic, OpenAI, Google, Meta?
-3. Defense proposals: What mitigations should we recommend?
-4. Ethical considerations for publishing this vulnerability?
+1. Are the σ₁ measurements valid? What additional validation is needed?
+2. Is the cross-model σ-normalization claim statistically supported?
+3. What confounds might explain the results (random direction controls needed)?
+4. Responsible disclosure: How should we notify model providers?
 """
     else:
         hypothesis = """

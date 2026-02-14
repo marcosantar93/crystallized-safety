@@ -1,36 +1,53 @@
+# Python
+*.py[cod]
+__pycache__/
+*.egg
+*.egg-info/
+.eggs/
+build/
+dist/
 
+# Virtual environments
+.venv/
+venv/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Jupyter
+.ipynb_checkpoints/
+
+# LaTeX build artifacts
+papers/*.aux
+papers/*.log
+papers/*.out
+papers/*.synctex.gz
+papers/*.fls
+papers/*.fdb_latexmk
+papers/*.bbl
+papers/*.blg
+papers/*.toc
+
+# Large files (use HuggingFace Hub instead)
+*.bin
+*.ckpt
+*.safetensors
+data/vectors/*.pt
+
+# Environment
+.env
+
+# Experiment tracking
+wandb/
+*.log
+
+# Keep directory structure
 !data/vectors/.gitkeep
 !figures/.gitkeep
 !results/.gitkeep
-# Environment
-# IDE
-# Jupyter
-# Keep directory structure
-# Large files (use HuggingFace Hub instead)
-# OS
-# Project specific
-# Python
-*.bin
-*.ckpt
-*.egg
-*.egg-info/
-*.log
-*.py[cod]
-*.safetensors
-*.swp
-.DS_Store
-.eggs/
-.env
-.idea/
-.ipynb_checkpoints/
-.venv/
-.vscode/
-Thumbs.db
-__pycache__/
-build/
-data/vectors/*.pt
-dist/
-results/*.json
-results/*.pt
-venv/
-wandb/
