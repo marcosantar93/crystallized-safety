@@ -1,0 +1,93 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{amsmath}
+\usepackage{hyperref}
+\usepackage[nameinlink,noabbrev]{cleveref}
+
+\title{Dose-Response Safety in Activation Steering:\\
+Safety Is a Knob, Not a Diode}
+\author{Marco Santarcangelo Zazzetta}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+We study activation steering for refusal behavior and show that safety failure follows a graded
+dose-response curve rather than a binary diode-like transition. Using an effective steering scale,
+position-aware response classification, and coherence gating, we observe four regimes:
+clean refusal, educational pivot, full compliance, and collapse. The educational pivot regime is
+especially concerning because harmful instructions can be embedded in refusal-style framing.
+\end{abstract}
+
+\section{Method}
+We extract a steering direction from contrastive harmful/harmless prompts and apply it at a
+target layer with varying steering strength. Responses are labeled by a three-way classifier:
+\texttt{refusal}, \texttt{compliance}, or \texttt{collapse}. The classifier is position-aware and
+explicitly handles refusal-prefixed instructional outputs.
+
+\section{Main Result}
+The measured compliance rate increases gradually with steering dose before coherence degrades,
+revealing four phases:
+\begin{enumerate}
+  \item Clean refusal
+  \item Educational pivot
+  \item Full compliance
+  \item Collapse
+\end{enumerate}
+
+\begin{figure}[t]
+  \centering
+  \includegraphics[width=0.9\linewidth]{dose_response_curve.png}
+  \caption{Dose-response curve and outcome composition from the core notebook sweep.}
+  \label{fig:dose-response}
+\end{figure}
+
+\begin{table}[t]
+  \centering
+  \begin{tabular}{@{}lll@{}}
+    \toprule
+    Phase & Behavior & Risk \\
+    \midrule
+    Clean refusal & Safe rejection & Low \\
+    Educational pivot & Refusal framing + harmful instructions & High \\
+    Full compliance & Direct harmful guidance & Very high \\
+    Collapse & Incoherent output & Mixed \\
+    \bottomrule
+  \end{tabular}
+  \caption{Four-phase interpretation of steering outcomes.}
+  \label{tab:phases}
+\end{table}
+
+\section{Why the Diode Hypothesis Failed}
+Two issues caused the earlier diode interpretation: (1) steering magnitudes that were too small to
+reach the transition band and (2) classifier false positives/negatives on long refusal-framed
+outputs. After fixing both, the transition is smooth and controllable.
+
+\section{Future Work: Activation-Based Attack Detection}
+Next work should add online defense by monitoring hidden-state trajectories for attack signatures
+(including multi-turn prompt attacks), then triggering conditional counter-steering or policy
+gating only when risk is detected.
+
+\section{Conclusion}
+Activation steering exposes a controllable safety dose-response. This enables both offensive
+characterization (how safety fails) and defensive control (when and how to intervene).
+
+\bibliographystyle{plain}
+\begin{thebibliography}{9}
+\bibitem{arditi2024}
+Arditi et al. Refusal in Language Models Is Mediated by a Single Direction. 2024.
+
+\bibitem{turner2023}
+Turner et al. Activation Addition: Steering Language Models Without Optimization. 2023.
+
+\bibitem{korznikov2025}
+Korznikov et al. The Rogue Scalpel: Activation Steering Compromises LLM Safety. 2025.
+
+\bibitem{tan2025}
+Tan et al. Programming Refusal with Conditional Activation Steering. 2025.
+\end{thebibliography}
+
+\end{document}

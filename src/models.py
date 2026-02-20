@@ -212,3 +212,25 @@ def get_steerable_models() -> list:
 def get_crystallized_models() -> list:
     """Get list of models showing crystallized safety (readable but not steerable)."""
     return [name for name, config in MODEL_REGISTRY.items() if not config.steerable]
+
+
+def load_model_and_tokenizer(
+    model_name: str,
+    *,
+    use_8bit: bool = True,
+    use_4bit: bool = False,
+    device_map: str = "auto",
+    torch_dtype: torch.dtype = torch.float16,
+):
+    """Backward-compatible helper used by older scripts.
+
+    Prefer using `ModelLoader` directly in new code.
+    """
+    loader = ModelLoader(
+        model_name=model_name,
+        use_8bit=use_8bit,
+        use_4bit=use_4bit,
+        device_map=device_map,
+        torch_dtype=torch_dtype,
+    )
+    return loader.load()

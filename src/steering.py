@@ -8,7 +8,8 @@ during inference, enabling controlled modification of model behavior.
 import argparse
 import logging
 from pathlib import Path
-from typing import Optional, List, Dict, Any, Tuple
+from typing import Optional, List, Dict, Any, Tuple, Iterator
+from contextlib import contextmanager
 
 import torch
 import numpy as np
@@ -37,11 +38,13 @@ class ResidualSteeringHook:
         self,
         steering_vector: torch.Tensor,
         alpha: float = -3.0,
-        position: int = -1
+        position: int = -1,
+        steer_all_tokens: bool = False,
     ):
         self.steering_vector = steering_vector
         self.alpha = alpha
         self.position = position
+        self.steer_all_tokens = steer_all_tokens
         self.handle = None
 
     def hook_fn(self, module, input, output):
@@ -57,10 +60,13 @@ class ResidualSteeringHook:
             dtype=hidden_states.dtype
         )
 
-        # Add steering vector at specified position
-        hidden_states[:, self.position, :] = (
-            hidden_states[:, self.position, :] + self.alpha * steering
-        )
+        if self.steer_all_tokens:
+            hidden_states[:, :, :] = hidden_states[:, :, :] + self.alpha * steering
+        else:
+            # Add steering vector at specified token position
+            hidden_states[:, self.position, :] = (
+                hidden_states[:, self.position, :] + self.alpha * steering
+            )
 
         if isinstance(output, tuple):
             return (hidden_states,) + output[1:]
@@ -159,7 +165,9 @@ class ActivationSteerer:
         prompt: str,
         alpha: float = -3.0,
         max_new_tokens: int = 150,
-        use_steering: bool = True
+        use_steering: bool = True,
+        position: int = -1,
+        steer_all_tokens: bool = False,
     ) -> str:
         """Generate text with optional steering.
 
@@ -185,7 +193,12 @@ class ActivationSteerer:
         # Setup steering hook if needed
         hook = None
         if use_steering and self.steering_vector is not None:
-            hook = ResidualSteeringHook(self.steering_vector, alpha)
+            hook = ResidualSteeringHook(
+                self.steering_vector,
+                alpha,
+                position=position,
+                steer_all_tokens=steer_all_tokens,
+            )
             hook.attach(self.model, self.layer)
 
         try:
@@ -205,6 +218,41 @@ class ActivationSteerer:
                 hook.remove()
 
         return response
+
+
+class SteeringHook:
+    """Backward-compatible context manager for older scripts."""
+
+    def __init__(
+        self,
+        direction: torch.Tensor,
+        layer: int,
+        alpha: float,
+        *,
+        position: int = -1,
+        steer_all_tokens: bool = False,
+    ):
+        self.direction = direction
+        self.layer = layer
+        self.alpha = alpha
+        self.position = position
+        self.steer_all_tokens = steer_all_tokens
+        self._hook: Optional[ResidualSteeringHook] = None
+
+    @contextmanager
+    def apply(self, model) -> Iterator[None]:
+        self._hook = ResidualSteeringHook(
+            self.direction,
+            self.alpha,
+            position=self.position,
+            steer_all_tokens=self.steer_all_tokens,
+        )
+        self._hook.attach(model, self.layer)
+        try:
+            yield
+        finally:
+            self._hook.remove()
+            self._hook = None
 
     def compute_logit_margin(
         self,

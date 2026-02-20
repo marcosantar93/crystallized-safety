@@ -315,3 +315,65 @@ def load_steering_vector(path: str) -> Tuple[torch.Tensor, Optional[Dict]]:
     else:
         # Legacy format: just the tensor
         return data, None
+
+
+def _get_layer_module_from_model(model, layer_idx: int):
+    """Best-effort layer module getter for common HF architectures."""
+    if hasattr(model, "model") and hasattr(model.model, "layers"):
+        return model.model.layers[layer_idx]
+    if hasattr(model, "transformer") and hasattr(model.transformer, "h"):
+        return model.transformer.h[layer_idx]
+    raise ValueError("Unknown model architecture (expected .model.layers or .transformer.h)")
+
+
+def extract_direction_contrastive(
+    model,
+    tokenizer,
+    positive_prompts: List[str],
+    negative_prompts: List[str],
+    layer: int,
+    *,
+    position: int = -1,
+    normalize: bool = True,
+    use_chat_template: bool = True,
+) -> torch.Tensor:
+    """Backward-compatible contrastive extractor used by older scripts.
+
+    Computes mean(acts_positive) - mean(acts_negative) at a given layer/position.
+    """
+    layer_module = _get_layer_module_from_model(model, layer)
+
+    def _format(prompt: str) -> str:
+        if use_chat_template and hasattr(tokenizer, "apply_chat_template"):
+            messages = [{"role": "user", "content": prompt}]
+            return tokenizer.apply_chat_template(messages, tokenize=False, add_generation_prompt=True)
+        return prompt
+
+    def _get_act(prompt: str) -> torch.Tensor:
+        acts: List[torch.Tensor] = []
+
+        def hook(_module, _input, output):
+            if isinstance(output, tuple):
+                h = output[0]
+            else:
+                h = output
+            acts.append(h[:, position, :].detach().float().cpu())
+
+        handle = layer_module.register_forward_hook(hook)
+        try:
+            text = _format(prompt)
+            inputs = tokenizer(text, return_tensors="pt").to(model.device)
+            with torch.no_grad():
+                model(**inputs)
+        finally:
+            handle.remove()
+
+        return acts[0].squeeze(0)
+
+    pos = torch.stack([_get_act(p) for p in positive_prompts]).mean(dim=0)
+    neg = torch.stack([_get_act(p) for p in negative_prompts]).mean(dim=0)
+    direction = pos - neg
+
+    if normalize:
+        direction = direction / direction.norm()
+    return direction
