@@ -1,0 +1,18 @@
+{
+  "model_choice": "phi3-mini",
+  "version": "v14.5",
+  "phase": "refusal",
+  "refusal_results": {},
+  "random_results": {},
+  "refusal_margins": {},
+  "random_margins": {},
+  "refusal_outputs": {},
+  "random_outputs": {},
+  "agreement_stats": {
+    "total": 0,
+    "agreed": 0
+  },
+  "timestamp": "2026-01-12T11:03:52.739332",
+  "emergency": true,
+  "error": "AttributeError: 'DynamicCache' object has no attribute 'seen_tokens'\nTraceback (most recent call last):\n  File \"/tmp/ipython-input-2373227027.py\", line 50, in <cell line: 0>\n    run_sweep(refusal_direction, 'refusal', checkpoint_mgr)\n  File \"/tmp/ipython-input-2373227027.py\", line 21, in run_sweep\n    output, logits = generate_steered(prompt, direction, strength)\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/ipython-input-3419719737.py\", line 22, in generate_steered\n    output_ids = model.generate(\n                 ^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/dist-packages/torch/utils/_contextlib.py\", line 120, in decorate_context\n    return func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/dist-packages/transformers/generation/utils.py\", line 2564, in generate\n    result = decoding_method(\n             ^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/dist-packages/transformers/generation/utils.py\", line 2781, in _sample\n    model_inputs = self.prepare_inputs_for_generation(input_ids, **model_kwargs)\n                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/root/.cache/huggingface/modules/transformers_modules/microsoft/Phi_hyphen_3_hyphen_mini_hyphen_4k_hyphen_instruct/f39ac1d28e925b323eae81227eaba4464caced4e/modeling_phi3.py\", line 1291, in prepare_inputs_for_generation\n    past_length = past_key_values.seen_tokens\n                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: 'DynamicCache' object has no attribute 'seen_tokens'\n"
+}

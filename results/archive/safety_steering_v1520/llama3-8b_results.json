@@ -1,0 +1,146 @@
+{
+  "model": "llama3-8b",
+  "config": {
+    "base": "meta-llama/Meta-Llama-3-8B",
+    "chat": "meta-llama/Meta-Llama-3-8B-Instruct",
+    "chat_template": "llama3",
+    "trust_remote_code": false
+  },
+  "n_layers": 32,
+  "standard_sweep": [
+    {
+      "layer": 0,
+      "similarity": 0.2764890193939209,
+      "base_sep": 0.04355456307530403,
+      "chat_sep": 0.029076335951685905
+    },
+    {
+      "layer": 3,
+      "similarity": 0.2908147871494293,
+      "base_sep": 0.3748069703578949,
+      "chat_sep": 0.2500307857990265
+    },
+    {
+      "layer": 6,
+      "similarity": 0.25319522619247437,
+      "base_sep": 0.8947612643241882,
+      "chat_sep": 0.7866469621658325
+    },
+    {
+      "layer": 9,
+      "similarity": 0.4622783064842224,
+      "base_sep": 1.7295321226119995,
+      "chat_sep": 2.2551023960113525
+    },
+    {
+      "layer": 12,
+      "similarity": 0.3501926362514496,
+      "base_sep": 2.2822554111480713,
+      "chat_sep": 4.543711185455322
+    },
+    {
+      "layer": 16,
+      "similarity": 0.41021615266799927,
+      "base_sep": 4.704977512359619,
+      "chat_sep": 7.028412342071533
+    },
+    {
+      "layer": 19,
+      "similarity": 0.3361450731754303,
+      "base_sep": 6.543489933013916,
+      "chat_sep": 9.603302955627441
+    },
+    {
+      "layer": 22,
+      "similarity": 0.31728050112724304,
+      "base_sep": 9.530579566955566,
+      "chat_sep": 13.167366027832031
+    },
+    {
+      "layer": 25,
+      "similarity": 0.30862653255462646,
+      "base_sep": 12.820068359375,
+      "chat_sep": 16.442977905273438
+    },
+    {
+      "layer": 28,
+      "similarity": 0.23063579201698303,
+      "base_sep": 15.81119441986084,
+      "chat_sep": 24.94011688232422
+    }
+  ],
+  "ortho_layer": 28,
+  "ortho_similarity": 0.23063579201698303,
+  "forced_sweep": [
+    {
+      "layer": 0,
+      "similarity": 0.9782565236091614,
+      "base_sep": 0.23657281696796417,
+      "chat_sep": 0.22561803460121155
+    },
+    {
+      "layer": 3,
+      "similarity": 0.9225690960884094,
+      "base_sep": 0.875332236289978,
+      "chat_sep": 0.8343280553817749
+    },
+    {
+      "layer": 6,
+      "similarity": 0.8823211193084717,
+      "base_sep": 1.5029094219207764,
+      "chat_sep": 1.5003762245178223
+    },
+    {
+      "layer": 9,
+      "similarity": 0.8421190977096558,
+      "base_sep": 2.0763325691223145,
+      "chat_sep": 2.2848854064941406
+    },
+    {
+      "layer": 12,
+      "similarity": 0.7340710163116455,
+      "base_sep": 2.346123218536377,
+      "chat_sep": 2.9195659160614014
+    },
+    {
+      "layer": 16,
+      "similarity": 0.7456856369972229,
+      "base_sep": 4.115340709686279,
+      "chat_sep": 4.729595184326172
+    },
+    {
+      "layer": 19,
+      "similarity": 0.7286825180053711,
+      "base_sep": 5.819033622741699,
+      "chat_sep": 6.333864688873291
+    },
+    {
+      "layer": 22,
+      "similarity": 0.7324943542480469,
+      "base_sep": 8.563241958618164,
+      "chat_sep": 8.605914115905762
+    },
+    {
+      "layer": 25,
+      "similarity": 0.7147120833396912,
+      "base_sep": 11.92702579498291,
+      "chat_sep": 10.96490478515625
+    },
+    {
+      "layer": 28,
+      "similarity": 0.6695349216461182,
+      "base_sep": 15.00133228302002,
+      "chat_sep": 13.382673263549805
+    }
+  ],
+  "forced_min_layer": 28,
+  "forced_min_similarity": 0.6695349216461182,
+  "steering": {
+    "baseline": 11.695070219039916,
+    "steered": 11.185526758432388,
+    "effect": -0.509543460607528
+  },
+  "pattern": "LOW_FLAT",
+  "dip_magnitude": 0.04286388556162518,
+  "recovery": 0.05487848321596783
+}

@@ -1,0 +1,50 @@
+{
+  "config": {
+    "model_name": "google/gemma-2-9b-it",
+    "target_layer": 21,
+    "alpha": -3.0,
+    "use_8bit": true,
+    "n_random": 3,
+    "n_ortho": 2,
+    "rotation_angles": [
+      10,
+      30
+    ],
+    "n_prompts_control1": 5,
+    "n_prompts_control2": 5,
+    "n_prompts_control3": 10,
+    "n_benign": 5,
+    "threshold_random_pass": 0.2,
+    "threshold_random_fail": 0.5,
+    "threshold_coherence_high": 4.0,
+    "threshold_flip_rate": 0.5,
+    "threshold_coherent_flip": 0.3,
+    "threshold_benign_degradation": 0.2,
+    "seed": 42
+  },
+  "timestamp": "2026-01-14T18:01:31.147700",
+  "control1": {
+    "extracted_mean": -0.09453125,
+    "random_mean": -0.05077311197916665,
+    "ortho_mean": -0.059704589843749996,
+    "random_ratio": 0.537103994490358,
+    "ortho_ratio": 0.6315857438016529
+  },
+  "early_exit": true,
+  "gates": [
+    {
+      "name": "Control 1: Direction Specificity",
+      "verdict": "RED",
+      "interpretation": "Generic perturbation effect (H3) - KILL SWITCH",
+      "metrics": {
+        "extracted_mean": -0.09453125,
+        "random_mean": -0.05077311197916665,
+        "ortho_mean": -0.059704589843749996,
+        "random_ratio": 0.537103994490358,
+        "ortho_ratio": 0.6315857438016529
+      }
+    }
+  ],
+  "final_verdict": "STOP",
+  "action": "Major issue detected - revise hypothesis or methodology"
+}

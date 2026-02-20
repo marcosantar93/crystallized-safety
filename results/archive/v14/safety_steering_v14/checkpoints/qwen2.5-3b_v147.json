@@ -1,0 +1,11 @@
+{
+  "phase": null,
+  "completed_strengths": [],
+  "results": {},
+  "extraction_validated": true,
+  "validation_data": {
+    "layer": 7,
+    "delta": 0.3125,
+    "valid": true
+  }
+}

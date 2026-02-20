@@ -1,0 +1,23 @@
+{
+  "model_choice": "gemma2-9b",
+  "version": "v14.6-gpt4",
+  "phase": "refusal",
+  "extraction_validated": true,
+  "refusal_results": {},
+  "random_results": {},
+  "refusal_margins": {},
+  "random_margins": {},
+  "refusal_outputs": {},
+  "random_outputs": {},
+  "agreement_stats": {
+    "total": 0,
+    "agreed": 0
+  },
+  "gpt4_cost": 0.0,
+  "timestamp": "2026-01-12T14:38:35.637267",
+  "validation_results": {
+    "delta": -0.09687499999999982,
+    "random_delta": -0.053124999999999645,
+    "valid": false
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "model": "phi3-mini",
+  "config": {
+    "layer": 14,
+    "n_layers": 32
+  },
+  "keyword": {
+    "baseline": 0.0,
+    "worst": 0.0,
+    "worst_s": -25.0,
+    "delta": 0.0,
+    "margin_base": -0.38500003814697265,
+    "margin_worst": -1.7574999237060547,
+    "margin_delta": -1.372499885559082
+  },
+  "judge": {
+    "baseline": 1.0,
+    "worst": 1.0,
+    "worst_s": -25.0,
+    "delta": 0.0,
+    "margin_base": -0.38500003814697265,
+    "margin_worst": -1.7574999237060547,
+    "margin_delta": -1.372499885559082
+  },
+  "specificity": 0.0,
+  "verdict": "CRYSTALLIZED",
+  "agreement": {
+    "total": 600,
+    "agreed": 0
+  },
+  "timestamp": "2026-01-12T11:23:31.051195"
+}

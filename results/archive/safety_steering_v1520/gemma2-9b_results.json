@@ -1,0 +1,146 @@
+{
+  "model": "gemma2-9b",
+  "config": {
+    "base": "google/gemma-2-9b",
+    "chat": "google/gemma-2-9b-it",
+    "chat_template": "gemma",
+    "trust_remote_code": false
+  },
+  "n_layers": 42,
+  "standard_sweep": [
+    {
+      "layer": 0,
+      "similarity": 0.5316082239151001,
+      "base_sep": 2.02455997467041,
+      "chat_sep": 1.1799551248550415
+    },
+    {
+      "layer": 4,
+      "similarity": 0.5613877177238464,
+      "base_sep": 7.367456436157227,
+      "chat_sep": 5.821431636810303
+    },
+    {
+      "layer": 8,
+      "similarity": 0.5992418527603149,
+      "base_sep": 29.74848747253418,
+      "chat_sep": 22.071863174438477
+    },
+    {
+      "layer": 12,
+      "similarity": 0.544822096824646,
+      "base_sep": 48.44767379760742,
+      "chat_sep": 54.323829650878906
+    },
+    {
+      "layer": 16,
+      "similarity": 0.47537660598754883,
+      "base_sep": 60.97001266479492,
+      "chat_sep": 91.79267883300781
+    },
+    {
+      "layer": 21,
+      "similarity": 0.3394305109977722,
+      "base_sep": 87.1535415649414,
+      "chat_sep": 193.56939697265625
+    },
+    {
+      "layer": 25,
+      "similarity": 0.23260943591594696,
+      "base_sep": 98.43873596191406,
+      "chat_sep": 292.2814025878906
+    },
+    {
+      "layer": 29,
+      "similarity": 0.22409765422344208,
+      "base_sep": 136.06698608398438,
+      "chat_sep": 420.2783508300781
+    },
+    {
+      "layer": 33,
+      "similarity": 0.23478037118911743,
+      "base_sep": 171.44940185546875,
+      "chat_sep": 528.6068115234375
+    },
+    {
+      "layer": 37,
+      "similarity": 0.21910198032855988,
+      "base_sep": 216.185546875,
+      "chat_sep": 629.05712890625
+    }
+  ],
+  "ortho_layer": 37,
+  "ortho_similarity": 0.21910198032855988,
+  "forced_sweep": [
+    {
+      "layer": 0,
+      "similarity": 0.9810377955436707,
+      "base_sep": 19.690183639526367,
+      "chat_sep": 19.53438949584961
+    },
+    {
+      "layer": 4,
+      "similarity": 0.9250383377075195,
+      "base_sep": 21.916349411010742,
+      "chat_sep": 23.643957138061523
+    },
+    {
+      "layer": 8,
+      "similarity": 0.9011929035186768,
+      "base_sep": 35.32085418701172,
+      "chat_sep": 41.650020599365234
+    },
+    {
+      "layer": 12,
+      "similarity": 0.8703137040138245,
+      "base_sep": 47.52170944213867,
+      "chat_sep": 63.977439880371094
+    },
+    {
+      "layer": 16,
+      "similarity": 0.7913588285446167,
+      "base_sep": 60.99732208251953,
+      "chat_sep": 84.75312805175781
+    },
+    {
+      "layer": 21,
+      "similarity": 0.703825831413269,
+      "base_sep": 79.72509002685547,
+      "chat_sep": 125.97723388671875
+    },
+    {
+      "layer": 25,
+      "similarity": 0.5901967883110046,
+      "base_sep": 92.2317886352539,
+      "chat_sep": 177.0398712158203
+    },
+    {
+      "layer": 29,
+      "similarity": 0.6633952856063843,
+      "base_sep": 133.79104614257812,
+      "chat_sep": 232.49801635742188
+    },
+    {
+      "layer": 33,
+      "similarity": 0.6625305414199829,
+      "base_sep": 174.97412109375,
+      "chat_sep": 297.45404052734375
+    },
+    {
+      "layer": 37,
+      "similarity": 0.6205487251281738,
+      "base_sep": 221.80226135253906,
+      "chat_sep": 373.5297546386719
+    }
+  ],
+  "forced_min_layer": 25,
+  "forced_min_similarity": 0.5901967883110046,
+  "steering": {
+    "baseline": 11.509057724475861,
+    "steered": 10.125719559192657,
+    "effect": -1.3833381652832042
+  },
+  "pattern": "DIP_ONLY",
+  "dip_magnitude": 0.3449772844711939,
+  "recovery": 0.006891354918479919
+}

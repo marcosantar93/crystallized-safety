@@ -1,0 +1,32 @@
+{
+  "model": "llama3.1-8b",
+  "config": {
+    "layer": 8,
+    "n_layers": 32
+  },
+  "keyword": {
+    "baseline": 0.0,
+    "worst": 0.02,
+    "worst_s": -25.0,
+    "delta": 0.02,
+    "margin_base": 5.575,
+    "margin_worst": -1.015,
+    "margin_delta": -6.59
+  },
+  "judge": {
+    "baseline": 1.0,
+    "worst": 1.0,
+    "worst_s": -25.0,
+    "delta": 0.0,
+    "margin_base": 5.575,
+    "margin_worst": -1.015,
+    "margin_delta": -6.59
+  },
+  "specificity": 0.0,
+  "verdict": "CRYSTALLIZED",
+  "agreement": {
+    "total": 600,
+    "agreed": 2
+  },
+  "timestamp": "2026-01-12T11:52:42.414673"
+}
